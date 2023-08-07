@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="txt"></p>
+<button type="button" id="demo" onclick="click1();">Click</button>
+<script>
+     const demo = document.getElementById('demo');
+     demo.addEventListener('mouseover',mouseover);
+    demo.addEventListener('mouseout',mouseout);
+    function mouseover(){
+        document.getElementById("demo").style.color="red"
+    }
+    function mouseout(){
+        document.getElementById("demo").style.color="black"
+    }
+    function click1(){
+        document.getElementById("txt").innerHTML="HI!";
+    }
+</script>
+</body>
+</html>
