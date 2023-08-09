@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2> Tính chỉ số BMI</h2>
+<input type="text" id="cannang" name="cannang" placeholder="kg">
+<label for="cannang">Nhập cân nặng</label><br>
+<input type="text" id="chieucao" name="chieucao" placeholder="met">
+<label for="chieucao">Nhập chiều cao</label><br>
+<button onclick="click1()">Check</button>
+<div id="result"></div>
+<script>
+    function click1() {
+        let cannang = document.getElementById('cannang').value;
+        let chieucao = document.getElementById('chieucao').value;
+        let bmi;
+        bmi = cannang / (chieucao * chieucao);
+        if (bmi < 18){
+            document.getElementById('result').innerHTML= ('Result BMI:'+ bmi +' .Underweight' )
+        } else if(bmi < 25.0){
+            document.getElementById('result').innerHTML= ('Result BMI:'+ bmi +' .Normal')
+        }else if(bmi< 30.0){
+            document.getElementById('result').innerHTML= ('Result BMI:'+ bmi +' .Overweigth')
+        }else {
+            document.getElementById('result').innerHTML= ('Result BMI:'+ bmi +' .Obese')
+        }
+    }
+</script>
+</body>
+</html>

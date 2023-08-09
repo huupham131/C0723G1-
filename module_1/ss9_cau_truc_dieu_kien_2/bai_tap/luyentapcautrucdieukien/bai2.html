@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="num1">Nhập số tuổi:</label>
+<input type="number" id="num1">
+<button onclick="click1()">Kiểm tra</button>
+<div id="result"></div>
+<script>
+    function click1(){
+        let num1= document.getElementById('num1').value;
+        if (num1 < 15) {
+            document.getElementById('result').innerHTML = ('Tuổi không đủ điều kiện vào lớp 10 ')
+        } else {
+            document.getElementById('result').innerHTML = ('Đủ điều kiện vào lớp 10.')
+        }
+    }
+
+</script>
+</body>
+</html>

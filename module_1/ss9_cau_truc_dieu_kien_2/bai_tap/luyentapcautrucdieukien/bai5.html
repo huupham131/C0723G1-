@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let diemKt= +prompt('Nhâp vào điểm kiểm tra:');
+    let diemGk= +prompt('Nhâp vào điểm giữa kỳ:');
+    let diemCk= +prompt('Nhâp vào điểm cuối kỳ:');
+    let diemTb;
+    diemTb=(diemKt + diemGk*2 +diemCk*3)/6
+    if(diemTb>= 8){
+        alert('Học lực tốt.')
+    } else if(diemTb>= 6.5){
+        alert('Học lực khá')
+    }else if(diemTb>= 5) {
+        alert('Học lực trung bình')
+    }else if(diemTb>= 3.5) {
+        alert('Học lực yếu')
+    } else {
+        alert('Học lực kém')
+    }
+</script>
+</body>
+</html>
