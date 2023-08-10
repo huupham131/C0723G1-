@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2> Giải phương trình bậc 1 ax + b =0</h2>
+<input type="number" id="numa">
+<label for="numa">Nhập số a</label><br>
+<input type="number" id="numb">
+<label for="numb">Nhập số b</label><br>
+<button type="button" onclick="giai()">Giải</button>
+<div id="result"></div>
+<script>
+    function giai() {
+        let a = document.getElementById('numa').value;
+        let b = document.getElementById('numb').value;
+        let x;
+        if (a === 0) {
+            if (b === 0) {
+                document.getElementById('result').innerText = ('Phương trình vô số nghiệm')
+            } else {
+                document.getElementById('result').innerText = ('Phương trình vô nghiệm')
+            }
+        } else {
+            x = -b / a
+            document.getElementById('result').innerText = ('Nghiệm của phương trình x = ' + x)
+        }
+    }
+</script>
+</body>
+</html>

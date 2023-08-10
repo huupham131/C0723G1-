@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2> Giải phương trình bậc 2 ax2 + bx + c =0</h2>
+<input type="number" id="numa">
+<label for="numa">Nhập số a</label><br>
+<input type="number" id="numb">
+<label for="numb">Nhập số b</label><br>
+<input type="number" id="numc">
+<label for="numc">Nhập số c</label><br>
+<button type="button" onclick="giai()">Giải</button>
+<div id="result"></div>
+<script>
+    function giai() {
+        let a = document.getElementById('numa').value;
+        let b = document.getElementById('numb').value;
+        let c = document.getElementById('numc').value;
+        let delta;
+        let x1;
+        let x2;
+        delta= Math.pow(b,2) - 4*a*c
+        if (delta < 0) {
+                document.getElementById('result').innerText = ('Phương trình vô nghiệm')
+            } else if(delta===0) {
+                x1=(-b)/(2*a);
+                document.getElementById('result').innerText = ('Phương trình có nghiệm là: x1=x2= ' + x1)
+            } else {
+            x1= ((-b)+ Math.sqrt(delta))/(2*a);
+            x2= ((-b)- Math.sqrt(delta))/(2*a);
+            document.getElementById('result').innerText = ('Nghiệm của phương trình: x1 = ' + x1 + ', x2 = ' + x2)
+        }
+    }
+</script>
+</body>
+</html>

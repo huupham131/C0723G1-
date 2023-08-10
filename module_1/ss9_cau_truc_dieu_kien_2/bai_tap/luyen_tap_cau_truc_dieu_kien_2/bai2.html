@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="met" placeholder="Nhập mét">
+<button type="button" onclick="click1()">Đổi</button>
+<div id="result"></div>
+<script>
+    function click1(){
+        let met= document.getElementById('met').value;
+        let ft;
+        ft= met* 3.2808
+        document.getElementById('result').innerText=('Feet là:' + ft )
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="canh" placeholder="Nhập cạnh a">
+<button type="button" onclick="click1()">Tính</button>
+<div id="result"></div>
+<script>
+    function click1(){
+        let a= document.getElementById('canh').value;
+        let S;
+        S= a * a;
+        document.getElementById('result').innerText=('Diện tích là:' +S)
+    }
+</script>
+</body>
+</html>

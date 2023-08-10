@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="num1">Nhập số phút gọi:</label>
+<input type="text" id="num1"><br>
+<button onclick="click1()">Check</button>
+<div id="result"></div>
+<script>
+    function click1(){
+        let sophut= document.getElementById('num1').value;
+        let giacuoc;
+        if (sophut <=60) {
+            giacuoc = 1000 * sophut
+            document.getElementById('result').innerHTML = ('Giá cước điện thoại:' + giacuoc)
+        } else if(sophut <= 200) {
+            giacuoc = 1000 * 60 + (sophut - 60) * 700;
+            document.getElementById('result').innerHTML = ('Giá cước điện thoại:' + giacuoc)
+        } else {
+            giacuoc = 1000*60 + 200*700 +(sophut- 260)*500 ;
+            document.getElementById('result').innerHTML = ('Giá cước điện thoại:'+ giacuoc)
+        }
+    }
+</script>
+</body>
+</html>

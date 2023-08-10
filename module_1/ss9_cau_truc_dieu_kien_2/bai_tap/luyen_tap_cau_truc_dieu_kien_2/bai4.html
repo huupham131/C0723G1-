@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="canha" placeholder="Nhập cạnh a">
+<label for="canha">Cạnh a</label><br>
+<input type="number" id="canhb" placeholder="Nhập cạnh b">
+<label for="canhb">Cạnh b</label><br>
+<button type="button" onclick="click1()">Tính</button>
+<div id="result"></div>
+<script>
+    function click1(){
+        let a= document.getElementById('canha').value;
+        let b= document.getElementById('canhb').value;
+        let S;
+        if (a>0 && b>0){
+        S= a * b;
+        document.getElementById('result').innerText=('Diện tích là:' +S)
+        } else {
+            document.getElementById('result').innerText=('Cạnh lớn hơn 0')
+        }
+    }
+</script>
+</body>
+</html>

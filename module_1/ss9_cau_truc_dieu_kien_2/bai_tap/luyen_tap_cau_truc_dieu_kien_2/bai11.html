@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let luong= +prompt('Nhập tiền lương (VND):');
+    let thue;
+    thue= luong* 0.1
+    if (luong>10000000){
+        document.write('Thuế thu nhập ca nhân là: ' + thue + 'VND')
+    }else if(luong>= 0){
+        document.write('Không chịu thuế')
+    } else{
+        document.write('Nhập sai rồi nhập lại đeeee')
+    }
+</script>
+</body>
+</html>

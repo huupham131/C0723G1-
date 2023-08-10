@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="doC" placeholder="Nhập độ C">
+<button type="button" onclick="click1()">Đổi</button>
+<div id="result"></div>
+<script>
+    function click1(){
+        let doC= document.getElementById('doC').value;
+        let doF;
+        doF= doC * 9/5 + 32;
+        document.getElementById('result').innerText=('Độ F là:' +doF)
+    }
+</script>
+</body>
+</html>
