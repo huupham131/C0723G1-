@@ -12,8 +12,10 @@
     function click1(){
         let a= document.getElementById('canh').value;
         let S;
-        S= a * a;
-        document.getElementById('result').innerText=('Diện tích là:' +S)
+        if(a>0) {
+            S= a * a;
+            document.getElementById('result').innerText = ('Diện tích là:' + S)
+        }
     }
 </script>
 </body>
