@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let sotien= +prompt('Nhập số tiền gửi (VND):');
+    let sothang= +prompt('Nhập số tháng gửi :');
+    let laisuat= +prompt('Nhập lãi suất (%/tháng):');
+    let result;
+    debugger
+        if (sotien > 0 && laisuat > 0 && sothang>0) {
+            for(i=1; i<=sothang;i++) {
+                result = sotien * Math.pow(1 + (laisuat / 100), i);
+                document.write('Số tiền nhận được tháng ' + i + '=' + result + 'VND' + '<br>')
+            }
+        } else {
+            document.write('Nhập lại ')
+        }
+</script>
+</body>
+</html>
