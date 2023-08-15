@@ -6,26 +6,14 @@
 </head>
 <body>
 <script>
-    // let num= +prompt('Nhập nhiệt độ hiện tại:')
-    // while(num>=100 || num<=20) {
-    //     if (num >= 100) {
-    //         num= +prompt('Nhập nhiệt độ hiện tại:')
-    //         alert('Giảm nhiệt độ')
-    //     }
-    //     if (num <= 20) {
-    //         num= +prompt('Nhập nhiệt độ hiện tại:')
-    //         alert('Tăng nhiệt độ')
-    //     }
-    // }
-    let num= +prompt('Nhập nhiệt độ hiện tại:')
-    while(num<=100 && num>=20) {
-        num= +prompt('Nhập nhiệt độ hiện tại:')
+    do {
+        let num = +prompt('Nhập nhiệt độ hiện tại:')
         if (num >= 100) {
             alert('Giảm nhiệt độ')
         } else if (num <= 20) {
-            alert('Tăng nhiệt độ')
-        }
-    }
+            alert('Tăng nhiệt độ');
+        } else alert('Nhiệt độ bình thường')
+    } while (num >= 100 || num <= 20)
 </script>
 </body>
 </html>

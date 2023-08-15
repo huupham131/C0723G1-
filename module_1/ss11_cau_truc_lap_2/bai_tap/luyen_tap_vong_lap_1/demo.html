@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="clickRandomNumber()">Chơi</button>
+<script>
+function clickRandomNumber() {
+    let rd = +prompt("Nhập khoảng bạn muốn đoán: ");
+    let randomNumber = Math.floor(Math.random() * rd);
+    let count = 0;
+    do {
+        let number = +prompt("Số bạn muốn đoán: ");
+        if (number === randomNumber) {
+            alert("Bạn đoán đúng rồi");
+            break;
+        } else if (number > randomNumber) {
+            alert("Số bạn đoán lớn hơn");
+        } else {
+            alert("Số bạn đoán nhỏ hơn");
+        }
+        count = count + 1;
+        if (count >= 3) {
+            alert("Bạn đã hết số lượt đoán");
+            break;
+        }
+    } while (true);
+}
+</script>
+</body>
+</html>
