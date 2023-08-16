@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="nhap">Nhập từ</label>
+<input id="nhap" type="text">
+<button onclick="checkc()">Dịch</button>
+<div id="result"></div>
+<script>
+    function checkc() {
+        let arrVietnamese = ["Màu vàng","Màu đỏ","Màu xanh lá cây","Màu đen","Màu trắng","Màu cam"];
+        let arrEnglish = ["yellow","red","green","black","white","orange"]
+        let word = document.getElementById("inputEl").value;
+        let result = "Not found";
+        word = word.toLowerCase();
+        for (let i = 0; i < arrEnglish.length; i++){
+            if (word === arrEnglish[i]){
+                result = arrVietnamese[i];
+                break;
+            }
+        }
+        document.getElementById("result").innerHTML = result;
+    }
+</script>
+</body>
+</html>

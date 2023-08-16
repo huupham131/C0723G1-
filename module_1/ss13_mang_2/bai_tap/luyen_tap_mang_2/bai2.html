@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = ['a', 'b', 'c', '1', '2', '3']
+    document.write('Mảng ban đầu là [' + arr + ']' + '<br>')
+    let first = 0
+    let last = arr.length - 1
+    while (first < last) {
+        let a = arr[first];
+        arr[first] = arr[last];
+        arr[last] = a;
+        first++;
+        last--;
+    }
+    document.write('Sau khi đảo ngược là ' + arr.toString())
+</script>
+</body>
+</html>

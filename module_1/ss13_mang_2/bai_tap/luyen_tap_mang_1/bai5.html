@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let count = +prompt('Nhập số lượng phần tử trong chuỗi muốn tạo')
+    let arr = new Array(count);
+    let result = 0
+    for (count = 0; count < arr.length; count++) {
+        arr[count] = prompt('Nhập giá trị phần tử ' + count)
+    }
+    document.write("Chuỗi đã nhập là " + arr + "<br>");
+    for (i = 0; i < count; i++) {
+        if (!isNaN(arr[i])) {
+            if (arr[i] < 0) {
+                result = result + 1;
+            }
+        }
+    }
+    document.write('Số nguyên tố âm trong chuỗi là: ' + result)
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let count = 10
+    let arr = new Array(count)
+    for (let i = 0; i < count; i++) {
+        arr[i] = +prompt('Nhập giá trị phần tử: [' + i + ']')
+    }
+    document.write("Mảng đã nhập là [" + arr + "]" + "<br>");
+    let V = +prompt('Nhập số V cần tìm:');
+    for (let i = 0; i < count; i++) {
+        if (V === arr[i]) {
+            for (let j = i; j < count; j++) {
+                arr[j] = arr[j + 1];
+            }
+            arr[arr.length - 1] = 0;
+            i--;
+        }
+    }
+    document.write("Mảng sau khi thay đổi là [" + arr + "]" + "<br>")
+</script>
+</body>
+</html>

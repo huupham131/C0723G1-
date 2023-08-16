@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = prompt('Nhập vào chuỗi ký tự bất kì:')
+    let upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    let lower = 'abcdefghijklmnopqrstuvwxyz'
+    let result = [arr[0]]
+    for (let x = 0; x < arr.length; x++) {
+        if (upper.includes(arr[x])) {
+            result.push(arr[x].toLowerCase())
+        } else if (lower.includes(arr[x])) {
+            result.push(arr[x].toUpperCase())
+        } else {
+            result.push(arr[x])
+        }
+    }
+    document.write(result.join(''))
+</script>
+</body>
+</html>

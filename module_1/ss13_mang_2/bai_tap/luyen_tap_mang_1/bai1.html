@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = [4, -6, 5, 8, 10, 2, 15, 6, -8, 20]
+    let sum = 0
+    let arr = []
+    for (let i = 0; i < num.length; i++) {
+        document.write(num[i] + '<br>')
+        sum = sum + num[i];
+        if (num[i] >= 10) {
+            arr.push(num[i])
+        }
+    }
+    document.write('Tổng 10 số= ' + sum + '<br>')
+    document.write('Những số lớn hơn hoặc bằng 10 là ' + arr)
+</script>
+</body>
+</html>

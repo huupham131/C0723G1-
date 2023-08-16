@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let count = +prompt('Nhập số lượng phần tử mảng muốn tạo')
+    let arr = new Array(count);
+    for (count = 0; count < arr.length; count++) {
+        arr[count] = prompt('Nhập giá trị phần tử [' + count + ']:')
+    }
+    document.write("Mảng đã nhập là [" + arr + "]" + "<br>");
+    let result = 0;
+    for (i = 0; i < count; i++) {
+        if (!isNaN(arr[i])) {
+            result = result + 1
+        }
+    }
+    document.write('Số lượng ký tự số trong mảng là: ' + result)
+</script>
+</body>
+</html>

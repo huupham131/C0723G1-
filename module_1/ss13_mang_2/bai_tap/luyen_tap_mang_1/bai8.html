@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let count = 10
+    let arr = new Array(count)
+    for (let i = 0; i < count; i++) {
+        arr[i] = +prompt('Nhập giá trị phần tử: [' + i + ']')
+    }
+    document.write("Mảng đã nhập là [" + arr + "]" + "<br>");
+    for (let j = 0; j < arr.length - 1; j++) {
+        let x;
+        for (let z = j + 1; z < arr.length; z++) {
+            if (arr[z] > arr[j]) {
+                x = arr[j];
+                arr[j] = arr[z];
+                arr[z] = x;
+            }
+        }
+    }
+    document.write('Mảng sau khi được sắp xếp [' + arr + ']')
+</script>
+</body>
+</html>

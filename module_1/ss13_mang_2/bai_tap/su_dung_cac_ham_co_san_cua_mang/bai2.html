@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = prompt('Nhập vào dãy số:')
+    let result = [num[0]];
+    for (let x = 0; x < num.length; x++) {
+        if ((num[x] % 2 === 0) && (num[x + 1] % 2 === 0)) {
+            result.push(num[x] + '-');
+        } else {
+            result.push(num[x]);
+        }
+    }
+    document.write(result.join(''));
+
+</script>
+</body>
+</html>

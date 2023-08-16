@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = [4, -6, 5, 8, 10, 2, 15, 6, -8, 20]
+    let max = num[0]
+    let sum = 0
+    let aver = 0
+    document.write(num.join(',') + '<br>')
+    for (i = 0; i < num.length; i++) {
+        sum = sum + num[i]
+        if (num[i] > max) {
+            max = num[i]
+        }
+    }
+    aver = sum / num.length
+    document.write('Phần tử có giá trị lớn nhất trong mảng là: ' + max + '<br>')
+    document.write('Giá trị trung bình của các phần tử trong mảng là: ' + aver)
+</script>
+</body>
+</html>

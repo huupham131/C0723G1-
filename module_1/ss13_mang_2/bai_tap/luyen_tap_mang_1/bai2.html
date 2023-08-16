@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = [4, -6, 5, 8, 10, 2, 15, 6, -8, 20]
+    let max = num[0];
+    let index = 0
+    document.write(num.join(',') + '<br>')
+    for (i = 1; i < num.length; i++) {
+        if (num[i] > max) {
+            max = num[i]
+            index = i
+        }
+    }
+    document.write('Phần tử có giá trị lớn nhất trong mảng là: ' + max + '<br>')
+    document.write('Và vị trí của phần tử trên trong mảng là: ' + index)
+</script>
+</body>
+</html>

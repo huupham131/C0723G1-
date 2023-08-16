@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let count = 10
+    let arr_a = new Array(count)
+    let arr_b = new Array(count)
+    let x = 0
+    let arr_c = []
+    for (let i = 0; i < count; i++) {
+        arr_a[i] = +prompt('Nhập giá trị phần tử của mảng a: [' + i + ']');
+        arr_c[x] = arr_a[i];
+        x++;
+    }
+    document.write("Mảng a là [" + arr_a + "]" + "<br>");
+    for (let j = 0; j < count; j++) {
+        arr_b[j] = +prompt('Nhập giá trị phần tử của mảng b: [' + j + ']');
+        arr_c[x] = arr_b[j];
+        x++;
+    }
+    document.write("Mảng b là [" + arr_b + "]" + "<br>");
+    document.write("Mảng c là [" + arr_c + "]" + "<br>");
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let count = 10
+    let arr = new Array(count);
+    result = "V is not in the array"
+    for (i = 0; i < count; i++) {
+        arr[i] = +prompt('Nhập giá trị phần tử [' + i + ']:')
+    }
+    document.write("Mảng đã nhập là [" + arr + "]" + "<br>");
+    let V = +prompt('Nhập số V cần tìm:');
+    for (j = 0; j < count; j++) {
+        if (V === arr[j]) {
+            result = ("V is in the array");
+            break;
+        }
+    }
+    document.write(result)
+</script>
+</body>
+</html>

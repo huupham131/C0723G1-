@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let count_1 = +prompt('Nhập số lượng phần tử chuỗi 1');
+    let arr_1 = new Array(count_1)
+    for (let i = 0; i < count_1; i++) {
+        arr_1[i] = prompt('Nhập giá trị phần tử của chuỗi 1: [' + i + ']');
+    }
+    document.write("Chuỗi 1 là [" + arr_1 + "]" + "<br>")
+    let count_2 = +prompt('Nhập số lượng phần tử chuỗi 2')
+    let arr_2 = new Array(count_2)
+    for (let i = 0; i < count_2; i++) {
+        arr_2[i] = prompt('Nhập giá trị phần tử của chuỗi 2: [' + i + ']');
+    }
+    document.write("Chuỗi 2 là [" + arr_2 + "]" + "<br>")
+    let result;
+    if (count_1 === count_2) {
+        result = " Hai chuỗi giống nhau"
+        for (let i = 0; i < count_1; i++) {
+            if (arr_1[i] !== arr_2[i]) {
+                result = "Hai chuỗi khác nhau";
+                break;
+            }
+        }
+    } else {
+        result = "Hai chuỗi giống nhau"
+    }
+    document.write(result)
+</script>
+</body>
+</html>
