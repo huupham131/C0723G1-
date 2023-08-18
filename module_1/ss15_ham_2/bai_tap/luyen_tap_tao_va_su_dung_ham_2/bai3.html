@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function factorial(x) {
+        let result = 1;
+        for (i = 1; i <= x; i++) {
+            result = result * i;
+        }
+        alert('Giai thừa của số đó là: ' + result)
+    }
+
+    let num = +prompt('Nhập vào số cần tính giai thừa:')
+    factorial(num)
+</script>
+</body>
+</html>

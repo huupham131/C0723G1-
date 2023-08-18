@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="check">Nhập</label>
+<input id="check">
+<select id="op">
+    <option>feet</option>
+    <option value="meter">mét </option>
+</select><br>
+<button onclick="change()">Đổi</button>
+<br>
+<div id="result"></div>
+<script>
+   let inputValue = +document.getElementById('check').value;
+    function changeFtoM() {
+        inputValue = +document.getElementById('check').value;
+        result = 0.305 * inputValue;
+        document.getElementById('result').innerHTML = (result +" met")
+    }
+
+    function changeMtoF() {
+        inputValue = +document.getElementById('check').value;
+        result = 3.279 * inputValue;
+        document.getElementById('result').innerHTML = (result + " feet")
+    }
+
+    function change() {
+        inputValue = +document.getElementById('check').value;
+        let op = document.getElementById('op').value;
+        if (op === "meters") {
+            changeFtoM()
+        } else {
+            changeMtoF()
+        }
+    }
+</script>
+</body>
+</html>

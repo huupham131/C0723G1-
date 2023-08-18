@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function arrCheck(x) {
+        let result = "Ký tự đã nhập không có trong mảng, vị trí -1"
+        for (i = 0; i < count; i++) {
+            if (x === arr[i]) {
+                result = ("Ký tự đã nhập nằm trong mảng và nằm ở vị trí [ " + i + "]");
+                break;
+            }
+        }
+        document.write(result)
+    }
+
+    let count = +prompt("Nhập vào số lượng phần tử của mảng")
+    let arr = new Array(count);
+    for (count = 0; count < arr.length; count++) {
+        arr[count] = prompt('Nhập giá trị phần tử [' + count + ']:')
+    }
+    document.write("Mảng đã nhập là [" + arr + "]" + "<br>");
+    let x = prompt('Nhập vào ký tự muốn tìm kiếm')
+    arrCheck(x)
+</script>
+</body>
+</html>
