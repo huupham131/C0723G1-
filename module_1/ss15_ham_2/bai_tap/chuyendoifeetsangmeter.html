@@ -9,17 +9,18 @@
 <input id="check">
 <select id="op">
     <option>feet</option>
-    <option value="meter">mét </option>
+    <option value="meter">mét</option>
 </select><br>
 <button onclick="change()">Đổi</button>
 <br>
 <div id="result"></div>
 <script>
-   let inputValue = +document.getElementById('check').value;
+    let inputValue = +document.getElementById('check').value;
+
     function changeFtoM() {
         inputValue = +document.getElementById('check').value;
         result = 0.305 * inputValue;
-        document.getElementById('result').innerHTML = (result +" met")
+        document.getElementById('result').innerHTML = (result + " met")
     }
 
     function changeMtoF() {
