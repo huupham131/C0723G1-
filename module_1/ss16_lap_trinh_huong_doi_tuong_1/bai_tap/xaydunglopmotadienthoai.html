@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xay dung lop mo ta dien thoai</title>
+</head>
+<body>
+<script>
+    class Phone {
+        constructor(name, battery, draft, inbox, outbox, status) {
+            this.name = name;
+            this.battery = battery;
+            this.draft = draft;
+            this.inbox = inbox;
+            this.outbox = outbox;
+            this.status = status;
+        }
+
+        checkStatus() {
+            if (this.status === "ON") {
+                document.write("Điện thoại đang bật")
+            } else {
+                document.write("Điện thoại đang tắt")
+            }
+            this.battery--
+        }
+
+        onOff() {
+            if (this.status === "OFF") {
+                this.status = "ON"
+                alert("Điện thoại đã được bật")
+            } else {
+                this.status = "OFF"
+                alert("Điện thoại đã tắt")
+            }
+        }
+
+        charge() {
+            this.battery = 80;
+        }
+
+        setDraft() {
+            if (this.status === "ON") {
+                let draft = prompt("Nhập tin nhắn nhập")
+                this.draft.push(draft);
+                this.battery--
+            } else {
+                alert("Bạn cần bật điện thoại")
+            }
+        }
+
+        sendMes(phone) {
+            if (this.status === "ON") {
+                let outbox = prompt("Nhập tin nhắn cần gửi")
+                this.outbox.push(outbox);
+                phone.inbox.push(outbox)
+                this.battery--
+            } else {
+                alert("Bạn cần bật điện thoại")
+            }
+        }
+
+        checkOutbox() {
+            if (this.status === "ON") {
+                document.write("Hộp thư đi: " + this.outbox + "<br>")
+                this.battery--
+            } else {
+                alert("Bạn cần bật điện thoại")
+            }
+        }
+
+        checkInbox() {
+            if (this.status === "ON") {
+                document.write("Hộp thư đến: " + this.inbox + "<br>")
+                this.battery--
+            } else {
+                alert("Bạn cần bật điện thoại")
+            }
+        }
+
+        checkDraft() {
+            if (this.status === "ON") {
+                document.write("Hộp thư nháp: " + this.draft + "<br>")
+                this.battery--
+            } else {
+                alert("Bạn cần bật điện thoại")
+            }
+        }
+
+        checkInfo() {
+            if (this.status === "ON") {
+                document.write("Name: " + this.name + " Battery: " + this.battery + " % " + "<br>")
+                this.battery--
+            } else {
+                alert("Bạn cần bật điện thoại")
+            }
+        }
+    }
+
+    let iphone = new Phone("iphone 13", 50, [], [], [], "ON")
+    let samsung = new Phone("Samsung S20", 50, [], [], [], "ON")
+    iphone.checkInfo()
+    samsung.checkInfo()
+    iphone.checkStatus()
+    samsung.checkStatus()
+    iphone.charge()
+    iphone.sendMes(samsung)
+    iphone.checkOutbox()
+    samsung.checkInbox()
+    iphone.checkInfo()
+</script>
+</body>
+</html>

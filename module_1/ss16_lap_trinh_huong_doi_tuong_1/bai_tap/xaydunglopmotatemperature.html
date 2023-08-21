@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(c) {
+            this.c = c
+        }
+
+        convertCToF() {
+            return this.c * 9 / 5 + 32;
+        }
+
+        convertCToK() {
+            return this.c + 273.15
+        }
+    }
+
+    let c = +prompt('Nhập nhiệt độ: ')
+    let nhietDo = new Temperature(c)
+    document.write('Độ C là :' + nhietDo.c + '<br>')
+    document.write('Độ K là :' + nhietDo.convertCToK() + '<br>')
+    document.write('Độ F là :' + nhietDo.convertCToF())
+</script>
+</body>
+</html>

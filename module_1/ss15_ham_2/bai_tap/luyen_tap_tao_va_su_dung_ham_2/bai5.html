@@ -8,7 +8,7 @@
 <script>
     let result
 
-    function minNum(a, b, c) {
+    function checkNumber(a, b, c) {
         if (a < b && a < c) {
             result = a
         } else if (b < c) {
@@ -21,7 +21,7 @@
     let num1 = +prompt('Nhập vào số thứ nhất:');
     let num2 = +prompt('Nhập vào số thứ 2:');
     let num3 = +prompt('Nhập vào số thứ 3:')
-    minNum(num1, num2, num3)
+    checkNumber(num1, num2, num3)
     document.write("Số nhỏ nhất là " + result)
 </script>
 </body>
