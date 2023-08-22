@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objects</title>
+</head>
+<body>
+<div id="game"></div>
+<script>
+    class Hero {
+        constructor(image, top, size, left, direction) {
+            this.image = image;
+            this.top = top;
+            this.left = left;
+            this.size = size;
+            this.direction = direction;
+        }
+
+        getHeroElement() {
+            return '<img width="' + this.size + '"' +
+                ' height="' + this.size + '"' +
+                ' src="' + this.image + '"' +
+                ' style="top: ' + this.top + 'px; left:' + this.left + 'px;position:absolute;" />';
+        }
+
+        moveRight() {
+            this.left += 70;
+        }
+
+        moveLeft() {
+            this.left -= 70;
+        }
+
+        moveTop() {
+            this.top -= 70;
+        }
+
+        moveDown() {
+            this.top += 70;
+        }
+    }
+
+    var hero = new Hero("https://tse1.explicit.bing.net/th?id=OIP.uRfZPZoYn73_KK9MjNPzAgHaIl&pid=Api&P=0&h=180", 50, 200, 30, 30);
+
+    function start() {
+        if (hero.direction === 'Right') {
+            if (hero.left < window.innerWidth - hero.size) {
+                hero.moveRight();
+            } else {
+                hero.direction = 'Down'
+            }
+        }
+        if (hero.direction === 'Down') {
+            if (hero.top < window.innerHeight - hero.size) {
+                hero.moveDown();
+            } else {
+                hero.direction = 'Left'
+            }
+        }
+        if (hero.direction === 'Left') {
+            if (hero.left > 0) {
+                hero.moveLeft();
+            } else {
+                hero.direction = 'Top'
+            }
+        }
+        if (hero.direction === 'Top') {
+            if (hero.top > 0) {
+                hero.moveTop();
+            } else {
+                hero.direction = 'Right'
+            }
+        }
+        document.getElementById('game').innerHTML = hero.getHeroElement();
+        setTimeout(start, 500)
+    }
+
+    hero.direction = 'Right'
+    start();
+</script>
+</body>
+</html>

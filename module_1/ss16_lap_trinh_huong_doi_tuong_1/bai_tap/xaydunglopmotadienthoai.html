@@ -18,14 +18,14 @@
 
         checkStatus() {
             if (this.status === "ON") {
-                document.write("Điện thoại đang bật")
+                document.write( + "Điện thoại đang bật" +"<br>")
             } else {
-                document.write("Điện thoại đang tắt")
+                document.write("Điện thoại đang tắt"+"<br>")
             }
             this.battery--
         }
 
-        onOff() {
+        checkOnOff() {
             if (this.status === "OFF") {
                 this.status = "ON"
                 alert("Điện thoại đã được bật")
