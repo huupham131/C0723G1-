@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let count= +prompt('Nhập vào số phần tử của mảng a');
+    let arrA= new Array(count)
+    for(i=0;i<count;i++) {
+        let num = +prompt('Nhập phần tử thứ [' + i + ']')
+        arrA[i]=num;
+    } document.write('Mảng a là ['+arrA+']')
+    let arrB= new Array(count)
+    let sum =0
+    for(i=0;i<count;i++){
+        sum=sum + arrA[i]
+        arrB[i]=sum
+    }
+    document.write('Mảng b là ['+arrB+']')
+</script>
+</body>
+</html>

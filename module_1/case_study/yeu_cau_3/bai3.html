@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numerators = [5, 2, 5];
+    let denominators = [6, 3, 4];
+    let max = numerators[0] / denominators[0]
+    let maxIndex = 0
+    for (i = 0; i < numerators.length; i++) {
+        if ((numerators[i] / denominators[i]) > max) {
+            max = (numerators[i] / denominators[i]);
+            maxIndex = i
+        }
+    }
+    document.write('Phân số lớn nhất là: ' + numerators[maxIndex] + '/' + denominators[maxIndex] + ' ở vị trí ' + maxIndex)
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function maxMinAvg(arr) {
+        let arrnew = []
+            let max = arr[0]
+            for (let i = 1; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+                arrnew[0] = arr[i]
+            }}
+            let min = arr[0]
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+                arrnew[1] = arr[i]
+            }
+            let sum = 0
+            sum = sum + arr[i];
+            arrnew[2] = sum / arr.length
+        }
+        return arrnew;
+    }
+    let arr1 = [2,6,7,4,3]
+   document.write(maxMinAvg(arr1))
+</script>
+</body>
+</html>

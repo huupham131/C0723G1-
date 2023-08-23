@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let h = +prompt('Nhập vào chiều cao của tam giác cân rỗng:')
+    if (h <= 0) {
+        alert('Nhập có vậy cũng sai')
+    } else {
+        for (i = 1; i <= h; i++) {
+            for (j = 1; j <= 2 * h - 1; j++) {
+                if ((i == h) || (j == h - i + 1) || (j == h + i - 1)) {
+                    document.write('*')
+                } else {
+                    document.write('&nbsp&nbsp')
+                }
+            } document.write('<br>')
+        }
+    }
+</script>
+</body>
+</html>

@@ -5,6 +5,26 @@
     <title>Title</title>
 </head>
 <body>
-
+<script>
+    while (true) {
+        text = prompt("xin nhập vào 1 chữ cái");
+        if (!/^[a-z]$/i.test(text)) {
+            alert("Nhập z cũng để sai")
+            continue;
+        }
+        textLower = text.toLowerCase();
+        switch (textLower) {
+            case "u":
+            case "e":
+            case "o":
+            case "a":
+            case "i":
+                alert(text + " là nguyên âm");
+                break;
+            default:
+                alert(text + " là phụ âm");
+        }
+    }
+</script>
 </body>
 </html>

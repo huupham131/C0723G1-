@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>adam eva</title>
+</head>
+<body>
+<script>
+    class apple{
+        constructor(height) {
+            this.height = 10;
+        }
+        getHeight(){
+            return this.height;
+        }
+        setHeight(sHeight){
+            this.height = sHeight;
+        }
+    }
+    class human{
+        constructor(name, isMale, weight, said){
+            this.name = name;
+            this.isMale = isMale;
+            this.weight = weight;
+            this.said = said;
+        }
+        getName(){
+            return this.name;
+        }
+        getWeight(){
+            return this.weight;
+        }
+        setWeight(sWeight){
+            this.weight = sWeight;
+        }
+        getIsMale(){
+            if (this.isMale){
+                return "Male";
+            }else {
+                return "Female";
+            }
+        }
+        getInfo(){
+            return "Name: " + this.name + "<br>Gender: " + this.getIsMale() + "<br>Comments: " + this.said + "<br>";
+        }
+    }
+
+
+    let myApple = new apple();
+    let adam = new human("Adam", true, 80, "tôi dek thích táo, tôi thích Apple");
+    let eva = new human("Eva", false, 60, "tôi dek thích Apple, tôi thích Samsung");
+
+    document.write(adam.getInfo() + "<br>");
+    document.write(eva.getInfo() + "<br>");
+
+    let count = 1;
+    while (myApple.getHeight() > 0){
+        let lst = [eva, adam];
+        let actionHuman = lst[count%2];
+
+        myApple.setHeight(myApple.getHeight() - 1);
+        actionHuman.setWeight(actionHuman.getWeight() + 1);
+
+        document.write("Set" + count + ": " + actionHuman.getName() + " ăn táo<br>");
+        document.write("- Trọng lượng táo còn lại: " + myApple.getHeight() + "kg<br>");
+        document.write("- Trọng lượng " + actionHuman.getName() + ": " + actionHuman.getWeight() + "kg<br>");
+        document.write("<br>");
+        count++;
+    }
+
+</script>
+</body>
+</html>
