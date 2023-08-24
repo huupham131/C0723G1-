@@ -5,8 +5,34 @@
     <title>Title</title>
 </head>
 <body>
+<ol type="1">
+    <caption>MENU</caption>
+    <li>Coffee</li>
+    <li>Cam Vắt</li>
+    <li>Nước Ép Cà Rốt</li>
+    <li>Nước Ép Cà Chua</li>
+    <li>Nước Lọc</li>
+    <li>Nước Dừa</li>
+</ol>
+<button type="button" onclick="click1()">Chọn nước</button>
 <script>
-    let 
+    function click1() {
+        let price = [15000, 20000, 17000, 17000, 5000, 21000];
+        let total = 0
+        do {
+            let choose = +prompt('Nhập mã nước đi bạn(nhập 7 để thoát)');
+            if (choose < 7) {
+                let quantity = +prompt('Nhập số lượng')
+                total += price[choose - 1] * quantity;
+            } else if (choose > 7) {
+                alert('Nhập lại bạn ơi')
+            } else {
+                alert('Số tiền b phải trả là ' + total)
+                break;
+            }
+        }
+        while (true);
+    }
 </script>
 </body>
 </html>

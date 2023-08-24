@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str1 = prompt('Nhập vào chuỗi muốn chuẩn hóa')
+
+    function nomalize(str) {
+        let newString = str.split(' ');
+        let arr1 = [];
+        let arr2 = [];
+
+        for (let i = 0; i < newString.length; i++) {
+            newString[i] = newString[i].trim();
+            if (newString[i] !== "") {
+                arr1.push(newString[i]);
+            }
+        }
+        for (let i = 0; i < arr1.length; i++) {
+            arr2.push(arr1[i].charAt(0).toUpperCase() + arr1[i].slice(1).toLowerCase());
+        }
+        let nomalize1 = arr2.join(' ');
+        document.write(nomalize1 + '<br>');
+        let max = arr2[0];
+        for (let j = 1; j < arr2.length; j++) {
+            if (max.length < arr2[j].length) {
+                max = arr2[j];
+            }
+        }
+        document.write('Từ dài nhất: ' + max)
+    }
+
+    nomalize(str1)
+</script>
+</body>
+</html>

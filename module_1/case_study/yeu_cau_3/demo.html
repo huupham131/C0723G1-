@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3-5_goi_mon</title>
+    <style>
+        td{
+            border: black 1px solid;
+        }
+        table{
+            border-collapse: collapse
+        }
+        button{
+            height: 35px;
+            width: 30px;
+            border-radius: 10px;
+            border: none;
+            color: white;
+            background-color: #5f6062;
+            font-size: 20px;
+            font-weight: inherit;
+        }
+        button:hover{
+            background-color: green;
+        }
+        img{
+            border-radius: 20px;
+            vertical-align: center;
+        }
+        input{
+            border: none;
+        }
+    </style>
+</head>
+<body>
+<table id="menu"></table>
+<caption style= "font-size:500%; padding:10px; color:blue "> MENU</caption>
+<script>
+    let width = 200;
+    let height = 100;
+    let listImg = [`<img src="https://tse3.mm.bing.net/th?id=OIP.Ab-vkKED6NoKloHThzRD0AHaE1&pid=Api&P=0&h=180" height="${height}" width="${width}"/>`,
+        `<img src="https://tse2.mm.bing.net/th?id=OIP.-TcDlm3kyOdk01pSmo64xAHaJQ&pid=Api&P=0&h=180" height="${height}" width="${width}"/>`,
+        `<img src="https://tse2.mm.bing.net/th?id=OIP.H5wHkWLlq8reU5lyWojlmgHaHU&pid=Api&P=0&h=180" height="${height}" width="${width}"/>`,
+        `<img src="https://hocphache.com.vn/wp-content/uploads/2019/08/nuoc-ep-ca-chua-nhieu-vitamin.jpg" height="${height}" width="${width}"/>`,
+        `<img src="https://vinmec-prod.s3.amazonaws.com/images/20200513_094457_911488_loi-ich-cua-nuoc-du.max-1800x1800.jpg" height="${height}" width="${width}"/>`,
+        `<img src="https://bunquayphuquoc.com.vn/timthumb.php?src=/upload/images/Pic_Menu(Cu)/N-2-Loc.jpg&h=600&w=600&zc=2" height="${height}" width="${width}"/>`]
+    let listName = ["Coffee", "Cam vắt", "Nước cà rốt", "Nước cà chua", "Nước dừa", "Nước lọc"];
+    let listValueShow = ["25,000 VND", "35,000 VND", "35,000 VND", "35,000 VND", "45,000 VND", "10,000 VND"];
+    let listValue = [25000, 35000, 35000, 35000, 45000, 10000];
+    let listCount = [0, 0, 0, 0, 0, 0];
+    function createMenu() {
+        let data = "";
+        for (let i = 0; i < listName.length; i++) {
+            data += "<tr>";
+            data += `<td style="width: 50px; text-align: center">${i}</td>
+             <td>${listImg[i]}</td>
+             <td style="width: 150px; text-align: center">${listName[i]}</td>
+             <td style="width: 150px; text-align: center">${listValueShow[i]}</td>
+             <td style="width: 200px; text-align: center">
+            <button onclick="changeCount([-1, ${i}])">-</button>
+             <input type="number" disabled value="${listCount[i]}" style="width: 75px; height: 35px; text-align: center; font-size: 25px">
+             <button onclick="changeCount([1, ${i}])">+</button>
+</td>`
+            data += "</tr>";
+        }
+        data += `<tr><td colspan='5' style='height: 50px; text-align: right; font-weight: bold'>Tổng cộng : ${currency()}${"&emsp;"}<button onclick="tinhTien()" style="width: 200px">Thanh toán</button>${"&emsp;"}</td></tr>`
+        document.getElementById("menu").innerHTML = data;
+    }
+    function changeCount(arr){
+        let id = arr[1];
+        let value = arr[0];
+        listCount[id] += value;
+        if (listCount[id] < 0){
+            listCount[id] = 0;
+        }
+        createMenu();
+    }
+    function currency(){
+        let sum = 0;
+        for (let i = 0; i < listCount.length; i++){
+            sum += listCount[i] * listValue[i];
+        }
+        return sum;
+    }
+    function tinhTien(){
+        alert("Cho xin " + currency() + " VND đi anh chai!!!");
+    }
+    createMenu()
+</script>
+</body>
+</html>
