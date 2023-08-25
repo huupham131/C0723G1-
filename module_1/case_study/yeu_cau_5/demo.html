@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let row = +prompt("input row:"); //2
+    let col = +prompt("input col:"); //3
+
+    let arr2d = new Array(row); //[U, U]
+    for (let row = 0; row < arr2d.length; row++) {
+        // arr2d[row] = [];
+        arr2d[row] = new Array(col); // [ [1,2,3], [U, U, U]]
+        for (let col = 0; col < arr2d[row].length; col++) {
+            arr2d[row][col] = prompt("input value [" + row + "][" + col + "]:");
+        }
+    }
+
+    for (let row = 0; row < arr2d.length; row++) {
+        for (let col = 0; col < arr2d[row].length; col++) {
+            document.write(arr2d[row][col]+"&nbsp;");
+        }
+        document.write("</br>");
+    }
+</script>
+</body>
+</html>

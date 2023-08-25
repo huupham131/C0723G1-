@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div id="add-product">
+        <button type="button" onclick="addNewStudent()">Thêm mới học viên</button>
+        <button type="button" onclick="editInfoStudent()">Sửa thông tin học viên</button>
+        <button type="button" onclick="deleteStudent()">Xóa học viên</button>
+    </div>
+    <div id="root"></div>
+</div>
+<script>
+    class Student{
+       constructor(id,name,grade,email,dob,module){
+           this.idStudent= id;
+           this.name = name;
+           this.grade=grade;
+           this.email= email;
+           this.dob=dob;
+           this.module=module;
+       }
+    }
+    let studen1= new Student('HV-0001','Trần Anh Tuấn','C0823G1','tuantran@gmail.com','01/01/2004','1')
+    let studen2= new Student('HV-0002','Phạm Thanh Hữu','C0723G1','tuantran@gmail.com','01/01/1998','1')
+    let studen3= new Student('HV-0003','Đàm Xuân Tưởng','C0723G1','tuantran@gmail.com','01/01/1997','1')
+    let studentList= [student1,student2,student3]
+    tableStudent()
+    function displayStudent() {
+        let tableStudent = `<table border="1">
+        <thead>
+          <tr>
+            <th>Mã học viên</th>
+            <th>Tên</th>
+            <th>Lớp</th>
+            <th>Email</th>
+            <th>Ngày sinh</th>
+          </tr>
+        </thead>
+        <tbody>`;
+        for (let i = 0; i < student.length; i++) {
+            const student = student[i];
+            tableStudent += `<tr>
+            <td>${student}</td>
+            <td></td>
+            <td></td>
+          </tr>`;
+        }
+        tableStudent += `</tbody>
+      </table>`;
+        document.getElementById("root").innerHTML = tableStudent;
+    }
+      function addNewProduct() {
+          let product = document.getElementById("inputValue").value;
+          products.push(product);
+          displayProducts();
+          document.getElementById("inputValue").value = "";
+      }
+      function deleteProduct(index) {
+          const confirmDelete = confirm(
+              `Ban co muon xoa san pham ${products[index]} khong?`
+          );
+          if (confirmDelete) {
+              products.splice(index, 1);
+              displayProducts();
+          }
+      }
+      function showEditProduct(index) {
+          document.getElementById("inputValue").value = products[index];
+          let buttonEdit = `<button type="button" onclick="editProduct('${index}')">Chinh sua</button>`;
+          document.getElementById("edit-product").innerHTML = buttonEdit;
+      }
+      function editProduct(index) {
+          let newProduct = document.getElementById("inputValue").value;
+          products[index] = newProduct;
+          displayProducts();
+          document.getElementById("inputValue").value = "";
+          document.getElementById("edit-product").innerHTML = "";
+      }
+      displayProducts();
+</script>
+</body>
+</html>

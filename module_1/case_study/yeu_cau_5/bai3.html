@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let row = +prompt('Nhập row:');
+    let col = +prompt('Nhập col:');
+    let arr2d = new Array(row);
+    for (let i = 0; i < arr2d.length; i++) {
+        arr2d[i] = new Array(col);
+        for (let j = 0; j < arr2d[i].length; j++) {
+            arr2d[i][j] = Math.floor(Math.random() * 100);
+        }
+    }
+    for (let row = 0; row < arr2d.length; row++) {
+        document.write('[')
+        for (let col = 0; col < arr2d[row].length; col++) {
+            document.write(arr2d[row][col] + "&nbsp;");
+        }
+        document.write("]");
+    }
+    document.write('<br>')
+
+    function checkMinMax(arr2d) {
+        let min = arr2d[0][0]
+        for (let i = 0; i < arr2d.length; i++) {
+            for (let j = 0; j < arr2d[i].length; j++) {
+                if (arr2d[i][j] < min) {
+                    min = arr2d[i][j]
+                }
+            }
+        }
+        document.write('Giá trị nhỏ nhất: ' + min + '<br>')
+        let max = arr2d[0][0]
+        for (let i = 0; i < arr2d.length; i++) {
+            for (let j = 0; j < arr2d[i].length; j++) {
+                if (arr2d[i][j] > max) {
+                    max = arr2d[i][j]
+                }
+            }
+        }
+        document.write('Giá trị lớn nhất: ' + max)
+    }
+
+    checkMinMax(arr2d)
+</script>
+</body>
+</html>

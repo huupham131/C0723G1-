@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    debugger
+    let row = +prompt('Nhập row(m):');
+    let col = +prompt('Nhập col(n):');
+    let arrMN = new Array(row);
+    for (let i = 0; i < arrMN.length; i++) {
+        arrMN[i] = new Array(col);
+        for (let j = 0; j < arrMN[i].length; j++) {
+            arrMN[i][j] = +prompt('Nhập vào giá trị [' + i + '][' + j + ']:')
+        }
+    }
+    for (let row = 0; row < arrMN.length; row++) {
+        document.write('[')
+        for (let col = 0; col < arrMN[row].length; col++) {
+            document.write(arrMN[row][col] + "&nbsp;");
+        }
+        document.write("]" + "<br>");
+    }
+    let sum = 0
+    for (let row = 0; row < arrMN.length; row++) {
+        for (let col = 0; col < arrMN[row].length; col++) {
+            if (arrMN[row][col] % 2 === 0) {
+                sum = sum + arrMN[row][col];
+            }
+        }
+    }
+    document.write('Tổng các số chẵn trong mảng là: ' + sum)
+</script>
+</body>
+</html>

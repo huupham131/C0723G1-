@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    debugger
+    let str1 = prompt('Nhập vào chuỗi:')
+
+    function differentSymbolsNaive(str) {
+        let newString = str.split('')
+        let arr1 = [];
+        for (i = 0; i < newString.length; i++) {
+            if (!arr1.includes(newString[i])) {
+                arr1.push(newString[i])
+            }
+        }
+        document.write('Có ' + arr1.length + ' ký tự khác nhau và Các ký tự khác nhau là ' + arr1.join(','))
+    }
+
+    differentSymbolsNaive(str1)
+</script>
+</body>
+</html>

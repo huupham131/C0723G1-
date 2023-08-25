@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str1 = prompt('Nhập vào chuỗi thứ nhất')
+    let str2 = prompt('Nhập vào chuỗi thứ hai')
+
+    function commonCharacterCount(s1, s2) {
+        let newStr1 = s1.split('')
+        let newStr2 = s2.split('')
+        let arr1 = [];
+        for (let i = 0; i < newStr1.length; i++) {
+            for (let j = 0; j < newStr2.length; j++) {
+                if (newStr1[i] === newStr2[j]) {
+                    arr1.push(newStr2[j]);
+                    newStr2.splice(j, 1);
+                    break;
+                }
+            }
+        }
+        return arr1;
+    }
+
+    let result = commonCharacterCount(str1, str2)
+    document.write('Số ký tự giống nhau la:' + result.length + "<br>")
+    document.write(result.join(','))
+</script>
+</body>
+</html>

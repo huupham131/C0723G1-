@@ -6,33 +6,38 @@
 </head>
 <body>
 <script>
-    let inputStr = prompt("nhap chuoi can chuan hoa")
-    let arr1 = [];
-    let demo = inputStr
-    demo = demo.toLowerCase()
-    for (let i=0; i<demo.length;i++){
-        if(demo[i] ===" "&& demo[i+1]===" "){
-            arr1[i] =""
-        }
-        else{arr1[i] = demo[i]}
-    }
-    if(arr1[0]==="" || arr1[0]===" "){
-        for(let j =0; j<arr1.length-1; j++){
-            if(arr1[j]===" "&& arr1[j+1] !==" "){
-                arr1[j+1] = arr1[j+1].toUpperCase()
-            }
-        }
-    }
-    else {
-        arr1[0] = arr1[0].toUpperCase()
-        for(let j =0; j<arr1.length-1; j++){
-            if(arr1[j]===" "&& arr1[j+1] !==" "){
-                arr1[j+1] = arr1[j+1].toUpperCase()
-            }
-        }
-    }
-    let result = arr1.join("")
-    console.log(result)
+    // let inputStr = prompt("nhap chuoi can chuan hoa")
+    // let arr1 = [];
+    // let demo = inputStr
+    // demo = demo.toLowerCase()
+    // for (let i=0; i<demo.length;i++){
+    //     if(demo[i] ===" "&& demo[i+1]===" "){
+    //         arr1[i] =""
+    //     }
+    //     else{arr1[i] = demo[i]}
+    // }
+    // if(arr1[0]==="" || arr1[0]===" "){
+    //     for(let j =0; j<arr1.length-1; j++){
+    //         if(arr1[j]===" "&& arr1[j+1] !==" "){
+    //             arr1[j+1] = arr1[j+1].toUpperCase()
+    //         }
+    //     }
+    // }
+    // else {
+    //     arr1[0] = arr1[0].toUpperCase()
+    //     for(let j =0; j<arr1.length-1; j++){
+    //         if(arr1[j]===" "&& arr1[j+1] !==" "){
+    //             arr1[j+1] = arr1[j+1].toUpperCase()
+    //         }
+    //     }
+    // }
+    // let result = arr1.join("")
+    // console.log(result)
+    let arr1= 'avms aff'
+    let arr2=[]
+    for (let i = 0; i < arr1.length; i++){
+        arr2.push(arr1[i].charAt().toUpperCase())}
+    console.log(arr2)
 </script>
 </body>
 </html>

@@ -7,15 +7,14 @@
 <body>
 <label for="check">Nhập số</label>
 <input id="check" type="number"><br>
-<button onclick="isPrime(num)">Check</button>
+<button onclick="isPrime()">Check</button>
 <div id="result"></div>
 <script>
-    let num = document.getElementById('check').value;
-
-    function isPrime(num) {
+    function isPrime() {
+        let num = document.getElementById('check').value;
         let souoc = 0;
         if (num === 0) {
-            document.getElementById(result).innerText = ('Số đã nhập không phải là số nguyên tố')
+            document.getElementById('result').innerText = ('Số đã nhập không phải là số nguyên tố')
         } else {
             for (let i = 1; i <= num; i++) {
                 if (num % i === 0) {
