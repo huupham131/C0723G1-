@@ -58,14 +58,9 @@
     }
 
     function addNewStudent() {
-        let newStudentId = prompt("Nhập mã học viên: ");
-        for(i=0;i<studentList.length;i++){
-            if(newStudentId === studentList[i].idStudent){
-
-            }
-        }
+        let newStudentId = prompt("Nhập mã học viên: ","HV-");
         let newName = prompt("Nhập tên học viên: ");
-        let newGrade = prompt("Nhập tên lớp: ");
+        let newGrade = prompt("Nhập tên lớp:" );
         let newEmail = prompt("Nhập email: ");
         let newBirthday = prompt("Nhập ngày sinh: ");
         let newModule = prompt("Nhập module:")
@@ -75,7 +70,7 @@
     }
 
     function deleteStudent() {
-        let deleteId = prompt('Nhập mã học viên bạn muốn xoá:')
+        let deleteId = prompt('Nhập mã học viên bạn muốn xoá:',"HV-")
         let flag= false
         for (i = 0; i < studentList.length; i++) {
             if (deleteId === studentList[i].idStudent) {
@@ -84,6 +79,8 @@
                     flag = true
                     studentList.splice(i, 1);
                     break;
+                }else{
+                    return;
                 }
             }
         }
@@ -94,7 +91,7 @@
     }
 
     function editInfoStudent() {
-        let editId = prompt('Nhập vào mã học viên bạn muốn sửa:');
+        let editId = prompt('Nhập vào mã học viên bạn muốn sửa:',"HV-");
         for (let i = 0; i < studentList.length; i++) {
             if (editId === studentList[i].idStudent) {
                 studentList[i].idStudent = prompt('Nhập vào mã mới học viên:')
@@ -111,13 +108,12 @@
         tableStudent();
     }
     function checkInputRequired(inputName) {
-        let input = prompt(`Nhập ${inputName}`);
         while (true) {
             if (input !== "") {
                 return input;
             } else {
-                alert(`${inputName} không được để trống!`);
-                input = prompt(`Nhập ${inputName}`);
+                alert(` không được để trống!`);
+                input = prompt(`Nhập`);
             }
         }
     }
@@ -128,11 +124,12 @@
             if (pattern.test(input)) {
                 return input;
             } else {
-                alert(`${inputName} phải là chữ cái!`);
+                alert(`phải là chữ cái!`);
                 input = checkInputRequired(inputName);
             }
         }
     }
+
 </script>
 </body>
 </html>
