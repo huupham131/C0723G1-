@@ -58,9 +58,9 @@
     }
 
     function addNewStudent() {
-        let newStudentId = prompt("Nhập mã học viên: ","HV-");
+        let newStudentId = prompt("Nhập mã học viên: ", "HV-");
         let newName = prompt("Nhập tên học viên: ");
-        let newGrade = prompt("Nhập tên lớp:" );
+        let newGrade = prompt("Nhập tên lớp:");
         let newEmail = prompt("Nhập email: ");
         let newBirthday = prompt("Nhập ngày sinh: ");
         let newModule = prompt("Nhập module:")
@@ -70,28 +70,28 @@
     }
 
     function deleteStudent() {
-        let deleteId = prompt('Nhập mã học viên bạn muốn xoá:',"HV-")
-        let flag= false
+        let deleteId = prompt('Nhập mã học viên bạn muốn xoá:', "HV-")
+        let flag = false
         for (i = 0; i < studentList.length; i++) {
             if (deleteId === studentList[i].idStudent) {
-                 const confirmdel=confirm('Bạn có muốn xoá học viên có mã ' + deleteId + ' không?');
+                const confirmdel = confirm('Bạn có muốn xoá học viên có mã ' + deleteId + ' không?');
                 if (confirmdel) {
                     flag = true
                     studentList.splice(i, 1);
                     break;
-                }else{
+                } else {
                     return;
                 }
             }
         }
-            if(!flag) {
-                alert('Mã học viên không tồn tại')
-            }
+        if (!flag) {
+            alert('Mã học viên không tồn tại')
+        }
         tableStudent();
     }
 
     function editInfoStudent() {
-        let editId = prompt('Nhập vào mã học viên bạn muốn sửa:',"HV-");
+        let editId = prompt('Nhập vào mã học viên bạn muốn sửa:', "HV-");
         for (let i = 0; i < studentList.length; i++) {
             if (editId === studentList[i].idStudent) {
                 studentList[i].idStudent = prompt('Nhập vào mã mới học viên:')
@@ -107,6 +107,7 @@
         }
         tableStudent();
     }
+
     function checkInputRequired(inputName) {
         while (true) {
             if (input !== "") {
@@ -117,6 +118,7 @@
             }
         }
     }
+
     function checkName(inputName) {
         let input = checkInputRequired(inputName);
         let pattern = /^[a-zA-Z ]+$/;
