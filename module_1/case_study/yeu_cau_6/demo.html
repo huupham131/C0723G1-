@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6-1_quan_ly_hoc_sinh</title>
+    <style>
+        button {
+            margin: 10px;
+            width: 80px;
+            height: 50px;
+            border-radius: 20px;
+            color: white;
+            background-color: rgba(100, 100, 100, 0.5);
+            border: none;
+            margin-bottom: 20px;
+            transition-duration: 800ms;
+            animation: startTable 2s;
+        }
+
+        @keyframes startTable {
+            from {
+                color: white;
+                background-color: white;
+                border: white;
+            }
+        }
+
+        button:hover {
+            scale: 1.1;
+            color: black;
+            background-color: rgba(255, 255, 255, 0.5);
+            border: black solid 1px;
+            transition-duration: 500ms;
+        }
+
+        td, th {
+            border: solid black 1px;
+            animation: startTable 2s;
+        }
+
+        tr:nth-child(even) {
+            background-color: lightgrey;
+            animation: startTable 2s;
+
+        }
+
+        #data {
+            border: 1px solid black;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table {
+            animation: startTable 2s;
+        }
+
+        .buttonAction {
+            width: 60px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+<div style="display: inline-block" onmouseleave="action(false)">
+    <button onmouseover="action(true)">Action</button>
+    <button onclick="addMember()" class="buttonAction" style="display: none">Add</button>
+    <button onclick="editMember()" class="buttonAction" style="display: none">Edit</button>
+    <button onclick="delMember()" class="buttonAction" style="display: none">Delete</button>
+</div>
+<table id="data">
+</table>
+<script>
+    let dataArr = [
+        ["HV-0001", "Mai Cơn Chắc Sân", "C0723G1", "sansi@gmail.com", "17/11/2011", 1],
+        ["HV-0002", "Mai Tài Phén", "C0723G1", "maitai@gmail.com.vn", "11/06/2012", 1],
+        ["HV-0003", "Lê Văn Đỗ Ki", "C0723G1", "levandoki@gmail.com", "07/07/1999", 2],
+        ["HV-0004", "Lê Nin", "C0723G1", "lenin@gmail.com.vn", "14/01/2010", 2],
+        ["HV-0005", "Đỗ Nam Trung", "C0723G1", "trump@gmail.com", "28/02/2014", 3],
+    ];
+    buildTable();
+
+    function action(boo) {
+        let element = document.getElementsByClassName("buttonAction");
+        if (boo) {
+            for (let i = 0; i < element.length; i++) {
+                element[i].style.display = "inline-block";
+            }
+        } else {
+            for (let i = 0; i < element.length; i++) {
+                element[i].style.display = "none";
+            }
+        }
+    }
+
+    function addMember() {
+        let code = "";
+        while (true) {
+            code = prompt("Nhập mã học viên (HV-XXXX, với XXXX là số)", "HV-");
+            let arrCode = getCode();
+            if (!arrCode.includes(code) && checkFormatCode(code)) {
+                break;
+            } else if (arrCode.includes(code)) {
+                alert("Mã này đã sử dụng. Vui lòng chọn mã khác");
+            } else {
+                alert("Mã này sai Format HV-XXXX. Vui lòng nhập lại");
+            }
+        }
+        let name = "";
+        while (true) {
+            name = prompt("Nhập tên học viên").trim();
+            if (name != "") {
+                name = standardizedName(name).trim();
+                if (name.length < 50) {
+                    break;
+                }
+                alert("Tên học viên tối đa 50 ký tự");
+            }
+            alert("Vui lòng nhập tên học viên");
+        }
+        let classInCodeGym = "";
+        while (true) {
+            classInCodeGym = prompt("Nhập lớp nhập học").toUpperCase();
+            if (classInCodeGym != "") {
+                break;
+            }
+            alert("Vui lòng điền lớp nhập học");
+        }
+        let email = "";
+        while (true) {
+            email = prompt("Nhập Email");
+            if (checkEmail(email)) {
+                break;
+            }
+            alert("Vui lòng điền Email");
+        }
+        let birthday = "";
+        while (true) {
+            birthday = prompt("Nhập ngày sinh (dd/mm/yyyy)");
+            if (checkDate(birthday)) {
+                break;
+            }
+            alert("Sai format dd/mm/yyyy. Xin hãy nhập lại")
+        }
+        let module = 0;
+        while (true) {
+            module = +prompt("Nhập module đang theo học");
+            if ([1, 2, 3, 4, 5, 6].includes(module)) {
+                break;
+            }
+            alert("Nhập Module từ 1-6")
+        }
+        dataArr.push([code, name, classInCodeGym, email, birthday, module]);
+        buildTable();
+    }
+
+    function editMember() {
+        let code = "";
+        let arrCode = getCode();
+        while (true) {
+            code = prompt("Nhập mã học viên (HV-XXXX, với XXXX là số)", "HV-");
+
+            if (!checkFormatCode(code)) {
+                alert("Mã này sai Format HV-XXXX. Vui lòng nhập lại");
+            } else if (!arrCode.includes(code)) {
+                alert("Mã này không tồn tại");
+                return;
+            } else {
+                break;
+            }
+        }
+        let ind = arrCode.indexOf(code);
+
+        let codeEdit = "";
+        while (true) {
+            codeEdit = prompt("Chỉnh sửa mã học viên (HV-XXXX, với XXXX là số)", dataArr[ind][0]);
+            let arrCode = getCode();
+            if (codeEdit != dataArr[ind][0]) {
+                if (!arrCode.includes(codeEdit) && checkFormatCode(codeEdit)) {
+                    break;
+                } else if (arrCode.includes(codeEdit)) {
+                    alert("Mã này đã sử dụng. Vui lòng chọn mã khác");
+                } else {
+                    alert("Mã này sai Format HV-XXXX. Vui lòng nhập lại");
+                }
+            } else {
+                break;
+            }
+        }
+        dataArr[ind][0] = codeEdit;
+        buildTable();
+
+        let nameEdit = "";
+        while (true) {
+            nameEdit = prompt("Chỉnh sửa tên học viên", dataArr[ind][1]).trim();
+            if (nameEdit != "") {
+                nameEdit = standardizedName(nameEdit).trim();
+                if (nameEdit.length < 50) {
+                    break;
+                }
+                alert("Tên học viên tối đa 50 ký tự");
+            }
+            alert("Vui lòng nhập tên học viên");
+        }
+        dataArr[ind][1] = nameEdit;
+        buildTable();
+
+        let classEdit = "";
+        while (true) {
+            classEdit = prompt("Chỉnh sửa lớp nhập học", dataArr[ind][2]).toUpperCase();
+            if (classEdit != "") {
+                break;
+            }
+            alert("Vui lòng điền lớp nhập học");
+        }
+        dataArr[ind][2] = classEdit;
+        buildTable();
+
+        let emailEdit = "";
+        while (true) {
+            emailEdit = prompt("Chỉnh sửa Email", dataArr[ind][3]);
+            if (checkEmail(emailEdit)) {
+                break;
+            }
+            alert("Vui lòng điền Email");
+        }
+        dataArr[ind][3] = emailEdit;
+        buildTable();
+
+        let birthdayEdit = "";
+        while (true) {
+            birthdayEdit = prompt("Chỉnh sửa ngày sinh (dd/mm/yyyy)", dataArr[ind][4]);
+            if (checkDate(birthdayEdit)) {
+                break;
+            }
+            alert("Sai format dd/mm/yyyy. Xin hãy nhập lại")
+        }
+        dataArr[ind][4] = birthdayEdit;
+        buildTable();
+
+        let moduleEdit = "";
+        while (true) {
+            moduleEdit = +prompt("Chỉnh sửa module đang theo học", dataArr[ind][5]);
+            if ([1, 2, 3, 4, 5, 6].includes(moduleEdit)) {
+                break;
+            }
+            alert("Nhập Module từ 1-6")
+        }
+        dataArr[ind][5] = moduleEdit;
+        buildTable();
+
+    }
+
+    function delMember() {
+        let code = "";
+        let arrCode = getCode();
+        while (true) {
+            code = prompt("Nhập mã học viên (HV-XXXX, với XXXX là số)", "HV-");
+
+            if (!checkFormatCode(code)) {
+                alert("Mã này sai Format HV-XXXX. Vui lòng nhập lại");
+            } else if (!arrCode.includes(code)) {
+                alert("Mã này không tồn tại");
+                return;
+            } else {
+                break;
+            }
+        }
+        let ind = arrCode.indexOf(code);
+        let confirmDel = confirm(`Bạn muốn xóa học viên : ${dataArr[ind][0]} - ${dataArr[ind][1]} của lớp : ${dataArr[ind][2]} chứ`);
+        if (confirmDel) {
+            dataArr.splice(ind, 1);
+            buildTable();
+        }
+    }
+
+    function buildTable() {
+        let dataStr = `<tr>
+                    <th style="width: 5%; height: 30px">STT</th>
+                    <th style="width: 12%">Mã học viên</th>
+                    <th style="width: 30%">Tên học viên</th>
+                    <th style="width: 12%">Lớp</th>
+                    <th style="width: 15%">Email</th>
+                    <th style="width: 15%">Ngày sinh</th>
+                    <th>Module</th>
+                   </tr><tr><td colspan="7" style="height: 10px"></td></tr>`
+        for (let i = 0; i < dataArr.length; i++) {
+            dataStr += `<tr><td style="text-align: center">${i + 1}</td>`;
+            for (let j = 0; j < dataArr[i].length; j++) {
+                dataStr += `<td>${dataArr[i][j]}</td>`;
+            }
+            dataStr += `</tr>`;
+        }
+        document.getElementById("data").innerHTML = dataStr;
+    }
+
+    function standardizedName(name) {
+        let upper = name.toUpperCase();
+        let lower = name.toLowerCase();
+        let standard = upper[0];
+        for (let i = 1; i < name.length; i++) {
+            if (name[i - 1] == " ") {
+                standard += upper[i];
+            } else {
+                standard += lower[i];
+            }
+        }
+        return standard;
+    }
+
+    function getCode() {
+        let codeData = [];
+        for (let i = 0; i < dataArr.length; i++) {
+            codeData.push(dataArr[i][0]);
+        }
+        return codeData;
+    }
+
+    function checkFormatCode(text) {
+        if (text.length == 7) {
+            let textHV = "";
+            let xxxx = "";
+            for (let i = 0; i < 3; i++) {
+                textHV += text[i];
+            }
+            for (let i = 3; i < text.length; i++) {
+                xxxx += text[i];
+                xxxx = +xxxx;
+            }
+            if (!isNaN(xxxx) && textHV == "HV-") {
+                return true
+            }
+        }
+        return false
+    }
+
+    function checkDate(date) {
+        let arr = date.match(/^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/);
+        if (arr != null) {
+            let data = arr.toString().split("/");
+            if (+data[0] <= 31 && +data[1] <= 12) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function checkEmail(email) {
+        return /.+@.+\.com\.?.*/i.test(email)
+    }
+</script>
+</body>
+</html>

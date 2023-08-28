@@ -14,73 +14,125 @@
     <div id="root"></div>
 </div>
 <script>
-    class Student{
-       constructor(id,name,grade,email,dob,module){
-           this.idStudent= id;
-           this.name = name;
-           this.grade=grade;
-           this.email= email;
-           this.dob=dob;
-           this.module=module;
-       }
+    class Student {
+        constructor(id, name, grade, email, birthday, module) {
+            this.idStudent = id;
+            this.name = name;
+            this.grade = grade;
+            this.email = email;
+            this.birthday = birthday;
+            this.module = module;
+        }
     }
-    let studen1= new Student('HV-0001','Trần Anh Tuấn','C0823G1','tuantran@gmail.com','01/01/2004','1')
-    let studen2= new Student('HV-0002','Phạm Thanh Hữu','C0723G1','tuantran@gmail.com','01/01/1998','1')
-    let studen3= new Student('HV-0003','Đàm Xuân Tưởng','C0723G1','tuantran@gmail.com','01/01/1997','1')
-    let studentList= [student1,student2,student3]
+
+    let student1 = new Student('HV-0001', 'Trần Anh Tuấn', 'C0823G1', 'tuantran@gmail.com', '01/01/2004', '1')
+    let student2 = new Student('HV-0002', 'Phạm Thanh Hữu', 'C0723G1', 'huupham@gmail.com', '01/01/1998', '1')
+    let student3 = new Student('HV-0003', 'Đàm Xuân Tưởng', 'C0723G1', 'tuongdam@gmail.com', '01/01/1997', '1')
+    let studentList = [student1, student2, student3]
     tableStudent()
-    function displayStudent() {
-        let tableStudent = `<table border="1">
-        <thead>
+
+    function tableStudent() {
+        let table = `<table border="1">
           <tr>
             <th>Mã học viên</th>
             <th>Tên</th>
             <th>Lớp</th>
             <th>Email</th>
             <th>Ngày sinh</th>
-          </tr>
-        </thead>
-        <tbody>`;
-        for (let i = 0; i < student.length; i++) {
-            const student = student[i];
-            tableStudent += `<tr>
-            <td>${student}</td>
-            <td></td>
-            <td></td>
+            <th>Module</th>
+          </tr>`
+
+
+        for (let i = 0; i < studentList.length; i++) {
+            table += `<tr>
+            <td>${studentList[i].idStudent}</td>
+            <td>${studentList[i].name}</td>
+            <td>${studentList[i].grade}</td>
+            <td>${studentList[i].email}</td>
+            <td>${studentList[i].birthday}</td>
+            <td>${studentList[i].module}</td>
           </tr>`;
         }
-        tableStudent += `</tbody>
-      </table>`;
-        document.getElementById("root").innerHTML = tableStudent;
+        table += `</table>`;
+        document.getElementById("root").innerHTML = table;
     }
-      function addNewProduct() {
-          let product = document.getElementById("inputValue").value;
-          products.push(product);
-          displayProducts();
-          document.getElementById("inputValue").value = "";
-      }
-      function deleteProduct(index) {
-          const confirmDelete = confirm(
-              `Ban co muon xoa san pham ${products[index]} khong?`
-          );
-          if (confirmDelete) {
-              products.splice(index, 1);
-              displayProducts();
-          }
-      }
-      function showEditProduct(index) {
-          document.getElementById("inputValue").value = products[index];
-          let buttonEdit = `<button type="button" onclick="editProduct('${index}')">Chinh sua</button>`;
-          document.getElementById("edit-product").innerHTML = buttonEdit;
-      }
-      function editProduct(index) {
-          let newProduct = document.getElementById("inputValue").value;
-          products[index] = newProduct;
-          displayProducts();
-          document.getElementById("inputValue").value = "";
-          document.getElementById("edit-product").innerHTML = "";
-      }
-      displayProducts();
+
+    function addNewStudent() {
+        let newStudentId = prompt("Nhập mã học viên: ");
+        for(i=0;i<studentList.length;i++){
+            if(newStudentId === studentList[i].idStudent){
+
+            }
+        }
+        let newName = prompt("Nhập tên học viên: ");
+        let newGrade = prompt("Nhập tên lớp: ");
+        let newEmail = prompt("Nhập email: ");
+        let newBirthday = prompt("Nhập ngày sinh: ");
+        let newModule = prompt("Nhập module:")
+        let newStudent = new Student(newStudentId, newName, newGrade, newEmail, newBirthday, newModule);
+        studentList.push(newStudent);
+        tableStudent();
+    }
+
+    function deleteStudent() {
+        let deleteId = prompt('Nhập mã học viên bạn muốn xoá:')
+        let flag= false
+        for (i = 0; i < studentList.length; i++) {
+            if (deleteId === studentList[i].idStudent) {
+                 const confirmdel=confirm('Bạn có muốn xoá học viên có mã ' + deleteId + ' không?');
+                if (confirmdel) {
+                    flag = true
+                    studentList.splice(i, 1);
+                    break;
+                }
+            }
+        }
+            if(!flag) {
+                alert('Mã học viên không tồn tại')
+            }
+        tableStudent();
+    }
+
+    function editInfoStudent() {
+        let editId = prompt('Nhập vào mã học viên bạn muốn sửa:');
+        for (let i = 0; i < studentList.length; i++) {
+            if (editId === studentList[i].idStudent) {
+                studentList[i].idStudent = prompt('Nhập vào mã mới học viên:')
+                studentList[i].name = prompt('Nhập vào tên học viên:')
+                studentList[i].grade = prompt('Nhập vào lớp học viên:')
+                studentList[i].email = prompt('Nhập vào email học viên:')
+                studentList[i].birthday = prompt('Nhập vào birthday học viên:')
+                studentList[i].module = prompt('Nhập vào module học viên:')
+            } else {
+                alert('Mã học viên không tồn tại')
+                break;
+            }
+        }
+        tableStudent();
+    }
+    function checkInputRequired(inputName) {
+        let input = prompt(`Nhập ${inputName}`);
+        while (true) {
+            if (input !== "") {
+                return input;
+            } else {
+                alert(`${inputName} không được để trống!`);
+                input = prompt(`Nhập ${inputName}`);
+            }
+        }
+    }
+    function checkName(inputName) {
+        let input = checkInputRequired(inputName);
+        let pattern = /^[a-zA-Z ]+$/;
+        while (true) {
+            if (pattern.test(input)) {
+                return input;
+            } else {
+                alert(`${inputName} phải là chữ cái!`);
+                input = checkInputRequired(inputName);
+            }
+        }
+    }
 </script>
 </body>
 </html>
