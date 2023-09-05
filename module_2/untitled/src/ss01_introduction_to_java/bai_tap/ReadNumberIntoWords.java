@@ -6,40 +6,39 @@ public class ReadNumberIntoWords {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhập số cần đọc: ");
-        int number = sc.nextInt();
-        if(number >= 0 && number <10){
-            switch(number){
-                case 0 :
-                    System.out.println("Zero");
-
-                case 1 :
-                    System.out.println("One");
-                    break;
-                case 2 :
-                    System.out.println("Two");
-                    break;
-                case 3 :
-                    System.out.println("Three");
-                    break;
-                case 4 :
-                    System.out.println("Four");
-                    break;
-                case 5 :
-                    System.out.println("Five");
-                    break;
-                case 6 :
-                    System.out.println("Six");
-                    break;
-                case 7 :
-                    System.out.println("Seven");
-                    break;
-                case 8 :
-                    System.out.println("Eight");
-                    break;
-                case 9 :
-                    System.out.println("Nine");
-                    break;
+        int number = Integer.parseInt(sc.nextLine());
+        int ones = (number % 100) % 10;
+        int hundred = number / 100;
+        int tens = (number - hundred * 100) / 10;
+        String[] zeroToNine = {"Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};
+        String[] tenToNineteen = {"Ten", "Eleven", "Twelve", "Thirdteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"};
+        String[] tensUnit = {"Ten", "Twenty", "Thirdty", "Fourty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"};
+        if (number >= 0 && number < 1000) {
+            if (hundred == 0) {
+                if (tens == 0) {
+                    System.out.println(number + " read as " + zeroToNine[ones]);
+                } else if (tens == 1) {
+                    System.out.println(number + " read as " + tenToNineteen[ones]);
+                } else if (ones == 0) {
+                    System.out.println(number + " read as " + tensUnit[tens - 1]);
+                } else {
+                    System.out.println(number + " read as " + tensUnit[tens - 1] + " " + zeroToNine[ones]);
+                }
+            } else {
+                if (tens == 0 && ones == 0) {
+                    System.out.println(number + " read as " + zeroToNine[hundred] + " hundred");
+                } else if (tens == 0) {
+                    System.out.println(number + " read as " + zeroToNine[hundred] + " hundred and " + zeroToNine[ones]);
+                } else if (tens == 1) {
+                    System.out.println(number + " read as " + zeroToNine[hundred] + " hundred and " + tenToNineteen[ones]);
+                } else if (ones == 0) {
+                    System.out.println(number + " read as " + zeroToNine[hundred] + " hundred and " + tensUnit[tens - 1]);
+                } else {
+                    System.out.println(number + " read as " + zeroToNine[hundred] + " hundred and " + tensUnit[tens - 1] + " " + zeroToNine[ones]);
+                }
             }
+        } else {
+            System.out.println("Out of ability");
         }
     }
 }
