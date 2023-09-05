@@ -7,7 +7,7 @@ public class ReadNumberIntoWords {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhập số cần đọc: ");
         int number = Integer.parseInt(sc.nextLine());
-        int ones = (number % 100) % 10;
+        int ones = number % 10;
         int hundred = number / 100;
         int tens = (number - hundred * 100) / 10;
         String[] zeroToNine = {"Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};
