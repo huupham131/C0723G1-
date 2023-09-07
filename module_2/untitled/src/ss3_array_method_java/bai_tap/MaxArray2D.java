@@ -9,20 +9,20 @@ public class MaxArray2D {
         int row = sc.nextInt();
         System.out.println("Nhap so cot mang 2d");
         int col = sc.nextInt();
-        double[][] matrix = new double[row][col];
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
+        double[][] array2D = new double[row][col];
+        for (int i = 0; i < array2D.length; i++) {
+            for (int j = 0; j < array2D[i].length; j++) {
                 System.out.println("Nhap phan tu [" + i + "][" + j + "]");
-                matrix[i][j] = sc.nextFloat();
+                array2D[i][j] = sc.nextFloat();
             }
         }
-        System.out.println("Ma tran sau khi nhap la");
-        double max = matrix[0][0];
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                System.out.print(matrix[i][j] + " ");
-                if (matrix[i][j] > max) {
-                    max = matrix[i][j];
+        System.out.println("Mang 2d sau khi nhap la");
+        double max = array2D[0][0];
+        for (int i = 0; i < array2D.length; i++) {
+            for (int j = 0; j < array2D[i].length; j++) {
+                System.out.print(array2D[i][j] + " ");
+                if (array2D[i][j] > max) {
+                    max = array2D[i][j];
                 }
             }
             System.out.println();
