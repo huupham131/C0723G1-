@@ -26,23 +26,22 @@ public class QuadraticEquation {
     }
 
     public double getDiscriminant() {
-        double delta=Math.pow(getB(), 2) - 4 * getA() * getC();
-        return  delta;
+        return Math.pow(getB(), 2) - 4 * getA() * getC();
     }
 
-    public String getRoot() {
+    public void getRoot() {
         double root1;
         double root2;
         if (getDiscriminant() > 0) {
             root1 = (-getB() + Math.pow(getDiscriminant(), 0.5)) / (2 * getA());
             root2 = (-getB() - Math.pow(getDiscriminant(), 0.5)) / (2 * getA());
-            return "Phương trình có 2 nghiệm là " + root1 + " và" + root2;
+            System.out.println("Phương trình có 2 nghiệm là " + root1 + " và " + root2);
+
         } else if (getDiscriminant() == 0) {
             root1 = (-getB()) / (2 * getA());
-            root2 = root1;
-            return "Phương trình có nghiệm kép " + root1;
+            System.out.println("Phương trình có nghiệm kép " + root1);
         } else {
-            return "Phương trình vô nghiệm";
+            System.out.println("Phương trình vô nghiệm");
         }
     }
 
