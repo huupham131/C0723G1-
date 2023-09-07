@@ -13,18 +13,6 @@ public class QuadraticEquation {
         this.c = c;
     }
 
-    public void setA(double a) {
-        this.a = a;
-    }
-
-    public void setB(double b) {
-        this.b = b;
-    }
-
-    public void setC(double c) {
-        this.c = c;
-    }
-
     public double getB() {
         return b;
     }
@@ -38,8 +26,8 @@ public class QuadraticEquation {
     }
 
     public double getDiscriminant() {
-        double delta;
-        return delta = Math.pow(getB(), 2) - 4 * getA() * getC();
+        double delta=Math.pow(getB(), 2) - 4 * getA() * getC();
+        return  delta;
     }
 
     public String getRoot() {
@@ -49,6 +37,10 @@ public class QuadraticEquation {
             root1 = (-getB() + Math.pow(getDiscriminant(), 0.5)) / (2 * getA());
             root2 = (-getB() - Math.pow(getDiscriminant(), 0.5)) / (2 * getA());
             return "Phương trình có 2 nghiệm là " + root1 + " và" + root2;
+        } else if (getDiscriminant() == 0) {
+            root1 = (-getB()) / (2 * getA());
+            root2 = root1;
+            return "Phương trình có nghiệm kép " + root1;
         } else {
             return "Phương trình vô nghiệm";
         }
@@ -62,7 +54,7 @@ public class QuadraticEquation {
         double b = scanner.nextDouble();
         System.out.print("Nhập hệ số c: ");
         double c = scanner.nextDouble();
-        QuadraticEquation equation = new QuadraticEquation(a,b,c);
+        QuadraticEquation equation = new QuadraticEquation(a, b, c);
         equation.getRoot();
     }
 }

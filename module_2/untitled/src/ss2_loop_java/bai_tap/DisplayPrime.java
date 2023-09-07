@@ -10,14 +10,12 @@ public class DisplayPrime {
         int count = 0;
         int number = 2;
         while (count < quantity) {
-            int i = 2;
             boolean check = true;
-            while (i < number) {
+            for (int i = 2; i <= Math.sqrt(number); i++) {
                 if (number % i == 0) {
                     check = false;
                     break;
                 }
-                i++;
             }
             if (check) {
                 System.out.println(number);
