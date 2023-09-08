@@ -9,24 +9,12 @@ public class Fan {
     private double radius = 5;
     private String color = "blue";
 
-    public int getSLOW() {
-        return SLOW;
-    }
-
-    public int getMEDIUM() {
-        return MEDIUM;
-    }
-
-    public int getFAST() {
-        return FAST;
+    public int getSpeed() {
+        return speed;
     }
 
     public void setSpeed(int speed) {
         this.speed = speed;
-    }
-
-    public int getSpeed() {
-        return speed;
     }
 
     public void setStatus(boolean status) {
@@ -58,7 +46,7 @@ public class Fan {
 
     public String toString() {
         if (isStatus()) {
-            return "Fan is on. Color: " + getColor() + ". Has a radius of " + getRadius();
+            return "Fan is on. Color: " + getColor() + ". Has a radius of " + getRadius() +" And speed: " + getSpeed();
         } else {
             return "Fan is off. Color: " + getColor() + ". Has a radius of " + getRadius();
         }
@@ -66,13 +54,13 @@ public class Fan {
 
     public static void main(String[] args) {
         Fan fan1 = new Fan();
-        fan1.setSpeed(3);
+        fan1.setSpeed(fan1.FAST);
         fan1.setRadius(10);
         fan1.setColor("yellow");
         fan1.setStatus(true);
         System.out.println(fan1);
         Fan fan2 = new Fan();
-        fan1.setSpeed(2);
+        fan1.setSpeed(fan2.MEDIUM);
         fan1.setRadius(5);
         fan1.setColor("blue");
         fan1.setStatus(false);
