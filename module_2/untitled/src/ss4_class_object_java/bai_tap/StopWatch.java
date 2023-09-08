@@ -32,6 +32,7 @@ public class StopWatch {
 
     public static void main(String[] args) {
         StopWatch watch = new StopWatch();
+        // test thời gian thực thi của thuật toán selection sort
         int[] numbersArray = new int[100000];
         for (int i = 0; i < numbersArray.length; i++) {
             numbersArray[i] = (int) (Math.random() * 100000);
@@ -51,6 +52,7 @@ public class StopWatch {
         }
         watch.stop();
         System.out.println("Thoi gian thuc thi thuat toan la selection sort " + watch.getElapsedTime() + " millisecond");
+        // test thời gian thực thi của thuật toán insertion sort
         int[] numbersArray1 = new int[100000];
         for (int i = 0; i < numbersArray1.length; i++) {
             numbersArray1[i] = (int) (Math.random() * 100000);
@@ -69,6 +71,7 @@ public class StopWatch {
         }
         watch.stop();
         System.out.println("Thoi gian thuc thi thuat toan insert Sort " + watch.getElapsedTime() + " millisecond");
+        // test thời gian thực thi của thuật toán bubble sort
         int[] numbersArray2 = new int[100000];
         for (int i = 0; i < numbersArray2.length; i++) {
             numbersArray2[i] = (int) (Math.random() * 100000);
