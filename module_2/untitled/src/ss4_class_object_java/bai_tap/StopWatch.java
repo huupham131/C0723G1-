@@ -37,7 +37,7 @@ public class StopWatch {
         }
         watch.start();
         int minIndex;
-        for (int i = 0; i < numbersArray.length; i++) {
+        for (int i = 0; i < numbersArray.length-1; i++) {
             minIndex = i;
             for (int j = i + 1; j < numbersArray.length; j++) {
                 if (numbersArray[j] < numbersArray[minIndex]) {
