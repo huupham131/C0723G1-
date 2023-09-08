@@ -30,6 +30,7 @@ public class MaxArray2D {
                     System.out.println();
                 }
                 System.out.println("Phan tu co gia tri lon nhat:" + max);
+                break;
             } else {
                 System.out.println("Nhập sai rùi nhập lại đi");
             }

@@ -23,6 +23,7 @@ public class MinArray {
                     }
                 }
                 System.out.println("Phan tu co gia tri nho nhat la " + min);
+                break;
             } else {
                 System.out.println("Nhập sai rùi nhập lại đi");
             }

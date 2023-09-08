@@ -9,8 +9,8 @@ public class DisplayPrime {
         int quantity = sc.nextInt();
         int count = 0;
         int number = 2;
+        boolean check = true;
         while (count < quantity) {
-            boolean check = true;
             for (int i = 2; i <= Math.sqrt(number); i++) {
                 if (number % i == 0) {
                     check = false;

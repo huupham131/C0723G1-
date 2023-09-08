@@ -28,12 +28,11 @@ public class SumNumOfCol {
                 System.out.println("Nhap cot muon tinh tong:");
                 int total = 0;
                 int input = sc.nextInt();
-                for (int j = (input - 1); j < matrix[0].length; j++) {
-                    for (int[] ints : matrix) {
-                        total += ints[input - 1];
-                    }
-                }
+                for (int[] ints : matrix) {
+                       total += ints[input - 1];
+                   }
                 System.out.println("Sum for column " + input + " is " + total);
+                break;
             }else {
                 System.out.println("Nhập sai rùi nhập lại đi");
             }

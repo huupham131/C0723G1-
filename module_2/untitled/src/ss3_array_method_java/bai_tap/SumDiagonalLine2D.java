@@ -28,6 +28,7 @@ public class SumDiagonalLine2D {
                     System.out.println();
                 }
                 System.out.println("Tong cua duong cheo la: " + sum);
+                break;
             } else {
                 System.out.println("Nhập sai rùi nhập lại đi");
             }

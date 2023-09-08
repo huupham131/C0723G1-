@@ -47,13 +47,19 @@ public class QuadraticEquation {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Nhập hệ số a: ");
-        double a = scanner.nextDouble();
-        System.out.print("Nhập hệ số b: ");
-        double b = scanner.nextDouble();
-        System.out.print("Nhập hệ số c: ");
-        double c = scanner.nextDouble();
-        QuadraticEquation equation = new QuadraticEquation(a, b, c);
-        equation.getRoot();
+        while (true) {
+            System.out.print("Nhập hệ số a: ");
+            double a = scanner.nextDouble();
+            if (a != 0) {
+                System.out.print("Nhập hệ số b: ");
+                double b = scanner.nextDouble();
+                System.out.print("Nhập hệ số c: ");
+                double c = scanner.nextDouble();
+                QuadraticEquation equation = new QuadraticEquation(a, b, c);
+                equation.getRoot();
+            } else {
+                System.out.println("a phải khác 0. Nhập lại đi b ei");
+            }
+        }
     }
 }

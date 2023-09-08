@@ -32,6 +32,7 @@ public class MergeArray {
                     array3[array1.length + i] = array2[i];
                 }
                 System.out.println("Mang 3 la " + Arrays.toString(array3));
+                break;
             } else {
                 System.out.println("Nhập sai rùi nhập lại đi");
             }
