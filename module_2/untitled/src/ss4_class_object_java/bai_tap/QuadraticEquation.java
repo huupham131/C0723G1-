@@ -57,6 +57,7 @@ public class QuadraticEquation {
                 double c = scanner.nextDouble();
                 QuadraticEquation equation = new QuadraticEquation(a, b, c);
                 equation.getRoot();
+                break;
             } else {
                 System.out.println("a phải khác 0. Nhập lại đi b ei");
             }
