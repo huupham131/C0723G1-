@@ -45,6 +45,7 @@ public class MoveablePoint extends Point {
     public String toString() {
         return "MoveablePoint{"+"x,y="+ Arrays.toString(super.getXY()) + "Speed="+ Arrays.toString(this.getSpeed()) + '}';
     }
+
 public MoveablePoint move(){
         super.setX(super.getX()+this.getxSpeed());
         super.setY(super.getY()+this.getySpeed());

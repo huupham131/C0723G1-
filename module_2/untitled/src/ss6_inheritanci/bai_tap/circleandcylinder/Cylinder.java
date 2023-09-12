@@ -23,11 +23,4 @@ public class Cylinder extends Circle {
     public String toString() {
         return "Cylinder{" + "height=" + this.getHeight() + ", color = " + this.getColor() + ", radius = " + this.getRadius() + " and has equal volume " + this.getVolume() + '}';
     }
-
-    public static void main(String[] args) {
-        Circle circle = new Circle(3, "white");
-        Cylinder cylinder1 = new Cylinder(6, "black", 10);
-        System.out.println(circle);
-        System.out.println(cylinder1);
-    }
 }

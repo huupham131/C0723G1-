@@ -1,6 +1,6 @@
 package ss5_accessmodifier_staticmethod_staticproperty.bai_tap.student;
 
-public class TestStudent {
+public class StudentTest {
     public static void main(String[] args) {
         Student student = new Student();
         student.setName("Huu");

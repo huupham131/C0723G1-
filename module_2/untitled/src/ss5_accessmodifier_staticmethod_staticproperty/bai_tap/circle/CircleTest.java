@@ -1,6 +1,6 @@
 package ss5_accessmodifier_staticmethod_staticproperty.bai_tap.circle;
 
-public class TestCircle {
+public class CircleTest {
     public static void main(String[] args) {
         Circle circle = new Circle();
         System.out.println(" Hinh tron co ban kinh la " + circle.getRadius() + " va co dien tich la " + circle.getArea());
