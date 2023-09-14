@@ -3,7 +3,7 @@ package ss8_clean_code_refactoring.bai_tap;
 public class TennisGame {
     public static String getScore(String player1Name, String player2Name, int m_score1, int m_score2) {
         String score = "";
-        int tempScore = 0;
+        int tempScore;
         if (m_score1 == m_score2) {
             switch (m_score1) {
                 case 0:
@@ -53,5 +53,9 @@ public class TennisGame {
             }
         }
         return score;
+    }
+
+    public static void main(String[] args) {
+
     }
 }

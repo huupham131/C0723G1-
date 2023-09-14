@@ -38,10 +38,6 @@ public class Rectangle extends Shape implements Resizeable {
         return this.getWidth() * this.getLength();
     }
 
-    public double getPerimeter() {
-        return 2 * (width + this.length);
-    }
-
     @Override
     public String toString() {
         return "A Rectangle with width="
