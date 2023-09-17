@@ -3,6 +3,7 @@ package ss10_dsa_danhsach.bai_tap.mvc.repository.impl;
 import ss10_dsa_danhsach.bai_tap.mvc.repository.IVehicleRepository;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class VehicleRepository<E> implements IVehicleRepository<E> {
     private ArrayList<E> vehicles = new ArrayList<>();
@@ -20,12 +21,17 @@ public class VehicleRepository<E> implements IVehicleRepository<E> {
     }
 
     @Override
-    public void removeVehicle(int id) {
-        vehicles.remove(id);
+    public void removeVehicle(E e) {
+        vehicles.remove(e);
     }
 
     @Override
     public E getVehicleDetail(int id) {
         return vehicles.get(id);
+    }
+
+    @Override
+    public List<E> getAllVehicles() {
+        return vehicles;
     }
 }

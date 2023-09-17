@@ -5,7 +5,7 @@ import ss10_dsa_danhsach.bai_tap.mvc.view.VehicleManagerView;
 
 public class Main {
     public static void main(String[] args) {
-        VehicleManagerView vehicleManagerView= new VehicleManagerView();
-
+        VehicleManagerView vehicleManagerView = new VehicleManagerView();
+        vehicleManagerView.render();
     }
 }
