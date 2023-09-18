@@ -5,6 +5,7 @@ import ss10_dsa_danhsach.bai_tap.mvc.repository.IVehicleRepository;
 import ss10_dsa_danhsach.bai_tap.mvc.repository.impl.VehicleRepositoryImpl;
 import ss10_dsa_danhsach.bai_tap.mvc.service.IVehicleService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class VehicleServiceImpl<E extends Vehicle> implements IVehicleService<E> {
@@ -41,7 +42,7 @@ public class VehicleServiceImpl<E extends Vehicle> implements IVehicleService<E>
     }
 
     @Override
-    public List<E> getAllVehicles() {
+    public ArrayList<E> getAllVehicles() {
         return vehicleRepository.getAllVehicles();
     }
 }

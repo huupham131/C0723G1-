@@ -2,6 +2,7 @@ package ss10_dsa_danhsach.bai_tap.mvc.repository.impl;
 
 import ss10_dsa_danhsach.bai_tap.mvc.repository.IVehicleRepository;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,7 +32,8 @@ public class VehicleRepositoryImpl<E> implements IVehicleRepository<E> {
     }
 
     @Override
-    public List<E> getAllVehicles() {
+    public ArrayList<E> getAllVehicles() {
         return vehicles;
     }
+
 }

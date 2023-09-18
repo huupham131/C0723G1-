@@ -8,12 +8,14 @@ import ss10_dsa_danhsach.bai_tap.mvc.model.Vehicle;
 
 import java.util.Scanner;
 
-public class VehicleManagerView<E extends Vehicle> {
+public class VehicleManagerView {
     private final Scanner scanner = new Scanner(System.in);
     private VehicleController<Car> carController = new VehicleController();
     private VehicleController<Truck> truckController = new VehicleController();
     private VehicleController<Motorbike> motorbikeController = new VehicleController();
-    private VehicleController<E> vehicleController = new VehicleController<>();
+    private int indexOfCar = -1;
+    private int indexOfTruck = -1;
+    private int indexOfMotorbike = -1;
 
     public int inputOption() {
         int option = 0;
@@ -29,15 +31,13 @@ public class VehicleManagerView<E extends Vehicle> {
         switch (option) {
             case 1:
                 System.out.println("What type of vehicle do you wan create?");
-                System.out.println("1. Car");
-                System.out.println("2. Truck");
-                System.out.println("3. Motorbike");
-                int typeOf = Integer.parseInt(scanner.nextLine());
-                if (typeOf == 1) {
+               displaySelect();
+                int display = Integer.parseInt(scanner.nextLine());
+                if (display == 1) {
                     carController.addVehicle(inputCar());
-                } else if (typeOf == 2) {
+                } else if (display == 2) {
                     truckController.addVehicle(inputTruck());
-                } else if (typeOf == 3) {
+                } else if (display == 3) {
                     motorbikeController.addVehicle(inputMotorbike());
                 } else {
                     System.out.println("The vehicle type you selected is not available");
@@ -45,30 +45,97 @@ public class VehicleManagerView<E extends Vehicle> {
                 break;
             case 2:
                 System.out.println("What type of vehicle do you wan display?");
-                System.out.println("1. Car");
-                System.out.println("2. Truck");
-                System.out.println("3. Motorbike");
-                int display = Integer.parseInt(scanner.nextLine());
-                if (display == 1) {
+                displaySelect();
+                int displayVehicle = Integer.parseInt(scanner.nextLine());
+                if (displayVehicle == 1) {
                     carController.displayVehicle();
-                } else if (display == 2) {
+                } else if (displayVehicle == 2) {
                     truckController.displayVehicle();
-                } else if (display == 3) {
+                } else if (displayVehicle == 3) {
                     motorbikeController.displayVehicle();
                 } else {
                     System.out.println("The vehicle type you selected is not available");
                 }
                 break;
             case 3:
-                System.out.println("What license Plates of vehicle do you wan delete?");
-                String delete = scanner.nextLine();
-                if (vehicleController.isLicensePlates(delete)) {
-//                    vehicleController.removeVehicle();
+                System.out.println("What type of vehicle do you wan delete?");
+                displaySelect();
+                int delete = Integer.parseInt(scanner.nextLine());
+                if (delete == 1) {
+                    System.out.println("Enter license Plates");
+                    String licensePlates = scanner.nextLine();
+                    getIndexOfVehicle(licensePlates);
+                    if(indexOfCar==-1){
+                        System.out.println("Not find vehicle");
+                    }else {
+                        carController.getAllVehicles().remove(indexOfCar);
+                        System.out.println("Delete Complete!");
+                    }
+                } else if (delete == 2) {
+                    System.out.println("Enter license Plates");
+                    String licensePlates = scanner.nextLine();
+                    getIndexOfVehicle(licensePlates);
+                    if(indexOfTruck==-1){
+                        System.out.println("Not find vehicle");
+                    }else {
+                        truckController.getAllVehicles().remove(indexOfTruck);
+                        System.out.println("Delete Complete!");
+                    }
+                } else if (delete == 3) {
+                    System.out.println("Enter license Plates");
+                    String licensePlates = scanner.nextLine();
+                    getIndexOfVehicle(licensePlates);
+                    if(indexOfMotorbike==-1){
+                        System.out.println("Not find vehicle");
+                    }else {
+                        motorbikeController.getAllVehicles().remove(indexOfMotorbike);
+                        System.out.println("Delete Complete!");
+                    }
+                } else {
+                    System.out.println("The vehicle type you selected is not available");
                 }
+                break;
             case 4:
+                System.out.println("What type of vehicle do you wan display?");
+                displaySelect();
+                int displayById = Integer.parseInt(scanner.nextLine());
+                if (displayById == 1) {
+                    carController.addVehicle(inputCar());
+                } else if (displayById == 2) {
+                    truckController.addVehicle(inputTruck());
+                } else if (displayById == 3) {
+                    motorbikeController.addVehicle(inputMotorbike());
+                } else {
+                    System.out.println("The vehicle type you selected is not available");
+                }
                 break;
             case 5:
                 System.exit(0);
+        }
+    }
+public void getindexofcar(){
+    System.out.println(indexOfCar);
+}
+    public void getIndexOfVehicle(String licensePlate) {
+        for (int i = 0; i < carController.getAllVehicles().size(); i++) {
+            if (carController.getAllVehicles().get(i).getLicensePlates().equals(licensePlate)) {
+                indexOfCar = i;
+                break;
+            }
+
+        }
+
+        for (int i = 0; i < carController.getAllVehicles().size(); i++) {
+            if (carController.getAllVehicles().get(i).getLicensePlates().equals(licensePlate)) {
+                indexOfTruck = i;
+                break;
+            }
+        }
+        for (int i = 0; i < carController.getAllVehicles().size(); i++) {
+            if (carController.getAllVehicles().get(i).getLicensePlates().equals(licensePlate)) {
+                indexOfMotorbike = i;
+                break;
+            }
         }
     }
 
@@ -120,6 +187,11 @@ public class VehicleManagerView<E extends Vehicle> {
         System.out.println("Enter Number of wattage");
         int wattage = Integer.parseInt(scanner.nextLine());
         return new Motorbike(licensePlates, brandName, year, owner, wattage);
+    }
+    public void displaySelect(){
+        System.out.println("1. Car");
+        System.out.println("2. Truck");
+        System.out.println("3. Motorbike");
     }
 
     public void displayVehicleManagerView() {

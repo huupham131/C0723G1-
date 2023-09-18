@@ -1,9 +1,7 @@
 package ss10_dsa_danhsach.bai_tap.mvc.service;
 
-import ss10_dsa_danhsach.bai_tap.mvc.model.Car;
-import ss10_dsa_danhsach.bai_tap.mvc.model.Vehicle;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public interface IVehicleService<E> {
     void addVehicle(E e);
@@ -14,5 +12,5 @@ public interface IVehicleService<E> {
 
     E getVehicleDetail(int id);
     boolean isLicensePlates(String licensePlates);
-    List<E> getAllVehicles();
+    ArrayList<E> getAllVehicles();
 }

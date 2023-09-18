@@ -4,6 +4,8 @@ import ss10_dsa_danhsach.bai_tap.mvc.model.Vehicle;
 import ss10_dsa_danhsach.bai_tap.mvc.service.IVehicleService;
 import ss10_dsa_danhsach.bai_tap.mvc.service.imple.VehicleServiceImpl;
 
+import java.util.ArrayList;
+
 public class VehicleController<E extends Vehicle> {
     private final IVehicleService<E> vehicleService = new VehicleServiceImpl<>();
 
@@ -26,5 +28,8 @@ public class VehicleController<E extends Vehicle> {
     }
     public boolean isLicensePlates(String licensePlates) {
         return vehicleService.isLicensePlates(licensePlates);
+    }
+    public ArrayList<E> getAllVehicles(){
+        return vehicleService.getAllVehicles();
     }
 }

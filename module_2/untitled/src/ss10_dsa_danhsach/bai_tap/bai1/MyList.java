@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class MyList<E> {
     private int size = 0;
-    static final int DEFAULT_CAPACITY = 10;
+    private static final int DEFAULT_CAPACITY = 10;
     private Object elements[];
 
     public MyList() {
@@ -16,12 +16,12 @@ public class MyList<E> {
     }
 
     public void add(int index, E element) {
-        if (index < 0 || index > size) {
+        if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();
-        } else if (index == size) {
+        } else if (index == elements.length) {
             ensureCapacity();
         } else {
-            for (int i = size; i >= index; i--) {
+            for (int i = size; i > index; i--) {
                 elements[i] = elements[i - 1];
             }
             elements[index] = element;
@@ -35,15 +35,15 @@ public class MyList<E> {
 
     public Object[] clone() {
         Object[] newArray = new Object[size];
-        for (int i = 0; i < size(); i++) {
+        for (int i = 0; i < size; i++) {
             newArray[i] = elements[i];
         }
         return newArray;
     }
 
     public boolean contains(E o) {
-        for (int i = 0; i < size(); i++) {
-            if (elements[i] == o) {
+        for (int i = 0; i < size; i++) {
+            if (elements[i].equals(o)) {
                 return true;
             }
         }
@@ -51,21 +51,19 @@ public class MyList<E> {
     }
 
     public int indexOf(E o) {
-        for (int i = 0; i < size(); i++) {
-            if (elements[i] == o) {
+        for (int i = 0; i < size; i++) {
+            if (elements[i].equals(o)) {
                 return i;
             }
         }
         return -1;
     }
 
-    public boolean add(E o) {
-        if (size >= elements.length) {
-            return false;
+    public void add(E o) {
+        if (size == elements.length) {
+            ensureCapacity();
         } else {
-            elements[size] = o;
-            size++;
-            return true;
+            elements[size++] = o;
         }
     }
 
@@ -75,7 +73,7 @@ public class MyList<E> {
     }
 
     public E get(int index) {
-        if (index < 0) {
+        if (index < 0 || index > size - 1) {
             throw new IndexOutOfBoundsException();
         }
         return (E) elements[index];

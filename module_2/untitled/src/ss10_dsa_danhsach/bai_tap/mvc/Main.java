@@ -8,4 +8,5 @@ public class Main {
         VehicleManagerView vehicleManagerView = new VehicleManagerView();
         vehicleManagerView.render();
     }
+
 }

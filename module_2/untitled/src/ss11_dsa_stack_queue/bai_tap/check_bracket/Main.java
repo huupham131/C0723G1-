@@ -13,7 +13,7 @@ public class Main {
         String[] stringArray = string.split("");
         boolean result = true;
         String left = "";
-        String right = "";
+        String temp = "";
         for (int i = 0; i < stringArray.length; i++) {
             if (stringArray[i].equals("(")) {
                 bStack.push(stringArray[i]);
@@ -23,17 +23,17 @@ public class Main {
                     result = false;
                     break;
                 } else {
-                    right += bStack.pop();
+                    temp += bStack.pop();
                 }
             }
         }
-        if (!(left.length() == right.length())) {
+        if (!(left.length() == temp.length())) {
             result = false;
         }
         if (result) {
-            System.out.println("Well");
+            System.out.println("Dung rui ne");
         } else {
-            System.out.println("???");
+            System.out.println("Sai rui ne");
         }
     }
 

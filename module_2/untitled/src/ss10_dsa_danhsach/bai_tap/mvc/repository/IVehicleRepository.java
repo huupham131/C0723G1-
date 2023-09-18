@@ -14,5 +14,6 @@ public interface IVehicleRepository<E> {
     void removeVehicle(E e);
 
     E getVehicleDetail(int id);
-    List<E> getAllVehicles();
+    ArrayList<E> getAllVehicles();
+
 }
