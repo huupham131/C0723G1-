@@ -11,6 +11,8 @@ public interface IVehicleService<E> {
     void removeVehicle(E e);
 
     E getVehicleDetail(int id);
+
     boolean isLicensePlates(String licensePlates);
+
     ArrayList<E> getAllVehicles();
 }

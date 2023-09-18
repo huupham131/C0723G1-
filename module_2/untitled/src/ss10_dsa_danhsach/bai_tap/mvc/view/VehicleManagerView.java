@@ -1,10 +1,7 @@
 package ss10_dsa_danhsach.bai_tap.mvc.view;
 
 import ss10_dsa_danhsach.bai_tap.mvc.controller.VehicleController;
-import ss10_dsa_danhsach.bai_tap.mvc.model.Car;
-import ss10_dsa_danhsach.bai_tap.mvc.model.Motorbike;
-import ss10_dsa_danhsach.bai_tap.mvc.model.Truck;
-import ss10_dsa_danhsach.bai_tap.mvc.model.Vehicle;
+import ss10_dsa_danhsach.bai_tap.mvc.model.*;
 
 import java.util.Scanner;
 
@@ -31,7 +28,7 @@ public class VehicleManagerView {
         switch (option) {
             case 1:
                 System.out.println("What type of vehicle do you wan create?");
-               displaySelect();
+                displaySelect();
                 int display = Integer.parseInt(scanner.nextLine());
                 if (display == 1) {
                     carController.addVehicle(inputCar());
@@ -62,32 +59,26 @@ public class VehicleManagerView {
                 displaySelect();
                 int delete = Integer.parseInt(scanner.nextLine());
                 if (delete == 1) {
-                    System.out.println("Enter license Plates");
-                    String licensePlates = scanner.nextLine();
-                    getIndexOfVehicle(licensePlates);
-                    if(indexOfCar==-1){
+                    getIndexOfVehicle(inputLicensePlates());
+                    if (indexOfCar == -1) {
                         System.out.println("Not find vehicle");
-                    }else {
+                    } else {
                         carController.getAllVehicles().remove(indexOfCar);
                         System.out.println("Delete Complete!");
                     }
                 } else if (delete == 2) {
-                    System.out.println("Enter license Plates");
-                    String licensePlates = scanner.nextLine();
-                    getIndexOfVehicle(licensePlates);
-                    if(indexOfTruck==-1){
+                    getIndexOfVehicle(inputLicensePlates());
+                    if (indexOfTruck == -1) {
                         System.out.println("Not find vehicle");
-                    }else {
+                    } else {
                         truckController.getAllVehicles().remove(indexOfTruck);
                         System.out.println("Delete Complete!");
                     }
                 } else if (delete == 3) {
-                    System.out.println("Enter license Plates");
-                    String licensePlates = scanner.nextLine();
-                    getIndexOfVehicle(licensePlates);
-                    if(indexOfMotorbike==-1){
+                    getIndexOfVehicle(inputLicensePlates());
+                    if (indexOfMotorbike == -1) {
                         System.out.println("Not find vehicle");
-                    }else {
+                    } else {
                         motorbikeController.getAllVehicles().remove(indexOfMotorbike);
                         System.out.println("Delete Complete!");
                     }
@@ -100,11 +91,26 @@ public class VehicleManagerView {
                 displaySelect();
                 int displayById = Integer.parseInt(scanner.nextLine());
                 if (displayById == 1) {
-                    carController.addVehicle(inputCar());
+                    getIndexOfVehicle(inputLicensePlates());
+                    if (indexOfCar == -1) {
+                        System.out.println("Not find vehicle");
+                    } else {
+                        displayCarById();
+                    }
                 } else if (displayById == 2) {
-                    truckController.addVehicle(inputTruck());
+                    getIndexOfVehicle(inputLicensePlates());
+                    if (indexOfTruck == -1) {
+                        System.out.println("Not find vehicle");
+                    } else {
+                        displayTruckById();
+                    }
                 } else if (displayById == 3) {
-                    motorbikeController.addVehicle(inputMotorbike());
+                    getIndexOfVehicle(inputLicensePlates());
+                    if (indexOfMotorbike == -1) {
+                        System.out.println("Not find vehicle");
+                    } else {
+                        displayMotorbikeById();
+                    }
                 } else {
                     System.out.println("The vehicle type you selected is not available");
                 }
@@ -113,16 +119,37 @@ public class VehicleManagerView {
                 System.exit(0);
         }
     }
-public void getindexofcar(){
-    System.out.println(indexOfCar);
-}
+
+    private void displayCarById() {
+        if (indexOfCar != -1) {
+            System.out.println(carController.getVehicleDetail(indexOfCar));
+        }
+    }
+
+    private void displayTruckById() {
+        if (indexOfTruck != -1) {
+            System.out.println(truckController.getVehicleDetail(indexOfTruck));
+        }
+    }
+
+    private void displayMotorbikeById() {
+        if (indexOfMotorbike != -1) {
+            System.out.println(motorbikeController.getVehicleDetail(indexOfMotorbike));
+        }
+    }
+
+    public String inputLicensePlates() {
+        System.out.println("Enter license Plates");
+        String licensePlates = scanner.nextLine();
+        return licensePlates;
+    }
+
     public void getIndexOfVehicle(String licensePlate) {
         for (int i = 0; i < carController.getAllVehicles().size(); i++) {
             if (carController.getAllVehicles().get(i).getLicensePlates().equals(licensePlate)) {
                 indexOfCar = i;
                 break;
             }
-
         }
 
         for (int i = 0; i < carController.getAllVehicles().size(); i++) {
@@ -148,8 +175,7 @@ public void getindexofcar(){
     public Car inputCar() {
         System.out.println("Enter license plates");
         String licensePlates = scanner.nextLine();
-        System.out.println("Enter brand Name");
-        String brandName = scanner.nextLine();
+        Manufacturer manufacturer = manufacturerCar();
         System.out.println("Enter year Of Manufacture");
         int year = Integer.parseInt(scanner.nextLine());
         System.out.println("Enter Owner");
@@ -158,40 +184,108 @@ public void getindexofcar(){
         int seats = Integer.parseInt(scanner.nextLine());
         System.out.println("Enter Car Type");
         String carType = scanner.nextLine();
-        return new Car(licensePlates, brandName, year, owner, seats, carType);
+        return new Car(licensePlates, manufacturer, year, owner, seats, carType);
     }
 
     public Truck inputTruck() {
         System.out.println("Enter license plates");
         String licensePlates = scanner.nextLine();
-        System.out.println("Enter brand Name");
-        String brandName = scanner.nextLine();
+        Manufacturer manufacturer = manufacturerTruck();
         System.out.println("Enter year Of Manufacture");
         int year = Integer.parseInt(scanner.nextLine());
         System.out.println("Enter Owner");
         String owner = scanner.nextLine();
         System.out.println("Enter Number of payload");
         int payload = Integer.parseInt(scanner.nextLine());
-        return new Truck(licensePlates, brandName, year, owner, payload);
+        return new Truck(licensePlates, manufacturer, year, owner, payload);
     }
 
     public Motorbike inputMotorbike() {
         System.out.println("Enter license plates");
         String licensePlates = scanner.nextLine();
-        System.out.println("Enter brand Name");
-        String brandName = scanner.nextLine();
+        Manufacturer manufacturer = manufacturerMotor();
         System.out.println("Enter year Of Manufacture");
         int year = Integer.parseInt(scanner.nextLine());
         System.out.println("Enter Owner");
         String owner = scanner.nextLine();
         System.out.println("Enter Number of wattage");
         int wattage = Integer.parseInt(scanner.nextLine());
-        return new Motorbike(licensePlates, brandName, year, owner, wattage);
+        return new Motorbike(licensePlates, manufacturer, year, owner, wattage);
     }
-    public void displaySelect(){
+
+    public void displaySelect() {
         System.out.println("1. Car");
         System.out.println("2. Truck");
         System.out.println("3. Motorbike");
+    }
+
+    public Manufacturer manufacturerCar() {
+        Manufacturer porsche = new Manufacturer(1, "Porsche", "Germany");
+        Manufacturer xeBo = new Manufacturer(2, "Xe Bò", "Việt Nam");
+        Manufacturer ferrari = new Manufacturer(3, "Ferrari", "Italia");
+        System.out.println("Enter Manufacturer: ");
+        System.out.println("1.Porsche");
+        System.out.println("2.Xe Bò");
+        System.out.println("3.Ferrari");
+        int choice;
+        while (true) {
+            choice = Integer.parseInt(scanner.nextLine());
+            if (choice == 1) {
+                return porsche;
+            } else if (choice == 2) {
+                return xeBo;
+            } else if (choice == 3) {
+                return ferrari;
+            } else {
+                System.out.println("Try again!");
+            }
+        }
+    }
+
+    public Manufacturer manufacturerMotor() {
+        Manufacturer yamaha = new Manufacturer(1, "Yamaha", "Japan");
+        Manufacturer honda = new Manufacturer(2, "Honda", "Japan");
+        Manufacturer vinfast = new Manufacturer(3, "Vinfast", "Việt Nam");
+        System.out.println("Enter Manufacturer: ");
+        System.out.println("1.Porsche");
+        System.out.println("2.Xe Bò");
+        System.out.println("3.Ferrari");
+        int choice;
+        while (true) {
+            choice = Integer.parseInt(scanner.nextLine());
+            if (choice == 1) {
+                return yamaha;
+            } else if (choice == 2) {
+                return honda;
+            } else if (choice == 3) {
+                return vinfast;
+            } else {
+                System.out.println("Try again!");
+            }
+        }
+    }
+
+    public Manufacturer manufacturerTruck() {
+        Manufacturer huynhdai = new Manufacturer(1, "Hyundai", "Korea");
+        Manufacturer truongHai = new Manufacturer(2, "Trường Hải", "Việt Nam");
+        Manufacturer xeCongNong = new Manufacturer(3, "Công Nông", "Việt Nam");
+        System.out.println("Enter Manufacturer: ");
+        System.out.println("1.Porsche");
+        System.out.println("2.Xe Bò");
+        System.out.println("3.Ferrari");
+        int choice;
+        while (true) {
+            choice = Integer.parseInt(scanner.nextLine());
+            if (choice == 1) {
+                return huynhdai;
+            } else if (choice == 2) {
+                return truongHai;
+            } else if (choice == 3) {
+                return xeCongNong;
+            } else {
+                System.out.println("Try again!");
+            }
+        }
     }
 
     public void displayVehicleManagerView() {

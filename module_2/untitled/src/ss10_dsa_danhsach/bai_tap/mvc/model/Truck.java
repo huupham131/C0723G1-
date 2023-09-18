@@ -10,8 +10,8 @@ public class Truck extends Vehicle {
         this.payloads = payloads;
     }
 
-    public Truck(String licensePlates, String brandName, int yearOfManufacture, String owner, int payloads) {
-        super(licensePlates, brandName, yearOfManufacture, owner);
+    public Truck(String licensePlates, Manufacturer manufacturer, int yearOfManufacture, String owner, int payloads) {
+        super(licensePlates, manufacturer, yearOfManufacture, owner);
         this.payloads = payloads;
     }
 
@@ -25,7 +25,7 @@ public class Truck extends Vehicle {
 
     @Override
     public String toString() {
-        return "Truck{" + super.toString()+
+        return "Truck{" + super.toString() +
                 "payloads=" + payloads +
                 '}';
     }

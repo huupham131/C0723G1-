@@ -12,8 +12,8 @@ public class Car extends Vehicle {
         this.carType = carType;
     }
 
-    public Car(String licensePlates, String brandName, int yearOfManufacture, String owner, int numberOfSeats, String carType) {
-        super(licensePlates, brandName, yearOfManufacture, owner);
+    public Car(String licensePlates, Manufacturer manufacturer, int yearOfManufacture, String owner, int numberOfSeats, String carType) {
+        super(licensePlates, manufacturer, yearOfManufacture, owner);
         this.numberOfSeats = numberOfSeats;
         this.carType = carType;
     }
@@ -36,7 +36,7 @@ public class Car extends Vehicle {
 
     @Override
     public String toString() {
-        return "Car{" +super.toString() +
+        return "Car{" + super.toString() +
                 "numberOfSeats=" + numberOfSeats +
                 ", carType='" + carType + '\'' +
                 '}';

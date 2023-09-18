@@ -2,16 +2,16 @@ package ss10_dsa_danhsach.bai_tap.mvc.model;
 
 public abstract class Vehicle {
     private String licensePlates;
-    private String brandName;
+    private Manufacturer manufacturer;
     private int yearOfManufacture;
     private String owner;
 
     public Vehicle() {
     }
 
-    public Vehicle(String licensePlates, String brandName, int yearOfManufacture, String owner) {
+    public Vehicle(String licensePlates, Manufacturer manufacturer, int yearOfManufacture, String owner) {
         this.licensePlates = licensePlates;
-        this.brandName = brandName;
+        this.manufacturer = manufacturer;
         this.yearOfManufacture = yearOfManufacture;
         this.owner = owner;
     }
@@ -22,14 +22,6 @@ public abstract class Vehicle {
 
     public void setLicensePlates(String licensePlates) {
         this.licensePlates = licensePlates;
-    }
-
-    public String getBrandName() {
-        return brandName;
-    }
-
-    public void setBrandName(String brandName) {
-        this.brandName = brandName;
     }
 
     public int getYearOfManufacture() {
@@ -48,11 +40,19 @@ public abstract class Vehicle {
         this.owner = owner;
     }
 
+    public Manufacturer getManufacturer() {
+        return manufacturer;
+    }
+
+    public void setManufacturer(Manufacturer manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
     @Override
     public String toString() {
         return "Vehicle{" +
                 "licensePlates='" + licensePlates + '\'' +
-                ", brandName='" + brandName + '\'' +
+                ", manufacturer=" + manufacturer +
                 ", yearOfManufacture=" + yearOfManufacture +
                 ", owner='" + owner + '\'' +
                 '}';
