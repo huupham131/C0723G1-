@@ -2,10 +2,10 @@ package ss10_dsa_danhsach.bai_tap.mvc.controller;
 
 import ss10_dsa_danhsach.bai_tap.mvc.model.Vehicle;
 import ss10_dsa_danhsach.bai_tap.mvc.service.IVehicleService;
-import ss10_dsa_danhsach.bai_tap.mvc.service.imple.VehicleService;
+import ss10_dsa_danhsach.bai_tap.mvc.service.imple.VehicleServiceImpl;
 
 public class VehicleController<E extends Vehicle> {
-    private final IVehicleService<E> vehicleService = new VehicleService<>();
+    private final IVehicleService<E> vehicleService = new VehicleServiceImpl<>();
 
     public void addVehicle(E e) {
         vehicleService.addVehicle(e);

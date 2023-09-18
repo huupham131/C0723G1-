@@ -5,7 +5,7 @@ import ss10_dsa_danhsach.bai_tap.mvc.repository.IVehicleRepository;
 import java.util.ArrayList;
 import java.util.List;
 
-public class VehicleRepository<E> implements IVehicleRepository<E> {
+public class VehicleRepositoryImpl<E> implements IVehicleRepository<E> {
     private ArrayList<E> vehicles = new ArrayList<>();
 
     @Override

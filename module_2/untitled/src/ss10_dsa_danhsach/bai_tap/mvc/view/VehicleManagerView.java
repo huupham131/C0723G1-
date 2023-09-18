@@ -67,7 +67,7 @@ public class VehicleManagerView<E extends Vehicle> {
                 }
             case 4:
                 break;
-            case 5 :
+            case 5:
                 System.exit(0);
         }
     }

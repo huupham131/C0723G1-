@@ -2,13 +2,13 @@ package ss10_dsa_danhsach.bai_tap.mvc.service.imple;
 
 import ss10_dsa_danhsach.bai_tap.mvc.model.Vehicle;
 import ss10_dsa_danhsach.bai_tap.mvc.repository.IVehicleRepository;
-import ss10_dsa_danhsach.bai_tap.mvc.repository.impl.VehicleRepository;
+import ss10_dsa_danhsach.bai_tap.mvc.repository.impl.VehicleRepositoryImpl;
 import ss10_dsa_danhsach.bai_tap.mvc.service.IVehicleService;
 
 import java.util.List;
 
-public class VehicleService<E extends Vehicle> implements IVehicleService<E> {
-    private final IVehicleRepository<E> vehicleRepository = new VehicleRepository<>();
+public class VehicleServiceImpl<E extends Vehicle> implements IVehicleService<E> {
+    private final IVehicleRepository<E> vehicleRepository = new VehicleRepositoryImpl<>();
 
     @Override
     public void addVehicle(E e) {
