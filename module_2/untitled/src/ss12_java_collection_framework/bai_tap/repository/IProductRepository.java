@@ -11,7 +11,7 @@ public interface IProductRepository {
 
     Product getProductDetail(String brandName);
 
-    void updateProduct(int id, Product product);
+    void updateProduct(Product product);
 
     void removeProduct(int id);
 

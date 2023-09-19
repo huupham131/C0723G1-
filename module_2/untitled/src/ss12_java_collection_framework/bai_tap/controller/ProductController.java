@@ -23,8 +23,8 @@ public class ProductController {
         }
         return null;
     }
-    public void updateProduct(int id, Product product) {
-        productService.updateProduct(id, product);
+    public void updateProduct(Product product) {
+        productService.updateProduct(product);
     }
 
     public void removeProduct(int id) {

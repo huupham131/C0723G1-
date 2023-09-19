@@ -10,10 +10,12 @@ import java.util.ArrayList;
 
 public class ProductServiceImpl implements IProductService {
     private final IProductRepository productRepository = new ProductRepositoryImpl();
+
     @Override
     public void createProduct(Product product) {
         productRepository.createProduct(product);
     }
+
     @Override
     public void displayProduct() {
         productRepository.displayProduct();
@@ -30,8 +32,8 @@ public class ProductServiceImpl implements IProductService {
     }
 
     @Override
-    public void updateProduct(int id, Product product) {
-        productRepository.updateProduct(id, product);
+    public void updateProduct(Product product) {
+        productRepository.updateProduct(product);
     }
 
     @Override
