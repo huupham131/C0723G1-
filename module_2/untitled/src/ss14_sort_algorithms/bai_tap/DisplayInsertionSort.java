@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class DisplayInsertionSort {
     public static void main(String[] args) {
-        int[] numbersArray ={7,-2,4,8,4,2};
+        int[] numbersArray = {7, -2, 4, 8, 4, 2};
         int n = numbersArray.length;
         int key;
         for (int i = 1; i < n; ++i) {
@@ -15,7 +15,7 @@ public class DisplayInsertionSort {
                 j = j - 1;
             }
             numbersArray[j + 1] = key;
-            System.out.println(""+Arrays.toString(numbersArray));
+            System.out.println("Step" + i + Arrays.toString(numbersArray));
         }
     }
 }
