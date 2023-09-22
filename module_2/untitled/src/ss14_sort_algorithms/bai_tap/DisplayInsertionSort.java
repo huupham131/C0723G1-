@@ -15,7 +15,9 @@ public class DisplayInsertionSort {
                 j = j - 1;
             }
             numbersArray[j + 1] = key;
-            System.out.println("Step" + i + Arrays.toString(numbersArray));
+            System.out.println("Change value at index "+ j + " to " + key );
+            System.out.println("After the loop " + i);
+            System.out.println("The result "+ Arrays.toString(numbersArray));
         }
     }
 }
