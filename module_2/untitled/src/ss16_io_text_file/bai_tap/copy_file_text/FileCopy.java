@@ -2,7 +2,7 @@ package ss16_io_text_file.bai_tap.copy_file_text;
 
 import java.io.*;
 
-public class Clone {
+public class FileCopy {
     public static void main(String[] args) {
         try {
             File file = new File("/Users/macbook/Documents/GitHub/C0723G1-PhamThanhHuu/module_2/untitled/src/ss16_io_text_file/bai_tap/copy_file_text/source_file.txt");
@@ -15,7 +15,7 @@ public class Clone {
             while ((line = bufferedReader.readLine()) != null) {
                 bufferedWriter.write(line);
                 bufferedWriter.newLine();
-                count+= 1;
+                count+= line.length();
             }
             bufferedReader.close();
             bufferedWriter.close();
