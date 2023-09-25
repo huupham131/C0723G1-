@@ -80,7 +80,8 @@ public class ProductManagerView {
     }
 
     public void displayAllProduct() {
-        System.out.println(productController.getAllProduct());
+        productController.displayProduct();
+
     }
 
     public Product inputProduct() {

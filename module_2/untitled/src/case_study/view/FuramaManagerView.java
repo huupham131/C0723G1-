@@ -3,11 +3,6 @@ package case_study.view;
 import java.util.Scanner;
 
 public class FuramaManagerView {
-    EmployeeManagerView employeeManegerView = new EmployeeManagerView();
-    CustomerManagerView customerManagerView = new CustomerManagerView();
-    FacilityManagerView facilityManagerView = new FacilityManagerView();
-    BookingManagerView bookingManagerView = new BookingManagerView();
-    PromotionManagerView promotionManagerView = new PromotionManagerView();
     Scanner scanner = new Scanner(System.in);
 
     public void displayMainMenu() {
@@ -31,19 +26,24 @@ public class FuramaManagerView {
     public void handleFuramaManagementOption(int option) {
         switch (option) {
             case 1:
+                EmployeeManagerView employeeManegerView = new EmployeeManagerView();
                 employeeManegerView.displayEmployeeMenu();
-                inputOption();
+                employeeManegerView.handleEmployeeManagementOption(inputOption());
                 break;
             case 2:
+                CustomerManagerView customerManagerView = new CustomerManagerView();
                 customerManagerView.displayCustomerMenu();
                 break;
             case 3:
+                FacilityManagerView facilityManagerView = new FacilityManagerView();
                 facilityManagerView.displayFacilityMenu();
                 break;
             case 4:
+                BookingManagerView bookingManagerView = new BookingManagerView();
                 bookingManagerView.displayBookingMenu();
                 break;
             case 5:
+                PromotionManagerView promotionManagerView = new PromotionManagerView();
                 promotionManagerView.displayPromotionMenu();
                 break;
             case 6:

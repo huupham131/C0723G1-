@@ -6,6 +6,7 @@ public class Triangle {
     private int edgeA;
     private int edgeB;
     private int edgeC;
+    Scanner scanner = new Scanner(System.in);
 
     public Triangle(int edgeA, int edgeB, int edgeC) {
         this.edgeA = edgeA;
@@ -28,37 +29,35 @@ public class Triangle {
         }
     }
 
-    public static int checkInput(int x) {
-        while (true) {
-            if (x > 0) {
-                return x;
-            } else {
-                System.out.println("Edge more than 0");
+    public static int inputEdge() throws IllegalTriangleException {
+        do {
+            try {
+                Scanner sc = new Scanner(System.in);
+                System.out.println("Input Edge:");
+                int edge = Integer.parseInt(sc.nextLine());
+                if (edge <= 0) {
+                    throw new IllegalTriangleException("Edge must be greater than 0");
+                } else {
+                    return edge;
+                }
+            } catch (IllegalTriangleException e) {
+                System.err.println(e.getMessage());
+            } catch (NumberFormatException e) {
+                System.out.println("Edge is Integer");
             }
-        }
+        } while (true);
     }
 
     public static void main(String[] args) throws IllegalTriangleException {
-        Scanner scanner = new Scanner(System.in);
-        int a;
-        int b;
-        int c;
         do {
             try {
-                System.out.println("Enter a:");
-                a = Integer.parseInt(scanner.nextLine());
-                checkInput(a);
-                System.out.println("Enter b:");
-                b = Integer.parseInt(scanner.nextLine());
-                checkInput(b);
-                System.out.println("Enter c:");
-                c = Integer.parseInt(scanner.nextLine());
-                checkInput(c);
+                int a = inputEdge();
+                int b = inputEdge();
+                int c = inputEdge();
                 checkTriangle(a, b, c);
                 Triangle triangle = new Triangle(a, b, c);
                 System.out.println(triangle);
                 break;
-
             } catch (IllegalTriangleException e) {
                 System.err.println(e.getMessage());
             } catch (NumberFormatException e) {

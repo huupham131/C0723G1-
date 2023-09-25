@@ -24,8 +24,9 @@ public class ProductRepositoryImpl implements IProductRepository {
 
     @Override
     public void displayProduct() {
+        System.out.format("%-5s %-15s %-10s\n", "ID", "Tên Hãng", "Giá");
         for (Product product : products) {
-            System.out.println(product.toString());
+            System.out.format("%-5s %-15s %-10s\n", product.getId(), product.getBrandName(), product.getPrice());
         }
     }
 
