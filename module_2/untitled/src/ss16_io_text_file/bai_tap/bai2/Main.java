@@ -39,6 +39,7 @@ public class Main {
                    country.setCode(dataArr[1]);
                    country.setName(dataArr[2]);
                 }
+                bufferedReader.close();
                 System.out.format("%-5s %-15s %-15s\n", country.getId(), country.getCode(), country.getName());
             }
         }catch (Exception e) {
