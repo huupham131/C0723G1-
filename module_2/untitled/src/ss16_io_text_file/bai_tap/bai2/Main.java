@@ -32,12 +32,12 @@ public class Main {
             String line = null;
             System.out.format("%-5s %-15s %-15s\n", "STT", "CODE", "TEN");
             while ((line = bufferedReader.readLine()) != null) {
-                String[] dataArr = line.split(",");
+                String[] dataArray = line.split(",");
                 Country country = new Country();
-                for (String data : dataArr) {
-                    country.setId(Integer.valueOf(dataArr[0]));
-                    country.setCode(dataArr[1]);
-                    country.setName(dataArr[2]);
+                for (String data : dataArray) {
+                    country.setId(Integer.valueOf(dataArray[0]));
+                    country.setCode(dataArray[1]);
+                    country.setName(dataArray[2]);
                 }
                 System.out.format("%-5s %-15s %-15s\n", country.getId(), country.getCode(), country.getName());
             }
