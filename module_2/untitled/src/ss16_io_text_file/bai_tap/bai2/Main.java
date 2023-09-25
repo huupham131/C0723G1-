@@ -10,7 +10,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 //        try {
-//            Path path = Path.of("/Users/macbook/Documents/GitHub/C0723G1-PhamThanhHuu/module_2/untitled/src/ss16_io_text_file/bai_tap/bai2/data.txt");
+//            Path path = Path.of("/Users/macbook/Documents/GitHub/C0723G1-PhamThanhHuu/module_2/untitled/src/ss16_io_text_file/bai_tap/bai2/data.csv");
 //            List<String> dataList = Files.readAllLines(path);
 //            System.out.format("%-5s %-15s %-15s\n",
 //                    "STT",
@@ -26,7 +26,7 @@ public class Main {
 //        }
         // Cach 2:
         try {
-            File file = new File("/Users/macbook/Documents/GitHub/C0723G1-PhamThanhHuu/module_2/untitled/src/ss16_io_text_file/bai_tap/bai2/data.txt");
+            File file = new File("/Users/macbook/Documents/GitHub/C0723G1-PhamThanhHuu/module_2/untitled/src/ss16_io_text_file/bai_tap/bai2/data.csv");
             FileReader reader = new FileReader(file);
             BufferedReader bufferedReader = new BufferedReader(reader);
             String line = null;
@@ -35,14 +35,14 @@ public class Main {
                 String[] dataArr = line.split(",");
                 Country country = new Country();
                 for (String data : dataArr) {
-                   country.setId(Integer.valueOf(dataArr[0]));
-                   country.setCode(dataArr[1]);
-                   country.setName(dataArr[2]);
+                    country.setId(Integer.valueOf(dataArr[0]));
+                    country.setCode(dataArr[1]);
+                    country.setName(dataArr[2]);
                 }
-                bufferedReader.close();
                 System.out.format("%-5s %-15s %-15s\n", country.getId(), country.getCode(), country.getName());
             }
-        }catch (Exception e) {
+            bufferedReader.close();
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
