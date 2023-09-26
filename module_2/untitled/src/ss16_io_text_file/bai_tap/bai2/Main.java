@@ -3,6 +3,7 @@ package ss16_io_text_file.bai_tap.bai2;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
@@ -25,10 +26,13 @@ public class Main {
 //            e.printStackTrace();
 //        }
         // Cach 2:
+        File file = null;
+        FileReader reader = null;
+        BufferedReader bufferedReader = null;
         try {
-            File file = new File("/Users/macbook/Documents/GitHub/C0723G1-PhamThanhHuu/module_2/untitled/src/ss16_io_text_file/bai_tap/bai2/data.csv");
-            FileReader reader = new FileReader(file);
-            BufferedReader bufferedReader = new BufferedReader(reader);
+            file = new File("/Users/macbook/Documents/GitHub/C0723G1-PhamThanhHuu/module_2/untitled/src/ss16_io_text_file/bai_tap/bai2/data.csv");
+            reader = new FileReader(file);
+            bufferedReader = new BufferedReader(reader);
             String line = null;
             System.out.format("%-5s %-15s %-15s\n", "STT", "CODE", "TEN");
             while ((line = bufferedReader.readLine()) != null) {
@@ -41,9 +45,19 @@ public class Main {
                 }
                 System.out.format("%-5s %-15s %-15s\n", country.getId(), country.getCode(), country.getName());
             }
-            bufferedReader.close();
         } catch (Exception e) {
             e.printStackTrace();
+        } finally {
+            try {
+                if (bufferedReader != null) {
+                    bufferedReader.close();
+                }
+                if (reader != null) {
+                    reader.close();
+                }
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 }
