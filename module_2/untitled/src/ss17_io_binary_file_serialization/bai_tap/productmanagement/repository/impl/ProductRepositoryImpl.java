@@ -11,7 +11,7 @@ public class ProductRepositoryImpl implements IProductRepository {
     private static final String PRODUCTS_CSV_PATH = "/Users/macbook/Documents/GitHub/C0723G1-PhamThanhHuu/module_2/untitled/src/ss17_io_binary_file_serialization/bai_tap/productmanagement/data/data.csv";
 
     public void writeByByteStream(String pathname, List<Product> data) {
-        File file = null;
+        File file;
         FileOutputStream fileOutputStream = null;
         ObjectOutputStream objectOutputStream = null;
         try {
@@ -39,7 +39,7 @@ public class ProductRepositoryImpl implements IProductRepository {
     }
 
     public List<Product> readByByteStream(String pathname) {
-        File file = null;
+        File file;
         FileInputStream fileInputStream = null;
         ObjectInputStream objectInputStream = null;
         try {
@@ -69,7 +69,7 @@ public class ProductRepositoryImpl implements IProductRepository {
     @Override
     public void createProduct(Product product) {
         List<Product> products = getProducts();
-        product.setId(products.size() + 1);
+//        product.setId(products.size() + 1);
         products.add(product);
         writeByByteStream(PRODUCTS_CSV_PATH, products);
     }
