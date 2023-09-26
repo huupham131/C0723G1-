@@ -31,12 +31,10 @@ public class FileCopy {
             inputStream = new FileInputStream(fileSource);
             outputStream = new FileOutputStream(fileTarget);
             int i = -1;
-            int count = 0;
             while ((i = inputStream.read()) != -1) {
                 outputStream.write(i);
-                count++;
             }
-            System.out.println("Count of bytes: "+ count);
+            System.out.println("Count of bytes: "+ fileSource.length());
         } catch (IOException e) {
             throw new RuntimeException(e);
         } finally {
