@@ -39,8 +39,6 @@ public class FileCopy {
             bufferedWriter.close();
             System.out.println("Successful cloning");
             System.out.println("Number of cloned characters:" + count);
-        } catch (FileNotFoundException e) {
-            System.out.println("File not found!");
         } catch (Exception e) {
             e.printStackTrace();
         }
