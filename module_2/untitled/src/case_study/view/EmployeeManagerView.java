@@ -7,6 +7,7 @@ public class EmployeeManagerView {
     private final Scanner scanner = new Scanner(System.in);
 
     public void displayEmployeeMenu() {
+        System.out.println("---Employee Menu---");
         System.out.println("1. Display list employees");
         System.out.println("2. Add new employee");
         System.out.println("3. Edit employee");
@@ -20,7 +21,7 @@ public class EmployeeManagerView {
         do {
             System.out.println("Please select feature:");
             option = Integer.parseInt(scanner.nextLine());
-        } while (option <= 0 || option >= 6);
+        } while (option <= 0 || option > 6);
         return option;
     }
 
@@ -33,13 +34,11 @@ public class EmployeeManagerView {
             case 3:
                 break;
             case 4:
-
                 break;
             case 5:
                 break;
             case 6:
-                furamaManagerView.render();
-                break;
+                return;
         }
     }
 }
