@@ -7,9 +7,9 @@ import java.util.Scanner;
 
 public class VehicleManagerView {
     private final Scanner scanner = new Scanner(System.in);
-    private VehicleController<Car> carController = new VehicleController();
-    private VehicleController<Truck> truckController = new VehicleController();
-    private VehicleController<Motorbike> motorbikeController = new VehicleController();
+    private final VehicleController<Car> carController = new VehicleController();
+    private final VehicleController<Truck> truckController = new VehicleController();
+    private final VehicleController<Motorbike> motorbikeController = new VehicleController();
     private int indexOfCar = -1;
     private int indexOfTruck = -1;
     private int indexOfMotorbike = -1;

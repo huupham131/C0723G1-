@@ -10,10 +10,14 @@ public class PromotionManagerView {
         System.out.println("3. Return main menu");
     }
     public void handlePromotionManagementOption() {
-        int option;
+        int option =0;
         do {
-            System.out.println("Please select feature:");
-            option = Integer.parseInt(scanner.nextLine());
+            try {
+                System.out.println("Please select feature:");
+                option = Integer.parseInt(scanner.nextLine());
+            }catch (NumberFormatException e){
+                System.out.println("feature is INTEGER");
+            }
         } while (option <= 0 || option > 3);
         switch (option) {
             case 1:

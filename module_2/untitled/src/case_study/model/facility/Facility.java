@@ -1,16 +1,16 @@
 package case_study.model.facility;
 
 public abstract class Facility {
-    private int serviceCode;
+    private String serviceCode;
     private String serviceName;
-    private int acreage;
-    private int price;
+    private double acreage;
+    private double price;
     private int maxPerson;
     private String rentalType;
     public Facility(){
     }
 
-    public Facility(int serviceCode, String serviceName, int acreage, int price, int maxPerson, String rentalType) {
+    public Facility(String serviceCode, String serviceName, double acreage, double price, int maxPerson, String rentalType) {
         this.serviceCode = serviceCode;
         this.serviceName = serviceName;
         this.acreage = acreage;
@@ -19,11 +19,11 @@ public abstract class Facility {
         this.rentalType = rentalType;
     }
 
-    public int getServiceCode() {
+    public String getServiceCode() {
         return serviceCode;
     }
 
-    public void setServiceCode(int serviceCode) {
+    public void setServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
     }
 
@@ -35,19 +35,19 @@ public abstract class Facility {
         this.serviceName = serviceName;
     }
 
-    public int getAcreage() {
+    public double getAcreage() {
         return acreage;
     }
 
-    public void setAcreage(int acreage) {
+    public void setAcreage(double acreage) {
         this.acreage = acreage;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 

@@ -18,8 +18,12 @@ public class FuramaManagerView {
     public int inputOption() {
         int option = 0;
         do {
-            System.out.println("Please select feature:");
-            option = Integer.parseInt(scanner.nextLine());
+            try {
+                System.out.println("Please select feature:");
+                option = Integer.parseInt(scanner.nextLine());
+            }catch (NumberFormatException e){
+                System.out.println("feature is INTEGER");
+            }
         } while (option <= 0 || option > 6);
         return option;
     }
@@ -28,9 +32,9 @@ public class FuramaManagerView {
 
         switch (option) {
             case 1:
-                EmployeeManagerView employeeManegerView = new EmployeeManagerView();
-                employeeManegerView.displayEmployeeMenu();
-                employeeManegerView.handleEmployeeManagementOption(inputOption());
+                EmployeeManagerView employeeManagerView = new EmployeeManagerView();
+                employeeManagerView.displayEmployeeMenu();
+                employeeManagerView.handleEmployeeManagementOption(inputOption());
                 break;
             case 2:
                 CustomerManagerView customerManagerView = new CustomerManagerView();
@@ -59,7 +63,6 @@ public class FuramaManagerView {
     }
 
     public void render() {
-
         while (true){
             displayMainMenu();
             handleFuramaManagementOption(inputOption());
