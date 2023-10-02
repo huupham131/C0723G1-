@@ -9,7 +9,7 @@ public class PromotionManagerView {
         System.out.println("2. Display list customers use voucher");
         System.out.println("3. Return main menu");
     }
-    public void handlePromotionManagementOption() {
+    public int inputOption(){
         int option =0;
         do {
             try {
@@ -19,6 +19,9 @@ public class PromotionManagerView {
                 System.out.println("feature is INTEGER");
             }
         } while (option <= 0 || option > 3);
+        return option;
+    }
+    public void handlePromotionManagementOption(int option) {
         switch (option) {
             case 1:
                 break;
@@ -27,5 +30,13 @@ public class PromotionManagerView {
             case 3:
                 return;
         }
+    }
+    public void menuPromotion(){
+        int temp;
+        do{
+            displayPromotionMenu();
+            temp = inputOption();
+            handlePromotionManagementOption(temp);
+        }while (temp!=3);
     }
 }

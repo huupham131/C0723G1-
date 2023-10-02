@@ -13,7 +13,7 @@ public class EmployeeRepositoryImpl implements IPersonRepository<Employee>, ICon
 
     @Override
     public void add(Employee employee) {
-        List<Employee> employees = new ArrayList<>();
+        List<Employee> employees = convertToObject(FileUtil.readFile(EMPLOYEE_PATH));
         employees.add(employee);
         FileUtil.writeFile(EMPLOYEE_PATH, this.convertToString(employees));
     }

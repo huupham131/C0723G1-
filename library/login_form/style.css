@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: url("Newsletter Popup Starter Files/Assets/img.png");
+    height: 100vh;
+    justify-content: center;
+    padding: 5rem 20rem 10rem 30rem;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.container {
+    width: 30vw;
+    height: 75vh;
+    background-color: white;
+    border-radius: 6px;
+}
+
+.contain-title {
+    height: 40%;
+    width: inherit;
+    background: linear-gradient(
+            to right,
+            rgba(51, 51, 243, 0.7),
+            rgba(51, 51, 243, 0.7)
+    ),
+    url("Newsletter Popup Starter Files/Assets/Pattern.png");
+    background-size: cover;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    color: whitesmoke;
+    text-align: center;
+    padding: 3rem 5rem 2rem 5rem;
+}
+
+.contain-content {
+    padding: 1rem;
+    padding-top: 1rem;
+    color: rgb(109, 108, 108);
+}
+
+.contain-content > p {
+    padding-bottom: 1rem;
+    text-align: center;
+}
+input {
+    padding: 0.7rem 1rem 0.7rem 1rem;
+    margin-left: 0;
+    width: 72%;
+    border-radius: 6px;
+    border: none;
+    background: rgb(223, 221, 221);
+}
+button {
+    width: 25%;
+    padding: 0.7rem 1rem 0.7rem 1rem;
+    border-radius: 6px;
+    border: none;
+    background: rgba(51, 51, 243, 0.7);
+}
+
+.flex {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+input button {
+    border-radius: 10px;
+    border: 1px solid wheat;
+}
+
+.flex-box {
+    display: flex;
+    width: 100%;
+    padding-top: 1rem;
+    padding-left: 5rem;
+    justify-content: center;
+}
+
+.text-color {
+    color: black;
+    font-weight: 600;
+}
+
+.down {
+    padding: 1rem 1.1rem 1rem 1.1rem;
+}
+
+@media screen and(max-width:830Px) {
+    body {
+        padding: 0 0 0 0;
+        background-color: white;
+    }
+    .container {
+        width: 100vw;
+        height: 100vh;
+    }
+}

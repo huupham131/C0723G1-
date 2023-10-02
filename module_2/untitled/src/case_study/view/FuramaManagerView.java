@@ -21,7 +21,10 @@ public class FuramaManagerView {
             try {
                 System.out.println("Please select feature:");
                 option = Integer.parseInt(scanner.nextLine());
-            }catch (NumberFormatException e){
+                if(option>6 || option<=0){
+                    System.out.println("Please choice 1 to 6");
+                }
+            } catch (NumberFormatException e) {
                 System.out.println("feature is INTEGER");
             }
         } while (option <= 0 || option > 6);
@@ -33,28 +36,23 @@ public class FuramaManagerView {
         switch (option) {
             case 1:
                 EmployeeManagerView employeeManagerView = new EmployeeManagerView();
-                employeeManagerView.displayEmployeeMenu();
-                employeeManagerView.handleEmployeeManagementOption(inputOption());
+                employeeManagerView.employeeMenu();
                 break;
             case 2:
                 CustomerManagerView customerManagerView = new CustomerManagerView();
-                customerManagerView.displayCustomerMenu();
-                customerManagerView.handleCustomerManagementOption(inputOption());
+                customerManagerView.customerMenu();
                 break;
             case 3:
                 FacilityManagerView facilityManagerView = new FacilityManagerView();
-                facilityManagerView.displayFacilityMenu();
-                facilityManagerView.handleFacilityManagementOption();
+                facilityManagerView.facilityMenu();
                 break;
             case 4:
                 BookingManagerView bookingManagerView = new BookingManagerView();
-                bookingManagerView.displayBookingMenu();
-                bookingManagerView.handleBookingManagementOption(inputOption());
+                bookingManagerView.menuBooking();
                 break;
             case 5:
                 PromotionManagerView promotionManagerView = new PromotionManagerView();
-                promotionManagerView.displayPromotionMenu();
-                promotionManagerView.handlePromotionManagementOption();
+                promotionManagerView.menuPromotion();
                 break;
             case 6:
                 System.exit(1);
@@ -63,7 +61,7 @@ public class FuramaManagerView {
     }
 
     public void render() {
-        while (true){
+        while (true) {
             displayMainMenu();
             handleFuramaManagementOption(inputOption());
         }

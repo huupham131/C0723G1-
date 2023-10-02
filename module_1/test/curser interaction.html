@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+  body{
+    background: black;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  #Particles:after{
+    content: " ";
+    position: absolute;
+    top: -2000px;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    border-radius: 100%;
+  }
+</style>
+</body>
+<script>
+  class MagicParticle{
+    constructor(x,y) {
+      this.x= x;
+      this.y = y;
+      this.size = random(10, 30);
+      this.baseColor = color(
+              random([
+                      "#e84e66","#67c69e",
+                      "#edf1f4","#80acc9",
+                      "#73a8b0","#f3817f",
+                      "#68d2a4","#1d203f",
+                      "#c9a30d"])
+      )}
+    update(){
+      this.x += this.speedX;
+      this.y += this.speedY;
+      this.opacity -=10
+    }
+  }
+</script>
+</html>
