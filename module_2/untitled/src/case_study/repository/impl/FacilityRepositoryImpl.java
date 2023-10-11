@@ -1,16 +1,29 @@
 package case_study.repository.impl;
 
 import case_study.model.facility.Facility;
+import case_study.model.facility.House;
+import case_study.model.facility.Room;
+import case_study.model.facility.Villa;
 import case_study.repository.IFacilityRepository;
 
 import java.util.*;
 
 public class FacilityRepositoryImpl implements IFacilityRepository {
-    LinkedHashMap<Facility, Integer> facilityMap = new LinkedHashMap<>();
-
+    private static final Map<Facility, Integer> facilityMap = new LinkedHashMap<>();
+static {
+    facilityMap.put(new Villa("SVVL-0001","Vip",20,2000,4,"day",20,"President",4),5);
+    facilityMap.put(new House("SVHO-0000","Normal",10,1000,3,"month","normal",2),3);
+    facilityMap.put(new Room("SVRO-0002","Luxury",15,1500,2,"day","free"),0);
+}
     @Override
     public List<Facility> displayListMaintenance() {
-        return null;
+        List<Facility> facilityList = new ArrayList<>();
+        for (Map.Entry<Facility, Integer> entry : facilityMap.entrySet()) {
+            if (entry.getValue() >= 5) {
+                facilityList.add(entry.getKey());
+            }
+        }
+        return facilityList;
     }
 
     @Override
@@ -20,19 +33,16 @@ public class FacilityRepositoryImpl implements IFacilityRepository {
 
     @Override
     public void delete(String id) {
-//        List<Facility> facilityList = display();
-//        for(Facility facility1 : facilityList ){
-//            if(facility1.getServiceCode().equals(id)){
-//                facilityList.remove(facility1);
-//            }
-//        }
-//        facilityList
+        List<Facility> facilityList = display();
+        for (Facility facility : facilityList) {
+            if (facility.getServiceCode().equals(id)) {
+                facilityList.remove(facility);
+            }
+        }
     }
 
     @Override
     public List<Facility> display() {
         return facilityMap.keySet().stream().toList();
     }
-
-
 }

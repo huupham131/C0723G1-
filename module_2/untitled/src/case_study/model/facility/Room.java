@@ -25,9 +25,13 @@ public class Room extends Facility {
 
     @Override
     public String toString() {
-        // ua roi ko override may phuong thuc chung ak ? in ra dich vu chu ko in ra so phong do rk ak ?
-        return "Room{" +
+        return "Room{" + "serviceCode=" + getServiceCode() +
+                ", serviceName='" + getServiceName()+
+                ", acreage=" + getAcreage() +
+                ", price=" + getPrice() +
+                ", maxPerson=" + getMaxPerson() +
+                ", rentalType='" + getRentalType()+
                 "freeService='" + freeService + '\'' +
-                '}';
+                '}'+"\n";
     }
 }

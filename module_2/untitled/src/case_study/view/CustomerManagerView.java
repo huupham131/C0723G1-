@@ -110,23 +110,27 @@ public class CustomerManagerView {
     }
 
     public String inputId() {
-        String id;
+        String id = "KH-";
+        String inputId;
         do {
-            System.out.println("Enter id of Customer(KH-YYYY):");
-            id = scanner.nextLine();
-            if (checkId(id)) {
+            System.out.println(id+ " Enter id of customer YYYY(Y is Integer):");
+            inputId = scanner.nextLine();
+            if (!Regex.codeValidate(inputId)) {
+                System.out.println("Invalid id");
+            }
+            if (checkId(id.concat(inputId))) {
                 System.out.println("Id already exists. Please enter id again:");
             }
-        } while (!Regex.idCustomerValidate(id) || checkId(id));
+        } while (!Regex.codeValidate(inputId) || checkId(id.concat(inputId)));
         return id;
     }
 
     public String inputName() {
         String name;
         do {
-            System.out.println("Enter name of customer:");
+            System.out.println("Enter name of customer(Format ex: Pham Thanh Huu):");
             name = scanner.nextLine();
-        } while (!Regex.NameValidate(name));
+        } while (!Regex.nameValidate(name));
         return name;
     }
 
@@ -142,7 +146,7 @@ public class CustomerManagerView {
     public String inputGender() {
         String gender;
         do {
-            System.out.println("Enter gender of customer:");
+            System.out.println("Enter gender of customer(Male or Female):");
             gender = scanner.nextLine();
         } while (!Regex.genderValidate(gender));
         return gender;
@@ -151,7 +155,7 @@ public class CustomerManagerView {
     public String inputIdCard() {
         String idCard;
         do {
-            System.out.println("Enter id card of customer:");
+            System.out.println("Enter id card of customer(9 or 12 numbers):");
             idCard = scanner.nextLine();
         } while (!Regex.idCardValidate(idCard));
         return idCard;

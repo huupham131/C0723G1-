@@ -18,11 +18,32 @@ public class House extends Facility {
         this.numberOfFloors = numberOfFloors;
     }
 
+    public String getTypeOfRoom() {
+        return typeOfRoom;
+    }
+
+    public void setTypeOfRoom(String typeOfRoom) {
+        this.typeOfRoom = typeOfRoom;
+    }
+
+    public int getNumberOfFloors() {
+        return numberOfFloors;
+    }
+
+    public void setNumberOfFloors(int numberOfFloors) {
+        this.numberOfFloors = numberOfFloors;
+    }
+
     @Override
     public String toString() {
-        return "House{" +
+        return "House{" + "serviceCode=" + getServiceCode() +
+                ", serviceName='" + getServiceName()+
+                ", acreage=" + getAcreage() +
+                ", price=" + getPrice() +
+                ", maxPerson=" + getMaxPerson() +
+                ", rentalType='" + getRentalType()+
                 "typeOfRoom='" + typeOfRoom + '\'' +
                 ", numberOfFloors=" + numberOfFloors +
-                '}';
+                '}'+"\n";
     }
 }

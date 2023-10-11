@@ -3,7 +3,7 @@ package ss10_dsa_danhsach.bai_tap.mvc.service;
 
 import java.util.ArrayList;
 
-public interface IVehicleService<E> {
+public interface    IVehicleService<E> {
     void addVehicle(E e);
 
     void displayVehicle();

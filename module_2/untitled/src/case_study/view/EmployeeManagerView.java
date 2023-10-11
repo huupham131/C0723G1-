@@ -21,16 +21,17 @@ public class EmployeeManagerView {
         System.out.println("5. Search by name employee");
         System.out.println("6. Return main menu");
     }
+
     public int inputOption() {
         int option = 0;
         do {
             try {
                 System.out.println("Please select feature:");
                 option = Integer.parseInt(scanner.nextLine());
-                if(option>6 || option<=0){
+                if (option > 6 || option <= 0) {
                     System.out.println("Please choice 1 to 6");
                 }
-            }catch (NumberFormatException e){
+            } catch (NumberFormatException e) {
                 System.out.println("feature is INTEGER");
             }
         } while (option <= 0 || option > 6);
@@ -81,16 +82,20 @@ public class EmployeeManagerView {
                 break;
             case 6:
                 break;
+            default:
+                System.out.println("Enter choice 1 to 6");
         }
     }
-public void employeeMenu(){
-    int temp;
-        do{
+
+    public void employeeMenu() {
+        int temp;
+        do {
             displayEmployeeMenu();
             temp = inputOption();
             handleEmployeeManagementOption(temp);
-        }while (temp!=6);
-}
+        } while (temp != 6);
+    }
+
     public Employee inputEmployee() {
         Employee employee = new Employee();
         employee.setIdEmployee(inputId());
@@ -106,6 +111,7 @@ public void employeeMenu(){
         return employee;
     }
 
+
     public boolean checkId(String id) {
         for (Employee employee : employeeController.display()) {
             if (employee.getIdEmployee().equals(id)) {
@@ -117,23 +123,30 @@ public void employeeMenu(){
 
 
     public String inputId() {
-        String id;
+        String id = "NV-";
+        String inputId;
         do {
-            System.out.println("Enter id of employee(NV-YYYY):");
-            id = scanner.nextLine();
-            if (checkId(id)) {
-                System.out.println("Id already exists. Please enter id again:");
+            System.out.println(id+ " Enter id of employee YYYY(Y is Integer):");
+            inputId = scanner.nextLine();
+            if (!Regex.codeValidate(inputId)) {
+                System.out.println("Invalid id");
+            }else {
+                if (checkId(id.concat(inputId))) {
+                    System.out.println("Id already exists. Please enter id again:");
+                } else {
+                    break;
+                }
             }
-        } while (!Regex.validate(id) || checkId(id));
+        } while (true);
         return id;
     }
 
     public String inputName() {
         String name;
         do {
-            System.out.println("Enter name of employee:");
+            System.out.println("Enter name of employee (Format ex: Pham Thanh Huu):");
             name = scanner.nextLine();
-        } while (!Regex.NameValidate(name));
+        } while (!Regex.nameValidate(name));
         return name;
     }
 
@@ -145,15 +158,14 @@ public void employeeMenu(){
             try {
                 System.out.println("Enter day of birth of employee (dd/mm/yyyy):");
                 dOB = scanner.nextLine();
-                if(Regex.is18YearsOld(dOB)){
+                if (Regex.is18YearsOld(dOB)) {
                     check = true;
-                }else{
+                } else {
                     System.out.println("Age of employee must greater than 18 year old");
                 }
-            } catch (DateTimeParseException e){
+            } catch (DateTimeParseException e) {
                 System.out.println("Day of birth format is dd/mm/yyyy");
             }
-
         } while (!Regex.dOBValidate(dOB) || !check);
         return dOB;
     }
@@ -161,7 +173,7 @@ public void employeeMenu(){
     public String inputGender() {
         String gender;
         do {
-            System.out.println("Enter gender of employee:");
+            System.out.println("Enter gender of employee(Male or Female):");
             gender = scanner.nextLine();
         } while (!Regex.genderValidate(gender));
         return gender;
@@ -170,7 +182,7 @@ public void employeeMenu(){
     public String inputIdCard() {
         String idCard;
         do {
-            System.out.println("Enter id card of employee:");
+            System.out.println("Enter id card of employee(9 or 12 numbers):");
             idCard = scanner.nextLine();
         } while (!Regex.idCardValidate(idCard));
         return idCard;

@@ -16,13 +16,14 @@ public class Regex {
     private static final String EMAIL_REGEX ="[^@]{2,64}@[^.]{2,253}\\.[0-9a-z-.]{2,63}";
     private static final String SALARY_REGEX = "^[1-9]\\d*$";
     private static final String ID_CUSTOMER_REGEX = "^KH-[0-9]{4}$";
+    private static final String CODE = "^[0-9]{4}$";
 
-    public static boolean validate(String regex) {
+    public static boolean idEmployeeValidate(String regex) {
         Pattern pattern = Pattern.compile(ID_EMPLOYEE_REGEX);
         Matcher matcher = pattern.matcher(regex);
         return matcher.matches();
     }
-    public static boolean NameValidate(String regex) {
+    public static boolean nameValidate(String regex) {
         Pattern pattern = Pattern.compile(NAME_REGEX);
         Matcher matcher = pattern.matcher(regex);
         return matcher.matches();
@@ -65,6 +66,11 @@ public class Regex {
     }
     public static boolean idCustomerValidate(String regex) {
         Pattern pattern = Pattern.compile(ID_CUSTOMER_REGEX);
+        Matcher matcher = pattern.matcher(regex);
+        return matcher.matches();
+    }
+    public static boolean codeValidate(String regex) {
+        Pattern pattern = Pattern.compile(CODE);
         Matcher matcher = pattern.matcher(regex);
         return matcher.matches();
     }

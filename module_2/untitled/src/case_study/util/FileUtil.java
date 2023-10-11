@@ -8,6 +8,7 @@ public class FileUtil {
     public static List<String> readFile(String pathname) {
         BufferedReader bufferedReader = null;
         FileReader fileReader = null;
+        List<String> data = new ArrayList<>();
         try {
             File file = new File(pathname);
             if (!file.exists()) {
@@ -15,7 +16,7 @@ public class FileUtil {
             }
             fileReader = new FileReader(file);
             bufferedReader = new BufferedReader(fileReader);
-            List<String> data = new ArrayList<>();
+
             String str;
             while ((str = bufferedReader.readLine()) != null) {
                 data.add(str);
@@ -36,15 +37,12 @@ public class FileUtil {
             }
         }
     }
-    public static void writeFile(String pathname, List<String> data){
+    public static void writeFile(String pathname, List<String> data, boolean flag){
         FileWriter fileWriter= null;
         BufferedWriter bufferedWriter = null;
         try {
             File file = new File(pathname);
-            if(!file.exists()){
-                file.createNewFile();
-            }
-            fileWriter = new FileWriter(file);
+            fileWriter = new FileWriter(file,flag);
             bufferedWriter = new BufferedWriter(fileWriter);
             for(String str : data){
                 bufferedWriter.write(str);

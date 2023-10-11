@@ -3,6 +3,7 @@ package ss12_java_collection_framework.bai_tap.service;
 import ss12_java_collection_framework.bai_tap.model.Product;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 public interface IProductService {
     void createProduct(Product product);

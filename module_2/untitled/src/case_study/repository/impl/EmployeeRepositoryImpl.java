@@ -13,9 +13,10 @@ public class EmployeeRepositoryImpl implements IPersonRepository<Employee>, ICon
 
     @Override
     public void add(Employee employee) {
-        List<Employee> employees = convertToObject(FileUtil.readFile(EMPLOYEE_PATH));
+        List<Employee> employees = new ArrayList<>();
+//                convertToObject(FileUtil.readFile(EMPLOYEE_PATH));
         employees.add(employee);
-        FileUtil.writeFile(EMPLOYEE_PATH, this.convertToString(employees));
+        FileUtil.writeFile(EMPLOYEE_PATH, this.convertToString(employees),true);
     }
 
     @Override
@@ -27,7 +28,7 @@ public class EmployeeRepositoryImpl implements IPersonRepository<Employee>, ICon
                 break;
             }
         }
-        FileUtil.writeFile(EMPLOYEE_PATH, this.convertToString(employees));
+        FileUtil.writeFile(EMPLOYEE_PATH, this.convertToString(employees),false);
     }
 
     @Override
@@ -89,7 +90,7 @@ public class EmployeeRepositoryImpl implements IPersonRepository<Employee>, ICon
                 employee1.setSalary(employee.getSalary());
             }
         }
-        FileUtil.writeFile(EMPLOYEE_PATH, this.convertToString(employees));
+        FileUtil.writeFile(EMPLOYEE_PATH, this.convertToString(employees),false);
     }
 
     @Override
@@ -97,7 +98,7 @@ public class EmployeeRepositoryImpl implements IPersonRepository<Employee>, ICon
         List<Employee> employees = display();
         List<Employee> newEmployee = new ArrayList<>();
         for (Employee employee : employees) {
-            if(employee.getName().equals(name)){
+            if(employee.getName().contains(name)){
                 newEmployee.add(employee);
             }
         }

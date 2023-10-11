@@ -62,7 +62,7 @@ public class CustomerRepositoryImpl implements IPersonRepository<Customer>, ICon
                 customer1.setAddress(customer.getAddress());
             }
         }
-        FileUtil.writeFile(CUSTOMER_PATH, this.convertToString(customers));
+        FileUtil.writeFile(CUSTOMER_PATH, this.convertToString(customers),false);
     }
 
     @Override
@@ -81,7 +81,7 @@ public class CustomerRepositoryImpl implements IPersonRepository<Customer>, ICon
     public void add(Customer customer) {
         List<Customer> customers = new ArrayList<>();
         customers.add(customer);
-        FileUtil.writeFile(CUSTOMER_PATH, this.convertToString(customers));
+        FileUtil.writeFile(CUSTOMER_PATH, this.convertToString(customers),true);
     }
 
     @Override
@@ -93,7 +93,7 @@ public class CustomerRepositoryImpl implements IPersonRepository<Customer>, ICon
                 break;
             }
         }
-        FileUtil.writeFile(CUSTOMER_PATH, this.convertToString(customers));
+        FileUtil.writeFile(CUSTOMER_PATH, this.convertToString(customers),false);
     }
 
     @Override
