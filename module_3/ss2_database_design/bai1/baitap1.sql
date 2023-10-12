@@ -54,7 +54,7 @@ foreign key (so_pn) references phieu_nhap(so_pn),
 foreign key (ma_vat_tu) references vat_tu(ma_vat_tu)
 );
 create table so_dien_thoai(
-so_dien_thoai varchar(20) not null,
+so_dien_thoai varchar(20),
 ma_nha_cc int not null,
 foreign key(ma_nha_cc) references nha_cung_cap(ma_nha_cc)
 );
