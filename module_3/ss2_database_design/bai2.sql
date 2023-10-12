@@ -8,17 +8,17 @@ customer_age int not null check (customer_age >=16)
 create table `order`(
 order_id int not null auto_increment primary key,
 order_date date not null,
-order_total_price float not null,
+order_total_price float not null check(order_total_price>0),
 customer_id int not null,
 foreign key(customer_id) references customer(customer_id)
 );
 create table product(
 product_id int not null auto_increment primary key,
 product_name varchar(20) not null,
-product_price float not null
+product_price float not null check(product_price >0)
 );
 create table order_detail(
-od_quantity int not null,
+od_quantity int not null check(od_quantity>0),
 product_id int not null,
 order_id int not null,
 primary key (product_id, order_id),
