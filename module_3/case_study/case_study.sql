@@ -192,3 +192,7 @@ value
 (6, 1, 1, 3),
 (7, 2, 1, 2),
 (8, 2, 12, 2);
+-- Q2
+select id, name_staff
+from staff
+where name_staff like 'H%' or 'T%' or 'K%' and (length(name_staff) <=15)
