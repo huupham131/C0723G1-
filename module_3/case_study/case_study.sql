@@ -31,7 +31,7 @@ foreign key (id_department) references department(id)
 );
 create table type_customer(
 id int primary key,
-name_customer varchar(45) not null 
+`name` varchar(45) not null 
 );
 create table customer(
 id int primary key,
@@ -122,7 +122,7 @@ value
 (8, 'Nguyễn Hà Đông', '1989-09-03', '234414123', 9000000, '0642123111', 'donghanguyen@gmail.com', '111 Hùng Vương, Hà Nội', 2, 4, 4),
 (9, 'Tòng Hoang', '1982-09-03', '256781231', 6000000, '0245144444', 'hoangtong@gmail.com', '213 Hàm Nghi, Đà Nẵng', 2, 4, 4),
 (10, 'Nguyễn Công Đạo', '1994-01-08', '755434343', 8000000, '0988767111', 'nguyencongdao12@gmail.com', '6 Hoà Khánh, Đồng Nai', 2, 3, 2);
-insert into type_customer (id, name_customer)
+insert into type_customer (id, `name`)
 value
 (1, 'Diamond'),
 (2, 'Platinium'),
@@ -192,7 +192,3 @@ value
 (6, 1, 1, 3),
 (7, 2, 1, 2),
 (8, 2, 12, 2);
--- Q2
-select id, name_staff
-from staff
-where name_staff like 'H%' or 'T%' or 'K%' and (length(name_staff) <=15)

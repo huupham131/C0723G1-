@@ -61,12 +61,10 @@ join `order` o on c.customer_id = o.customer_id
 join order_detail od on o.order_id = od.order_id
 join product p on od.product_id = p.product_id;
 -- Hiển thị tên những khách hàng không mua bất kỳ một sản phẩm nào
-select c.customer_name,ifnull(p.product_name, 'chưa mua gì')as name_of_product
+select c.customer_name,ifnull(o.customer_id, 'Ko mua gì cả') as products
 from customer c
 left join `order` o on c.customer_id = o.customer_id
-left join order_detail od on o.order_id = od.order_id
-left join product p on od.product_id = p.product_id
-having name_of_product = 'chưa mua gì';
+where o.customer_id is null;
 -- Hiển thị mã hóa đơn, ngày bán và giá tiền của từng hóa đơn 
 -- (giá một hóa đơn được tính bằng tổng giá bán của từng loại mặt hàng xuất hiện trong hóa đơn. 
 -- Giá bán của từng loại được tính = odQTY*pPrice)
