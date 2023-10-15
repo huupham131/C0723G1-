@@ -28,4 +28,19 @@ group by name_customer;
 select name_customer
 from customer
 union select name_customer
-from customer
+from customer;
+-- 9.Thực hiện thống kê doanh thu theo tháng, nghĩa là tương ứng với mỗi tháng trong năm 2021
+--  thì sẽ có bao nhiêu khách hàng thực hiện đặt phòng.
+select month(ct.start_date) as `month`, count(ct.id_customer) as quantity_customer
+from contract ct
+where year(ct.start_date) = 2021
+group by `month`
+order by `month`;
+-- 10.Hiển thị thông tin tương ứng với từng hợp đồng thì đã sử dụng bao nhiêu dịch vụ đi kèm.
+-- Kết quả hiển thị bao gồm ma_hop_dong, ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, so_luong_dich_vu_di_kem
+-- (được tính dựa trên việc sum so_luong ở dich_vu_di_kem).
+select ct.id, ct.start_date, ct.end_date, ct.deposits, sum(ifnull(cd.quantity,0))as quantity_accompanied_service
+from contract ct
+left join contract_detail cd on ct.id = cd.id_contract
+left join accompanied_service acs on acs.id = cd.id_accompanied_service
+group by ct.id
