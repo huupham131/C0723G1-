@@ -32,3 +32,4 @@ left join contract_detail cd on ct.id = cd.id_contract
 left join accompanied_service acs on cd.id_accompanied_service = acs.id
 group by c.id, ct.id
 order by c.id;
+

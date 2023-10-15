@@ -78,8 +78,8 @@ unit varchar(10) not null,
 );
 create table contract(
 id int primary key,
-startdate datetime not null,
-enddate datetime not null,
+start_date datetime not null,
+end_date datetime not null,
 deposits double not null check(deposits>=0),
 id_staff int not null,
 id_customer int not null,
@@ -168,7 +168,7 @@ value
 (4, 'Buffet buổi sáng', 15000, 'suất', 'đầy đủ đồ ăn, tráng miệng'),
 (5, 'Buffet buổi trưa', 90000, 'suất', 'đầy đủ đồ ăn, tráng miệng'),
 (6, 'Buffet buổi tối', 16000, 'suất', 'đầy đủ đồ ăn, tráng miệng');
-insert into contract (id, startdate, enddate, deposits, id_staff, id_customer, id_service)
+insert into contract (id, start_date, end_date, deposits, id_staff, id_customer, id_service)
 value
 (1, '2020-12-08', '2020-12-08', 0, 3, 1, 3),
 (2, '2020-07-14', '2020-07-21', 200000, 7, 3, 1),

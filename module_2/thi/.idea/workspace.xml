@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="543909bb-df61-4002-83f0-b4d504fa0b17" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../module_3/ss2_database_design/bai2.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_3/ss2_database_design/bai2.sql" afterDir="false" />
-    </list>
+    <list default="true" id="543909bb-df61-4002-83f0-b4d504fa0b17" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,6 +109,7 @@
       <workItem from="1696905232827" duration="1520000" />
       <workItem from="1696922006083" duration="198000" />
       <workItem from="1697097585087" duration="10000" />
+      <workItem from="1697290287930" duration="98000" />
     </task>
     <servers />
   </component>
