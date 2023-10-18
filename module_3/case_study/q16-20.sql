@@ -28,8 +28,20 @@ set id_type_customer = 1
 where id in (select id from w_customer);
 drop view if exists w_customer;
 -- 18.	Xóa những khách hàng có hợp đồng trước năm 2021 (chú ý ràng buộc giữa các bảng).
-create view w_contract_before_2021 as
-select c.id as id_customer, ct.id as id_contract_detail, cd;
+alter table customer
+add column is_delete boolean default 0;
+with temp as(
+select c.id 
+from customer c
+join contract ct on ct.id_customer = c.id
+where year(start_date) < 2021)
+
+update customer
+set is_delete = 1
+where id in ( select * from temp);
+
+select * from customer
+where is_delete = 0;
 -- 19.	Cập nhật giá cho các dịch vụ đi kèm được sử dụng trên 10 lần trong năm 2020 lên gấp đôi.
 create view w_accompanied_service as
 select acs.id
