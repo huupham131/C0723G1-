@@ -37,6 +37,7 @@ from quantity_acs);
 -- 14.Hiển thị thông tin tất cả các Dịch vụ đi kèm chỉ mới được sử dụng một lần duy nhất.
 -- Thông tin hiển thị bao gồm ma_hop_dong, ten_loai_dich_vu, ten_dich_vu_di_kem, so_lan_su_dung
 -- (được tính dựa trên việc count các ma_dich_vu_di_kem).
+SET sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
 select ct.id as id_contract, ts.name as type_service_name, acs.name as accompanied_service_name, 
 count(cd.id_accompanied_service) as count_used_acs
 from contract ct
@@ -44,7 +45,7 @@ join service s on s.id = ct.id_service
 join type_service ts on ts.id = s.id_type_service
 join contract_detail cd on ct.id =cd.id_contract
 join accompanied_service acs on acs.id = cd.id_accompanied_service
-group by ct.id, ts.name, acs.name
+group by cd.id_accompanied_service
 having count(cd.id_accompanied_service) = 1;
 -- 15.Hiển thi thông tin của tất cả nhân viên bao gồm ma_nhan_vien, ho_ten, ten_trinh_do, ten_bo_phan, so_dien_thoai,
 --  dia_chi mới chỉ lập được tối đa 3 hợp đồng từ năm 2020 đến 2021.
