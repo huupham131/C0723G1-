@@ -29,8 +29,13 @@ where id in (select id from w_customer);
 select * from w_customer;
 -- 18.	Xóa những khách hàng có hợp đồng trước năm 2021 (chú ý ràng buộc giữa các bảng).
 create view w_contract_before_2021 as
-select c.id as id_customer, ct.id as id_contract_detail, cd
+select c.id as id_customer, ct.id as id_contract_detail, cd;
 -- 19.	Cập nhật giá cho các dịch vụ đi kèm được sử dụng trên 10 lần trong năm 2020 lên gấp đôi.
 
 -- 20.	Hiển thị thông tin của tất cả các nhân viên và khách hàng có trong hệ thống, thông tin hiển thị bao gồm id
 --  (ma_nhan_vien, ma_khach_hang), ho_ten, email, so_dien_thoai, ngay_sinh, dia_chi.
+select id , name_staff, email, phone_number, birthday, address
+from staff
+union all
+select id , name_customer, email, phone_number, birthday, address
+from customer
