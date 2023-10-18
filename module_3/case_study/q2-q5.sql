@@ -23,7 +23,7 @@ order by quantity_rent;
 -- Chi Phí Thuê + Số Lượng * Giá, với Số Lượng và Giá là từ bảng dich_vu_di_kem, hop_dong_chi_tiet) 
 -- cho tất cả các khách hàng đã từng đặt phòng. (những khách hàng nào chưa từng đặt phòng cũng phải hiển thị ra). 
 select c.id, c.name_customer,tc.`name`, ct.id, s.name_service, ct.start_date, ct.end_date, 
-(ifnull(s.price,0) + sum(ifnull(cd.quantity,0) * ifnull(acs.price,0))) as total
+(ifnull(s.price,0) + ifnull(cd.quantity,0) * ifnull(acs.price,0)) as total
 from customer c
 join type_customer tc on c.id_type_customer = tc.id
 left join contract ct on c.id = ct.id_customer
