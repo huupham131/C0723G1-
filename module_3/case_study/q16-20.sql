@@ -25,7 +25,9 @@ where year(start_date) = 2021 and tc.name = "Platinium"
 group by c.id;
 update customer
 set id_type_customer = 1
-where id in (select id from w_customer);
+where id in (
+select id from w_customer
+where total >= 1000000);
 drop view if exists w_customer;
 -- 18.	Xóa những khách hàng có hợp đồng trước năm 2021 (chú ý ràng buộc giữa các bảng).
 alter table customer

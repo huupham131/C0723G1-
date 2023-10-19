@@ -37,7 +37,7 @@ from quantity_acs);
 -- 14.Hiển thị thông tin tất cả các Dịch vụ đi kèm chỉ mới được sử dụng một lần duy nhất.
 -- Thông tin hiển thị bao gồm ma_hop_dong, ten_loai_dich_vu, ten_dich_vu_di_kem, so_lan_su_dung
 -- (được tính dựa trên việc count các ma_dich_vu_di_kem).
-set sql_mode=(select replace(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
+set sql_mode= (select replace(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
 select ct.id as id_contract, ts.name as type_service_name, acs.name as accompanied_service_name, 
 count(cd.id_accompanied_service) as count_used_acs
 from contract ct

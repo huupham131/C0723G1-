@@ -77,7 +77,7 @@ unit varchar(10) not null,
 `status` varchar(45) not null
 );
 create table contract(
-id int primary key,
+id int primary key auto_increment,
 start_date datetime not null,
 end_date datetime not null,
 deposits double not null check(deposits>=0),
