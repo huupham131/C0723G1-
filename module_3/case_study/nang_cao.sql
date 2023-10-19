@@ -93,11 +93,6 @@ end_date = '2000-01-12'
 where id = 16;
 -- 27.Tạo Function thực hiện yêu cầu sau:
 -- a.Tạo Function func_dem_dich_vu: Đếm các dịch vụ đã được sử dụng với tổng tiền là > 2.000.000 VNĐ.
--- b.Tạo Function func_tinh_thoi_gian_hop_dong: Tính khoảng thời gian dài nhất tính từ lúc bắt đầu làm
--- hợp đồng đến lúc kết thúc hợp đồng mà khách hàng đã thực hiện thuê dịch vụ (lưu ý chỉ xét các khoảng thời
--- gian dựa vào từng lần làm hợp đồng thuê dịch vụ, không xét trên toàn bộ các lần làm hợp đồng).
---  Mã của khách hàng được truyền vào như là 1 tham số của function này.
-
 delimiter //
 create function func_dem_dich_vu()
 returns int
@@ -112,8 +107,50 @@ join accompanied_service acs on cd.id_accompanied_service = acs.id
 group by s.id
 having total >2000000)
 select count(id) into total_service 
-from v_service;
+from temp;
 return total_service;
 end
 //
+delimiter ;
+select func_dem_dich_vu();
+-- b.Tạo Function func_tinh_thoi_gian_hop_dong: Tính khoảng thời gian dài nhất tính từ lúc bắt đầu làm
+-- hợp đồng đến lúc kết thúc hợp đồng mà khách hàng đã thực hiện thuê dịch vụ (lưu ý chỉ xét các khoảng thời
+-- gian dựa vào từng lần làm hợp đồng thuê dịch vụ, không xét trên toàn bộ các lần làm hợp đồng).
+--  Mã của khách hàng được truyền vào như là 1 tham số của function này.
+delimiter //
+create function func_tinh_thoi_gian_hop_dong(f_id_customer int)
+returns int
+deterministic
+begin
+declare max_time int;
+select max(datediff(end_date, start_date)) into max_time
+from contract ct
+join customer c on ct.id_customer = c.id
+where ct.id_customer = f_id_customer;
+return max_time;
+end
+//
+delimiter ;
+select func_tinh_thoi_gian_hop_dong(4);
+-- 28.	Tạo Stored Procedure sp_xoa_dich_vu_va_hd_room để tìm các dịch vụ được thuê bởi khách hàng với loại dịch vụ là
+-- “Room” từ đầu năm 2015 đến hết năm 2019 để xóa thông tin của các dịch vụ đó (tức là xóa các bảng ghi trong bảng dich_vu)
+-- và xóa những hop_dong sử dụng dịch vụ liên quan (tức là phải xóa những bản gi trong bảng hop_dong) và những bản liên quan khác.
+delimiter //
+create procedure sp_xoa_dich_vu_va_hd_room() 
+begin
+with temp as (
+select s.id as id_service , ct.id as id_contract, cd.id as id_contract_detail 
+from service s
+join type_service ts on ts.id = s.id_type_service
+join contract ct on ct.id_service = s.id
+join contract_detail cd on cd.id_contract = ct.id
+where ts.name ='Room' and (year(start_date) between 2015 and 2019)
+)
+delete from service 
+where id in (select id_service from temp);
+delete from contract 
+where id in (select id_contract from temp);
+delete from contract_detail  
+where id in (select id_contract_detail from temp);
+end //
 delimiter ;

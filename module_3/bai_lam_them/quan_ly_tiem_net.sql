@@ -64,6 +64,3 @@ value
 (1,'Nước ngọt',20000,'chai'),
 (2,'Bánh mì',15000, 'Ổ'),
 (3,'Mì tôm',10000, 'Tô');
-insert into service_detail
-value 
-(1,
