@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="290c0306-7685-4431-a3ef-5687af339a05" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../module_3/ss6_css/bai_tap/bai_1/bai_1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_3/ss6_css/bai_tap/bai_1/bai_1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_3/ss6_css/bai_tap/bai_2/bai_2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module_3/ss6_css/thuc_hanh/th.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module_1/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../module_1/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module_1/test/test1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module_2/thi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../module_2/thi/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2X0oUxQ9DjsONWqOELaQW3ckN8Y" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/macbook/Documents/GitHub/C0723G1-PhamThanhHuu/library&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/library/library/login_form/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="290c0306-7685-4431-a3ef-5687af339a05" name="Changes" comment="" />
+      <created>1697775377084</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1697775377084</updated>
+      <workItem from="1697775378174" duration="506000" />
+      <workItem from="1697783853640" duration="4000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

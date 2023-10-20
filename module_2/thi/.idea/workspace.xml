@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="543909bb-df61-4002-83f0-b4d504fa0b17" name="Changes" comment="" />
+    <list default="true" id="543909bb-df61-4002-83f0-b4d504fa0b17" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../module_3/ss6_css/bai_tap/bai_1/bai_1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_3/ss6_css/bai_tap/bai_1/bai_1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_3/ss6_css/bai_tap/bai_2/bai_2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_3/ss6_css/thuc_hanh/th.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_1/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_1/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_1/test/test1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,6 +119,8 @@
       <workItem from="1697097585087" duration="10000" />
       <workItem from="1697290287930" duration="98000" />
       <workItem from="1697621487281" duration="2000" />
+      <workItem from="1697775110183" duration="597000" />
+      <workItem from="1697777075782" duration="374000" />
     </task>
     <servers />
   </component>
