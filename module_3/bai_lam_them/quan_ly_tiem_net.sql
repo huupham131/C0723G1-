@@ -17,6 +17,15 @@ email varchar (45),
 id_type_customer int,
 foreign key (id_type_customer) references type_customer(id)
 );
+create table service_user(
+id int primary key ,
+start_time datetime,
+end_time datetime,
+id_computer int,
+id_customer int,
+foreign key (id_computer) references computer(id),
+foreign key (id_customer) references customer(id)
+);
 create table accompanied_service(
 id int primary key,
 `name` varchar(45) not null,
@@ -25,20 +34,11 @@ unit varchar(10) not null
 );
 create table service_detail(
 id int primary key ,
-start_time datetime,
-end_time datetime,
-id_computer int,
-id_customer int,
-id_accompanied_service int,
-foreign key (id_computer) references computer(id),
-foreign key (id_customer) references customer(id),
-foreign key (id_accompanied_service) references accompanied_service(id)
-);
-create table bill(
-id int primary key ,
 total int,
-id_service_detail int,
-foreign key (id_service_detail) references service_detail(id)
+id_service_user int,
+id_accompanied_service int,
+foreign key (id_service_user) references service_user(id),
+foreign key (id_accompanied_service) references accompanied_service(id)
 );
 -- insert values
 insert into type_customer

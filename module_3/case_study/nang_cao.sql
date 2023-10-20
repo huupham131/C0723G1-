@@ -28,23 +28,26 @@ delimiter ;
 -- vẹn tham chiếu đến các bảng liên quan.
 
 delimiter //
-create procedure sp_them_moi_hop_dong( p_start_date datetime, p_end_date datetime, p_deposits double, p_id_staff int,
+create procedure sp_them_moi_hop_dong(p_id int, p_start_date datetime, p_end_date datetime, p_deposits double, p_id_staff int,
 p_id_customer int,  p_id_service int) 
 begin
-if exists (select id from staff where p_id_staff = id) then
-	if exists (select c.id from customer c where p_id_customer = c.id) then
-		if exists (select id from service where p_id_service = id) then
-			insert into contract (start_date, end_date, deposits, id_staff, id_customer, id_service)
-            value (p_start_date, p_end_date, p_deposits, p_id_staff, p_id_customer, p_id_service);
-		else select 'id service not exist';
-        end if;
-	else select 'id customer not exist';
+if not exists( select id from contract where p_id = id) then
+	if exists (select id from staff where p_id_staff = id) then
+		if exists (select c.id from customer c where p_id_customer = c.id) then
+			if exists (select id from service where p_id_service = id) then
+				insert into contract
+				value (p_id, p_start_date, p_end_date, p_deposits, p_id_staff, p_id_customer, p_id_service);
+			else select 'id service not exist';
+			end if;
+		else select 'id customer not exist';
+		end if;
+	else select 'id staff not exist';
 	end if;
-else select 'id staff not exist';
+else select 'id contract was existed';
 end if;
 end //
 delimiter ;
-call sp_them_moi_hop_dong('2000-12-12', '2000-12-12', 2131, 10,1,1);
+call sp_them_moi_hop_dong(17,'2000-12-12', '2000-12-12', 2131, 10,1,1);
 -- 25.	Tạo Trigger có tên tr_xoa_hop_dong khi xóa bản ghi trong bảng hop_dong thì hiển thị tổng số lượng bản ghi còn
 -- lại có trong bảng hop_dong ra giao diện console của database.
 delimiter //
@@ -59,11 +62,9 @@ set nofi = concat('total of contract is ', total);
 signal sqlstate '45000' set message_text = nofi;
 end //
 delimiter ;
-drop trigger tr_xoa_hop_dong;
-set sql_safe_updates = 0;
 delete from contract
-where id = 17;
-set sql_safe_updates = 1;
+where id = 17 ;
+SELECT COUNT(id) FROM contract;
 -- 26.	Tạo Trigger có tên tr_cap_nhat_hop_dong khi cập nhật ngày kết thúc hợp đồng, cần kiểm tra xem thời gian cập nhật
 -- có phù hợp hay không, với quy tắc sau: Ngày kết thúc hợp đồng phải lớn hơn ngày làm hợp đồng ít nhất là 2 ngày.
 -- Nếu dữ liệu hợp lệ thì cho phép cập nhật, nếu dữ liệu không hợp lệ thì in ra thông báo “Ngày kết thúc hợp đồng phải
