@@ -1,6 +1,17 @@
 drop database if exists pet_store;
 create database if not exists pet_store;
 use pet_store;
+create table if not exists roles(
+id_role int auto_increment primary key,
+roles varchar(50) unique not null
+);
+create table if not exists accounts(
+id_account int auto_increment primary key,
+username varchar(50) unique not null,
+`password` varchar(50) not null,
+id_role int default 2,
+foreign key(id_role) references roles(id_role)
+);
 create table type_customer(
 id_type_customer int primary key auto_increment,
 name_type_customer varchar(50) not null
@@ -12,8 +23,8 @@ name_customer varchar(50) not null,
 phone_number varchar(50) not null,
 address varchar(200) not null,
 id_type_customer int not null,
-username_customer varchar(50) not null unique,
-password_customer varchar(50) not null,
+id_account int not null,
+foreign key (id_account) references accounts(id_account),
 foreign key (id_type_customer) references type_customer(id_type_customer)
 );
 create table type_pet(
@@ -39,22 +50,9 @@ phone_number varchar(10) not null,
 address varchar(50) not null,
 identification_card varchar(12) not null,
 salary int,
+id_account int not null,
+foreign key (id_account) references accounts(id_account),
 unique(phone_number,identification_card)
-);
-create table if not exists roles(
-id_role int auto_increment primary key,
-roles varchar(50) unique not null,
-id_customer int,
-id_employee int,
-foreign key(id_customer) references customer(id_customer),
-foreign key(id_employee) references employees(id_employee)
-);
-create table if not exists accounts(
-id_account int auto_increment primary key,
-username varchar(50) unique not null,
-`password` varchar(50) not null,
-id_role int default 2,
-foreign key(id_role) references roles(id_role)
 );
 create table if not exists service(
 id_service int auto_increment primary key,
