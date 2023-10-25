@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="543909bb-df61-4002-83f0-b4d504fa0b17" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../module_3/ss6_css/bai_tap/bai_1/bai_1.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module_3/ss6_css/bai_tap/bai_1/bai_1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module_3/ss6_css/bai_tap/bai_2/bai_2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module_3/ss6_css/thuc_hanh/th.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module_1/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_1/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module_1/test/test1.html" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_3/ss8_bootstrap/bai_tap/bai1/bai1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_3/ss8_bootstrap/bai_tap/bai2/bai2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_3/ss8_bootstrap/thuc_hanh/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_3/ss8_bootstrap/thuc_hanh/th.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bai1/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai1/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_3/.idea/module_3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_3/.idea/module_3.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,6 +121,10 @@
       <workItem from="1697621487281" duration="2000" />
       <workItem from="1697775110183" duration="597000" />
       <workItem from="1697777075782" duration="374000" />
+      <workItem from="1698205528270" duration="598000" />
+      <workItem from="1698209293338" duration="63000" />
+      <workItem from="1698226374237" duration="84000" />
+      <workItem from="1698227027113" duration="905000" />
     </task>
     <servers />
   </component>
