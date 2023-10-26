@@ -13,7 +13,7 @@
 <body>
 <div>
     <div class="row">
-        <div class="col-lg-8" style="margin-right: 0; padding-right: 0">
+        <div class="col-lg-9" style="margin-right: 0; padding-right: 0">
             <nav class="navbar navbar-expand-lg bg-body-tertiary h-100 align-content-center"
                  style="background: whitesmoke">
                 <div class="collapse navbar-collapse">
@@ -60,7 +60,7 @@
                 </div>
             </nav>
         </div>
-        <div class="col-lg-4" style="margin-left: 0; padding-left: 0">
+        <div class="col-lg-3 align-items-center" style="margin-left: 0; padding-left: 0">
             <nav class="navbar navbar-expand-lg bg-body-tertiary h-100" style="background: whitesmoke">
                 <div class="container-fluid">
                     <div class="collapse navbar-collapse">
@@ -78,16 +78,16 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="m-2 text-decoration-none text-black">Search <i
-                                        class="fa-solid fa-magnifying-glass"></i></a>
+                                <a class="text-decoration-none text-black d-flex" style="padding: 8px">Search <i
+                                        class="fa-solid fa-magnifying-glass" style="padding: 2px"></i></a>
                             </li>
                             <li class="nav-item">
-                                <a class="m-2 text-decoration-none text-black">Cart <i
-                                        class="fa-solid fa-caret-down fa-cart-shopping"></i></a>
+                                <a class="text-decoration-none text-black d-flex" style="padding: 8px">Cart <i
+                                        class="fa-solid fa-caret-down fa-cart-shopping" style="padding: 2px"></i></a>
                             </li>
                             <li class="nav-item">
-                                <a class="m-2 text-decoration-none text-black">Sign in <i
-                                        class="fa-solid fa-sign-in"></i></a>
+                                <a class="m-2 text-decoration-none text-black d-flex">Sign in <i
+                                        class="fa-solid fa-sign-in" style="padding: 2px"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -95,8 +95,13 @@
             </nav>
         </div>
     </div>
-    <div class="mb-0" style="background-color: darkgrey; text-align: right">
-        <p class="me-5 mb-0" style="padding: 5px">Animation | <i class="fa-solid fa-toggle-on "></i> On</p>
+    <div class="mb-0 d-flex" style="background-color: darkgrey">
+        <div class="col-lg-10"></div>
+        <div style="position: relative;" class="form-check form-switch d-flex col-lg-2">
+            <p class="me-5 mb-0">Animation | </p>
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+        </div>
     </div>
     <div class="row">
         <img class="w-100"
