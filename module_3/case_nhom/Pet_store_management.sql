@@ -21,6 +21,7 @@ id_customer int primary key auto_increment,
 customer_code varchar(50) unique not null,
 name_customer varchar(50) not null,
 phone_number varchar(50) not null,
+email varchar(50),
 address varchar(200) not null,
 id_type_customer int not null,
 id_account int not null,
@@ -67,25 +68,20 @@ id_status int auto_increment primary key,
 create table if not exists booking(
 id_booking int auto_increment primary key,
 booking_code varchar(50) unique not null,
-id_customer int not null,
+id_pet int not null,
 id_employee int not null,
 start_time datetime not null,
 end_time datetime not null,
 id_status int,
-foreign key(id_customer) references customer(id_customer),
+foreign key(id_pet) references pet(id_pet),
 foreign key(id_employee) references employees(id_employee),
 foreign key(id_status) references `status`(id_status)
-);
-create table if not exists bill(
-id_bill int auto_increment primary key,
-id_booking int not null,
-foreign key(id_booking) references booking(id_booking)
 );
 create table if not exists detail_service(
 id_detail_service int auto_increment primary key,
 id_service int not null,
-id_bill int not null,
+id_booking int not null,
 quantity int default 0,
 foreign key (id_service) references service(id_service),
-foreign key (id_bill) references bill(id_bill)
+foreign key (id_booking) references booking(id_booking)
 );

@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="543909bb-df61-4002-83f0-b4d504fa0b17" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../module_3/case_nhom/bang_info_employees/bang_employee.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_3/case_nhom/giao_dien/web_gt_cua_hang.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module_3/ss8_bootstrap/bai_tap/bai2/bai2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_3/ss8_bootstrap/bai_tap/bai2/bai2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_3/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_3/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_3/.idea/module_3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_3/.idea/module_3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_3/case_nhom/Pet_store_management.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_3/case_nhom/Pet_store_management.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,6 +125,8 @@
       <workItem from="1698226374237" duration="84000" />
       <workItem from="1698227027113" duration="1503000" />
       <workItem from="1698244092245" duration="3000" />
+      <workItem from="1698286461331" duration="3000" />
+      <workItem from="1698337922010" duration="1437000" />
     </task>
     <servers />
   </component>
