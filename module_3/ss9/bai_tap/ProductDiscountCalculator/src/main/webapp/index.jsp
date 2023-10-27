@@ -6,9 +6,12 @@
 </head>
 <body>
 <form action="/cal" method="get">
-    <input name="description" placeholder="Enter product description">
-    <input name="price" placeholder="Enter price">
-    <input name="discountPercent" placeholder="Enter discount percent">
+    <p>Enter product description</p><input name="description">
+    <br>
+    <p>Enter price</p><input name="price" type="number" step="0.01">
+    <br>
+    <p>Enter discount percent</p><input name="discountPercent" type="number" step="0.01">
+    <br>
     <button type="submit">Calculate Discount</button>
 </form>
 </body>
