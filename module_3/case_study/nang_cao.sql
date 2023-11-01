@@ -47,7 +47,7 @@ else select 'id contract was existed';
 end if;
 end //
 delimiter ;
-call sp_them_moi_hop_dong(17,'2000-12-12', '2000-12-12', 2131, 10,1,1);
+call sp_them_moi_hop_dong(15,'2000-12-12', '2000-12-12', 2131, 10,1,1);
 -- 25.	Tạo Trigger có tên tr_xoa_hop_dong khi xóa bản ghi trong bảng hop_dong thì hiển thị tổng số lượng bản ghi còn
 -- lại có trong bảng hop_dong ra giao diện console của database.
 delimiter //
@@ -57,13 +57,14 @@ for each row
 begin
 declare total int;
 declare nofi varchar(50);
-select count(id) into total from contract;
+select count(*) into total from contract;
 set nofi = concat('total of contract is ', total);
 signal sqlstate '45000' set message_text = nofi;
 end //
 delimiter ;
-delete from contract
-where id = 17 ;
+drop trigger tr_xoa_hop_dong;
+delete from contract where id = 15 ;
+select count(id) from contract;
 SELECT COUNT(id) FROM contract;
 -- 26.	Tạo Trigger có tên tr_cap_nhat_hop_dong khi cập nhật ngày kết thúc hợp đồng, cần kiểm tra xem thời gian cập nhật
 -- có phù hợp hay không, với quy tắc sau: Ngày kết thúc hợp đồng phải lớn hơn ngày làm hợp đồng ít nhất là 2 ngày.
