@@ -357,6 +357,8 @@ public class UserRepository implements IUserRepository {
         return rowDeleted;
     }
 
+
+    // Bài 2 Luyện tập MySql JDBC Transaction
     @Override
     public void deleteUserTransaction() throws SQLException {
         Connection connection = BaseRepository.getConnectDB();
