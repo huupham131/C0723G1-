@@ -17,4 +17,13 @@ public interface IUserRepository {
      boolean updateUser(User user);
      List<User> searchByCountry(String country);
      List<User> orderByName();
+     User getUserById(int id);
+
+     void insertUserStore(User user) throws SQLException;
+     void addUserTransaction(User user, List<Integer> permission);
+     void insertUpdateWithoutTransaction();
+      void insertUpdateUseTransaction();
+      List<User> getAllUsersBySP();
+     boolean updateUserBySP(User user);
+     boolean deleteUserBySP(int id);
 }

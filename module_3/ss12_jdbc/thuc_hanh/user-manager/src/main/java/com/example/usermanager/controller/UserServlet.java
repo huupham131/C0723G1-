@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(name = "UserServlet", urlPatterns = "/users")
@@ -30,7 +31,8 @@ public class UserServlet extends HttpServlet {
                     insertUser(request, response);
                     break;
                 case "edit":
-                    updateUser(request, response);
+//                    updateUser(request, response);
+                    updateUserBySP(request, response);
                     break;
             }
         } catch (SQLException ex) {
@@ -53,7 +55,8 @@ public class UserServlet extends HttpServlet {
                     showEditForm(request, response);
                     break;
                 case "delete":
-                    deleteUser(request, response);
+//                    deleteUser(request, response);
+                    deleteUserBySP(request, response);
                     break;
                 case "search":
                     searchByCountry(request, response);
@@ -61,13 +64,28 @@ public class UserServlet extends HttpServlet {
                 case "order":
                     orderByName(request, response);
                     break;
+                case "test-without-tran":
+                    testWithoutTran(request, response);
+                    break;
+                case "test-use-tran":
+                    testUseTran(request, response);
+                    break;
                 default:
-                    listUser(request, response);
+//                    listUser(request, response);
+                    listUserBySP(request, response);
                     break;
             }
         } catch (SQLException ex) {
             throw new ServletException(ex);
         }
+    }
+
+    private void testUseTran(HttpServletRequest request, HttpServletResponse response) {
+        userService.insertUpdateUseTransaction();
+    }
+
+    private void testWithoutTran(HttpServletRequest request, HttpServletResponse response) {
+        userService.insertUpdateWithoutTransaction();
     }
 
     private void orderByName(HttpServletRequest request, HttpServletResponse response) {
@@ -109,6 +127,18 @@ public class UserServlet extends HttpServlet {
             e.printStackTrace();
         }
     }
+private void listUserBySP(HttpServletRequest request, HttpServletResponse response) {
+    List<User> listUser = userService.getAllUsersBySP();
+    request.setAttribute("listUser", listUser);
+    RequestDispatcher dispatcher = request.getRequestDispatcher("view/user/list.jsp");
+    try {
+        dispatcher.forward(request, response);
+    } catch (ServletException e) {
+        e.printStackTrace();
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
 
     private void showAddForm(HttpServletRequest request, HttpServletResponse response) {
         RequestDispatcher dispatcher = request.getRequestDispatcher("view/user/create.jsp");
@@ -123,7 +153,8 @@ public class UserServlet extends HttpServlet {
 
     private void showEditForm(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
-        User existingUser = userService.selectUser(id);
+//        User existingUser = userService.selectUser(id);
+        User existingUser = userService.getUserById(id);
         RequestDispatcher dispatcher = request.getRequestDispatcher("view/user/edit.jsp");
         request.setAttribute("user", existingUser);
         try {
@@ -141,8 +172,27 @@ public class UserServlet extends HttpServlet {
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String country = request.getParameter("country");
+//        userService.insertUser(newUser);
+//        userService.insertUserStore(newUser);
+        String add = request.getParameter("add");
+        String edit = request.getParameter("edit");
+        String delete = request.getParameter("delete");
+        String view = request.getParameter("view");
+        List<Integer> permissions = new ArrayList<>();
+        if (add != null){
+            permissions.add(1);
+        }
+        if (edit != null){
+            permissions.add(2);
+        }
+        if (delete != null){
+            permissions.add(3);
+        }
+        if (view != null){
+            permissions.add(4);
+        }
         User newUser = new User(name, email, country);
-        userService.insertUser(newUser);
+        userService.addUserTransaction(newUser,permissions);
         response.sendRedirect("/users");
     }
 
@@ -157,11 +207,28 @@ public class UserServlet extends HttpServlet {
         userService.updateUser(book);
         response.sendRedirect("/users");
     }
+    private void updateUserBySP(HttpServletRequest request, HttpServletResponse response)
+            throws SQLException, IOException, ServletException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        String name = request.getParameter("name");
+        String email = request.getParameter("email");
+        String country = request.getParameter("country");
+
+        User user = new User(id, name, email, country);
+        userService.updateUserBySP(user);
+        response.sendRedirect("/users");
+    }
 
     private void deleteUser(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException, ServletException {
         int id = Integer.parseInt(request.getParameter("id"));
         userService.deleteUser(id);
+        response.sendRedirect("/users");
+    }
+    private void deleteUserBySP(HttpServletRequest request, HttpServletResponse response)
+            throws SQLException, IOException, ServletException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        userService.deleteUserBySP(id);
         response.sendRedirect("/users");
     }
 }
