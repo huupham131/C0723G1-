@@ -26,4 +26,5 @@ public interface IUserRepository {
       List<User> getAllUsersBySP();
      boolean updateUserBySP(User user);
      boolean deleteUserBySP(int id);
+     void deleteUserTransaction() throws SQLException;
 }

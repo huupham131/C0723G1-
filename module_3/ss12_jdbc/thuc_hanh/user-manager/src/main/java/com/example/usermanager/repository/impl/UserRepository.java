@@ -122,7 +122,6 @@ public class UserRepository implements IUserRepository {
         Connection connection = BaseRepository.getConnectDB();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(SEARCH_BY_COUNTRY);
-            preparedStatement.setString(1, country);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
@@ -277,61 +276,29 @@ public class UserRepository implements IUserRepository {
     @Override
     public void insertUpdateUseTransaction() {
         Connection conn = BaseRepository.getConnectDB();
-
         try {
             Statement statement = conn.createStatement();
-
             PreparedStatement psInsert = conn.prepareStatement(SQL_INSERT);
-
             PreparedStatement psUpdate = conn.prepareStatement(SQL_UPDATE);
-
             statement.execute(SQL_TABLE_DROP);
-
             statement.execute(SQL_TABLE_CREATE);
-
-            // start transaction block
-
-            conn.setAutoCommit(false); // default true
-
-            // Run list of insert commands
-
+            conn.setAutoCommit(false);
             psInsert.setString(1, "Quynh");
-
             psInsert.setBigDecimal(2, new BigDecimal(10));
-
             psInsert.setTimestamp(3, Timestamp.valueOf(LocalDateTime.now()));
-
             psInsert.execute();
-
-
             psInsert.setString(1, "Ngan");
-
             psInsert.setBigDecimal(2, new BigDecimal(20));
-
             psInsert.setTimestamp(3, Timestamp.valueOf(LocalDateTime.now()));
-
             psInsert.execute();
-
             psUpdate.setBigDecimal(2, new BigDecimal(999.99));
-
-
             psUpdate.setString(2, "Quynh");
-
             psUpdate.execute();
-
-
             conn.commit();
-
-
             conn.setAutoCommit(true);
-
-
         } catch (Exception e) {
-
             System.out.println(e.getMessage());
-
             e.printStackTrace();
-
         }
     }
 
@@ -381,12 +348,37 @@ public class UserRepository implements IUserRepository {
         String update_sp = "{CALL sp_delete_user(?)}";
         try {
             CallableStatement callableStatement = connection.prepareCall(update_sp);
-            callableStatement.setInt(1, id);
+            callableStatement.setInt(1, 1);
+            callableStatement.executeUpdate();
             rowDeleted = callableStatement.executeUpdate() > 0;
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
         return rowDeleted;
+    }
+
+    @Override
+    public void deleteUserTransaction() throws SQLException {
+        Connection connection = BaseRepository.getConnectDB();
+        int rowEffect = 0;
+        try {
+
+            connection.setAutoCommit(false);
+            PreparedStatement preparedStatement = connection.prepareStatement(DELETE_USERS_SQL);
+            preparedStatement.setInt(1,1);
+            rowEffect += preparedStatement.executeUpdate();
+            preparedStatement.setInt(1,2);
+            rowEffect += preparedStatement.executeUpdate();
+            preparedStatement.setInt(1,3);
+            rowEffect += preparedStatement.executeUpdate();
+            if(rowEffect==3){
+                connection.commit();
+            }
+        } catch (SQLException e) {
+            connection.rollback();
+            throw new RuntimeException(e);
+        }
+
     }
 
     private void printSQLException(SQLException ex) {
