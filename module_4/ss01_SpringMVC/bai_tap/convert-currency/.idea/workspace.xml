@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="96e4809a-f69b-4814-928b-aba3b66cdba5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/bai_tap/bai_tap_them/src/main/java/com/example/bai_tap_them/config/FilterUTF8.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/bai_tap/bai_tap_them/src/main/java/com/example/bai_tap_them/util/BaseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/bai_tap/bai_tap_them/src/main/webapp/view/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/bai_tap/bai_tap_them/src/main/webapp/view/demo.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/bai_tap/bai_tap_them/src/main/webapp/view/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/bai_tap/kiem_tra_module3/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/bai_tap/kiem_tra_module3/src/main/java/com/example/kiem_tra_module3/config/FilterUTF8.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/bai_tap/kiem_tra_module3/src/main/java/com/example/kiem_tra_module3/controller/VePhatServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/bai_tap/kiem_tra_module3/src/main/java/com/example/kiem_tra_module3/model/TaiKhoan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/bai_tap/kiem_tra_module3/src/main/java/com/example/kiem_tra_module3/model/VePhat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/bai_tap/kiem_tra_module3/src/main/java/com/example/kiem_tra_module3/model/VePhatDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/bai_tap/kiem_tra_module3/src/main/java/com/example/kiem_tra_module3/repository/IVePhatRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/bai_tap/kiem_tra_module3/src/main/java/com/example/kiem_tra_module3/repository/impl/VePhatRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/bai_tap/kiem_tra_module3/src/main/java/com/example/kiem_tra_module3/service/IVePhatService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/bai_tap/kiem_tra_module3/src/main/java/com/example/kiem_tra_module3/service/impl/VePhatService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/bai_tap/kiem_tra_module3/src/main/java/com/example/kiem_tra_module3/util/BaseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/bai_tap/kiem_tra_module3/src/main/webapp/view/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/bai_tap/kiem_tra_module3/src/main/webapp/view/demo.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/bai_tap/kiem_tra_module3/src/main/webapp/view/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/config/CheckLoginFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/config/FilterUTF8.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/config/HomeFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/controller/AccountServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/controller/BookingManagementServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/controller/CustomerAdminServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/controller/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/controller/EmployeeServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/controller/HomeServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/controller/PetServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/controller/RegisterServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/controller/ServiceServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/dto/AccountDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/dto/BookingDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/dto/BookingNamDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/dto/DetailServiceBookingDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/dto/DetailServiceDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/dto/EmployeeDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/model/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/model/Booking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/model/BookingStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/model/DetailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/model/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/model/EmployeeBooking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/model/Pet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/model/PetBooking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/model/PetOfCustomerBooking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/model/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/model/Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/model/ServiceBooking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/repository/BaseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/repository/IAccountRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/repository/IBookingRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/repository/ICustomerAdminRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/repository/ICustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/repository/IEmployeeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/repository/IPetRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/repository/IRegisterRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/repository/IServiceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/repository/impl/AccountRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/repository/impl/BookingRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/repository/impl/CustomerAdminRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/repository/impl/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/repository/impl/EmployeeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/repository/impl/PetRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/repository/impl/RegisterRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/repository/impl/ServiceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/service/IAccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/service/IBookingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/service/ICustomerAdminService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/service/ICustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/service/IEmployeeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/service/IPetService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/service/IRegisterService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/service/IServiceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/service/impl/AccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/service/impl/BookingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/service/impl/CustomerAdminService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/service/impl/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/service/impl/EmployeeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/service/impl/PetService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/service/impl/RegisterService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/java/com/example/casestudy/service/impl/ServiceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/accounts/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/accounts/createaccount.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/accounts/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/accounts/error-404.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/accounts/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/accounts/navbar.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/booking/adding-detail-service.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/booking/booking-customer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/booking/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/booking/edit-detail-service.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/booking/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/booking/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/booking/show-detail-service-by-id.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/booking/show-detail-service.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/css/aos.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/css/customer-style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/css/edit.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/css/header.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/css/list.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/css/register.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/css/table.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/customer/create_customer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/customer/customer_select.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/customer/detail_history.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/customer/history_booking.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/customer/select_admin.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/customer/update_admin.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/customer/update_customer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/employee/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/employee/detail.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/employee/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/employee/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/home/error.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/home/footer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/home/introduceService.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/home/introductionStore.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/home/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/home/mainHome.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/home/navbar.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/home/register.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/js/aos.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/js/list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/pet/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/pet/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/pet/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/service/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/service/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/case-study/src/main/webapp/view/service/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/convertcurrency/ConvertController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/convert.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dictionary/src/main/java/com/example/dictionary/DictionaryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dictionary/src/main/java/com/example/dictionary/repository/DictionaryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dictionary/src/main/java/com/example/dictionary/repository/IDictionaryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dictionary/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dictionary/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dictionary/src/main/webapp/WEB-INF/views/dictionary.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dictionary/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/spring-greeting/src/main/java/com/example/springgreeting/GreetingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/spring-greeting/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/spring-greeting/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/spring-greeting/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/spring-greeting/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/spring-mvc/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/spring-mvc/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/spring-mvc/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/spring-mvc/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/spring-mvc/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/spring-mvc/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module_3/case_nhom/Pet_store_management.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module_3/case_nhom/Pet_store_management.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/user-manager/src/main/java/com/example/usermanager/controller/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/user-manager/src/main/java/com/example/usermanager/controller/UserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/user-manager/src/main/java/com/example/usermanager/repository/impl/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/user-manager/src/main/java/com/example/usermanager/repository/impl/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/user-manager/src/main/java/com/example/usermanager/service/impl/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/user-manager/src/main/java/com/example/usermanager/service/impl/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/user-manager/src/main/webapp/view/user/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module_3/ss12_jdbc/thuc_hanh/user-manager/src/main/webapp/view/user/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dictionary/src/main/java/com/example/dictionary/service/DictionaryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../dictionary/src/main/java/com/example/dictionary/service/DictionaryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dictionary/src/main/java/com/example/dictionary/service/IDictionaryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../dictionary/src/main/java/com/example/dictionary/service/IDictionaryService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2Y9P0FFIvvcm9WOQtZtMclGyliO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/macbook/Documents/GitHub/C0723G1-PhamThanhHuu/module_4/ss01_SpringMVC/bai_tap/convert-currency/src/main/webapp/WEB-INF",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.82" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.82" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="hot-swap-classes" />
+      <deployment>
+        <artifact name="Gradle : com.example : convert-currency-1.0-SNAPSHOT.war">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="6bdb245c-2f4e-4b60-bd48-57733e2d2afe" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="50170" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Gradle : com.example : convert-currency-1.0-SNAPSHOT.war" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="96e4809a-f69b-4814-928b-aba3b66cdba5" name="Changes" comment="" />
+      <created>1699934598534</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1699934598534</updated>
+      <workItem from="1699934599639" duration="3801000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

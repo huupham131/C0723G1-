@@ -95,7 +95,7 @@ INSERT INTO type_customer (name_type_customer) VALUES ('VIP');
 INSERT INTO type_pet (name_type_pet) VALUES ('Dog');
 INSERT INTO type_pet (name_type_pet) VALUES ('Cat');
 INSERT INTO employees (employee_name, birthday, phone_number, address, identification_card, salary, id_account) 
-VALUES ('John Doe', '1990-01-01', '1234567890', '123 Main St', 'ABC123456', 3000, 2);
+VALUES ('John Huu', '1990-01-01', '1234567891', '123 Main St', 'ABC123426', 3000, 1);
 INSERT INTO service (service_name, service_price, unit) VALUES ('Grooming', 50, 1);
 INSERT INTO service (service_name, service_price, unit) VALUES ('Vaccination', 30, 1);
 INSERT INTO `status` (`status`) VALUES ('Pending');

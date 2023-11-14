@@ -62,10 +62,13 @@
                 <td><c:out value="${user.getName()}"/></td>
                 <td><c:out value="${user.getEmail()}"/></td>
                 <td><c:out value="${user.getCountry()}"/></td>
-                <td>
-                    <a href="/users?action=edit&id=${user.id}">
+                <td><form method="post">
+                    <input hidden="hidden" type="text" name="action" value="edit">
+                    <input hidden="hidden" type="number" name="id" value="${user.id}">
+                    <a>
                         <button>Edit</button>
                     </a>
+                </form>
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="modalDelete('${user.id}','${user.name}')">
                         Delete

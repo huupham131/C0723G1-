@@ -85,4 +85,9 @@ public class UserService implements IUserService {
     public boolean deleteUserBySP(int id) {
         return userRepository.deleteUserBySP(id);
     }
+
+    @Override
+    public void deleteUserTransaction() {
+
+    }
 }

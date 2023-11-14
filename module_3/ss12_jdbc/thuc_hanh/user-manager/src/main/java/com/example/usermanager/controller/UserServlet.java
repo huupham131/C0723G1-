@@ -30,9 +30,12 @@ public class UserServlet extends HttpServlet {
                 case "create":
                     insertUser(request, response);
                     break;
+//                case "edit":
+////                    updateUser(request, response);
+////                    updateUserBySP(request, response);
+//                    break;
                 case "edit":
-//                    updateUser(request, response);
-                    updateUserBySP(request, response);
+                    showEditForm(request, response);
                     break;
             }
         } catch (SQLException ex) {

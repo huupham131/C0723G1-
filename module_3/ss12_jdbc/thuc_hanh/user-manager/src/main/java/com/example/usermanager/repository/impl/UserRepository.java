@@ -101,19 +101,19 @@ public class UserRepository implements IUserRepository {
     }
 
     public boolean updateUser(User user) {
-        boolean rowUpdated;
-        Connection connection = BaseRepository.getConnectDB();
-        try {
-            PreparedStatement statement = connection.prepareStatement(UPDATE_USERS_SQL);
-            statement.setString(1, user.getName());
-            statement.setString(2, user.getEmail());
-            statement.setString(3, user.getCountry());
-            statement.setInt(4, user.getId());
-            rowUpdated = statement.executeUpdate() > 0;
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-        return rowUpdated;
+            boolean rowUpdated;
+            Connection connection = BaseRepository.getConnectDB();
+            try {
+                PreparedStatement statement = connection.prepareStatement(UPDATE_USERS_SQL);
+                statement.setString(1, user.getName());
+                statement.setString(2, user.getEmail());
+                statement.setString(3, user.getCountry());
+                statement.setInt(4, user.getId());
+                rowUpdated = statement.executeUpdate() > 0;
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+            return rowUpdated;
     }
 
     @Override
