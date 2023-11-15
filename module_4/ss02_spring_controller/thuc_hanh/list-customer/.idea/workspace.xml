@@ -4,7 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96e4809a-f69b-4814-928b-aba3b66cdba5" name="Changes" comment="" />
+    <list default="true" id="a679139e-fe1b-435c-8090-ec9ba5339b55" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../ss01_SpringMVC/bai_tap/spring-email-validation/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss01_SpringMVC/bai_tap/spring-email-validation/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss01_SpringMVC/bai_tap/spring-email-validation/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss01_SpringMVC/bai_tap/spring-email-validation/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss01_SpringMVC/bai_tap/spring-email-validation/src/main/java/com/example/EmailController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss01_SpringMVC/bai_tap/spring-email-validation/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss01_SpringMVC/bai_tap/spring-email-validation/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss01_SpringMVC/bai_tap/spring-email-validation/src/main/webapp/WEB-INF/views/success.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss01_SpringMVC/bai_tap/spring-email-validation/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/sandwich/src/main/java/com/example/SandwichController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/sandwich/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/sandwich/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/sandwich/src/main/webapp/WEB-INF/views/result.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/sandwich/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/repository/CustomerRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/repository/ICustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/service/ICustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/info.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../timeZone/src/main/java/com/example/TimeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../timeZone/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../timeZone/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../timeZone/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss01_SpringMVC/bai_tap/convert-currency/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss01_SpringMVC/bai_tap/convert-currency/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss01_SpringMVC/bai_tap/convert-currency/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss01_SpringMVC/bai_tap/convert-currency/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss01_SpringMVC/bai_tap/dictionary/src/main/java/com/example/dictionary/controller/DictionaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss01_SpringMVC/bai_tap/dictionary/src/main/java/com/example/dictionary/controller/DictionaryController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +51,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
         <option value="Jsp File" />
       </list>
@@ -33,10 +67,10 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 0
-}</component>
-  <component name="ProjectId" id="2Y9P0FFIvvcm9WOQtZtMclGyliO" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2YCBfjEggjnqxviCASfFqzuN4Rr" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -47,12 +81,11 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/macbook/Documents/GitHub/C0723G1-PhamThanhHuu/module_4/ss01_SpringMVC/bai_tap/convert-currency/src/main/webapp/WEB-INF",
+    "last_opened_file_path": "/Users/macbook/Documents/GitHub/C0723G1-PhamThanhHuu/module_4/ss02_spring_controller/thuc_hanh/list-customer/src/main/webapp/WEB-INF",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "spring.configuration.checksum": "9fb769c5eab1b4742a07fae5a15fc48f",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -65,14 +98,14 @@
     <configuration name="Tomcat 9.0.82" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.82" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="hot-swap-classes" />
       <deployment>
-        <artifact name="Gradle : com.example : convert-currency-1.0-SNAPSHOT.war">
+        <artifact name="Gradle : com.example : list-customer-1.0-SNAPSHOT.war">
           <settings>
             <option name="CONTEXT_PATH" value="" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="6bdb245c-2f4e-4b60-bd48-57733e2d2afe" />
+        <option name="BASE_DIRECTORY_NAME" value="b9dfc5fb-e85d-46be-8e66-c9f7679d0c3f" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -80,7 +113,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="50170" />
+        <option name="DEBUG_PORT" value="52907" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -145,7 +178,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="Gradle : com.example : convert-currency-1.0-SNAPSHOT.war" />
+          <artifact name="Gradle : com.example : list-customer-1.0-SNAPSHOT.war" />
         </option>
       </method>
     </configuration>
@@ -153,13 +186,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="96e4809a-f69b-4814-928b-aba3b66cdba5" name="Changes" comment="" />
-      <created>1699934598534</created>
+      <changelist id="a679139e-fe1b-435c-8090-ec9ba5339b55" name="Changes" comment="" />
+      <created>1700019789129</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1699934598534</updated>
-      <workItem from="1699934599639" duration="3801000" />
-      <workItem from="1699946618533" duration="27000" />
+      <updated>1700019789129</updated>
+      <workItem from="1700019790187" duration="2890000" />
     </task>
     <servers />
   </component>

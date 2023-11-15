@@ -31,5 +31,6 @@ public class DictionaryController {
         model.addAttribute("result",result);
         model.addAttribute("eng",eng);
         return "/dictionary";
+
     }
 }
