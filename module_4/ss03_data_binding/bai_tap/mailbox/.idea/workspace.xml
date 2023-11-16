@@ -5,27 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33db0a6f-4497-473a-8f42-9e1406be7fae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh1/src/main/java/com/example/thuc_hanh1/controller/EmployeeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh1/src/main/java/com/example/thuc_hanh1/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh1/src/main/java/com/example/thuc_hanh1/model/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh1/src/main/java/com/example/thuc_hanh1/model/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh1/src/main/java/com/example/thuc_hanh1/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh1/src/main/java/com/example/thuc_hanh1/model/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh1/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh1/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh1/src/main/webapp/WEB-INF/views/employee/create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh1/src/main/webapp/WEB-INF/views/employee/info.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh1/src/main/webapp/WEB-INF/views/login/error.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh1/src/main/webapp/WEB-INF/views/login/home.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh1/src/main/webapp/WEB-INF/views/login/user.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh1/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss02_spring_controller/bai_tap/calculator/src/main/java/com/example/CalculatorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss02_spring_controller/bai_tap/calculator/src/main/java/com/example/controller/CalculatorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss02_spring_controller/bai_tap/sandwich/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss02_spring_controller/bai_tap/sandwich/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss02_spring_controller/thuc_hanh/list-customer/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss02_spring_controller/thuc_hanh/list-customer/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss02_spring_controller/thuc_hanh/list-customer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss02_spring_controller/thuc_hanh/list-customer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,9 +20,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2YEy107FQVZqUIfgQBMJGcmkdMI" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -59,6 +39,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "spring.configuration.checksum": "ee5896c6f500d2fb71021ea4c6b32450",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -99,6 +80,7 @@
       <option name="presentableId" value="Default" />
       <updated>1700104816555</updated>
       <workItem from="1700104817660" duration="499000" />
+      <workItem from="1700105388380" duration="480000" />
     </task>
     <servers />
   </component>
