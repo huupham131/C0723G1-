@@ -4,14 +4,16 @@ import com.example.model.Mailbox;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class MailboxRepositoryImpl implements IMailboxRepository{
+public class MailboxRepositoryImpl implements IMailboxRepository {
     private static Mailbox mailbox = new Mailbox();
+
     static {
         mailbox.setLanguage("Chinese");
         mailbox.setPageSize(25);
         mailbox.setSpamsFilter(false);
         mailbox.setSignature("Thor \nKing,Asgard");
     }
+
     @Override
     public Mailbox getMailbox() {
         return mailbox;

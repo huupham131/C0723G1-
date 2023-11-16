@@ -17,7 +17,7 @@
         <tr>
             <th>Language</th>
             <td>
-                <form:select path="language" itemValue="${mailbox.language}">
+                <form:select path="language" >
                     <form:options items="${languageList}"/>
                 </form:select>
             </td>
@@ -25,18 +25,19 @@
         <tr>
             <th>Page Size:</th>
             <td>Show
-                <form:select path="pageSize" itemValue="${mailbox.pageSize}">
-                <form:options items="${pageSizeList}"/>
-            </form:select>
-                email per page</td>
+                <form:select path="pageSize">
+                    <form:options items="${pageSizeList}"/>
+                </form:select>
+                email per page
+            </td>
         </tr>
         <tr>
-            <th>Spams filter: </th>
+            <th>Spams filter:</th>
             <td><form:checkbox path="spamsFilter" value="${mailbox.spamsFilter}"/>Enable spams filter</td>
         </tr>
         <tr>
             <th>Signature</th>
-            <td><form:textarea path="signature" /></td>
+            <td><form:textarea path="signature"/></td>
         </tr>
         <tr>
             <th></th>

@@ -19,16 +19,17 @@ public class MailboxController {
 
     @GetMapping("")
     public String showForm(Model model) {
-        model.addAttribute("mailbox",mailboxService.getMailbox());
-        model.addAttribute("languageList",new String[]{"English", "Vietnamese", "Japanese", "Chinese"});
-        model.addAttribute("pageSizeList",new int[]{5, 10, 15, 25, 50, 100});
+        model.addAttribute("mailbox", mailboxService.getMailbox());
+        model.addAttribute("languageList", new String[]{"English", "Vietnamese", "Japanese", "Chinese"});
+        model.addAttribute("pageSizeList", new int[]{5, 10, 15, 25, 50, 100});
         return "/form";
     }
+
     @PostMapping("/update")
-    public String update(@ModelAttribute Mailbox mailbox, Model model){
+    public String update(@ModelAttribute Mailbox mailbox, Model model) {
         mailboxService.updateMailbox(mailbox);
-        model.addAttribute("mailbox",mailboxService.getMailbox());
-        model.addAttribute("mess","update complete");
+        model.addAttribute("mailbox", mailboxService.getMailbox());
+        model.addAttribute("mess", "update complete");
         return "/result";
     }
 }
