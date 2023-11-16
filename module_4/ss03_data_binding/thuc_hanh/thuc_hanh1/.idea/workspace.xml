@@ -4,9 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a679139e-fe1b-435c-8090-ec9ba5339b55" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="caa057ea-3162-4346-ac07-4b830a8f48c8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/mailbox/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/mailbox/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/mailbox/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/thuc_hanh1/controller/EmployeeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/thuc_hanh1/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/thuc_hanh1/model/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/thuc_hanh1/model/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/thuc_hanh1/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/thuc_hanh1/model/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/employee/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/employee/info.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login/error.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login/user.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss02_spring_controller/bai_tap/calculator/src/main/java/com/example/CalculatorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss02_spring_controller/bai_tap/calculator/src/main/java/com/example/controller/CalculatorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss02_spring_controller/bai_tap/sandwich/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss02_spring_controller/bai_tap/sandwich/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss02_spring_controller/thuc_hanh/list-customer/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss02_spring_controller/thuc_hanh/list-customer/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss02_spring_controller/thuc_hanh/list-customer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss02_spring_controller/thuc_hanh/list-customer/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +40,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
         <option value="Jsp File" />
       </list>
@@ -37,10 +55,10 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 6
-}</component>
-  <component name="ProjectId" id="2YCBfjEggjnqxviCASfFqzuN4Rr" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2YEuY3uyk5DMpZ2Jkp7QX92Ypgk" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -51,12 +69,11 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/macbook/Documents/GitHub/C0723G1-PhamThanhHuu/module_4/ss02_spring_controller/thuc_hanh/list-customer/src/main/webapp/WEB-INF",
+    "last_opened_file_path": "/Users/macbook/Documents/GitHub/C0723G1-PhamThanhHuu/module_4/ss03_data_binding/thuc_hanh/thuc_hanh1/src/main/webapp/WEB-INF",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "spring.configuration.checksum": "b3718cb837e73f6055acce48e8e75a19",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -64,19 +81,22 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/employee" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.82" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.82" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="hot-swap-classes" />
       <deployment>
-        <artifact name="Gradle : com.example : list-customer-1.0-SNAPSHOT.war">
+        <artifact name="Gradle : com.example : thuc_hanh1-1.0-SNAPSHOT.war">
           <settings>
             <option name="CONTEXT_PATH" value="" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="b9dfc5fb-e85d-46be-8e66-c9f7679d0c3f" />
+        <option name="BASE_DIRECTORY_NAME" value="1011000c-c032-473e-a64e-ea2d697ce281" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -84,7 +104,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="52907" />
+        <option name="DEBUG_PORT" value="55304" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -149,7 +169,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="Gradle : com.example : list-customer-1.0-SNAPSHOT.war" />
+          <artifact name="Gradle : com.example : thuc_hanh1-1.0-SNAPSHOT.war" />
         </option>
       </method>
     </configuration>
@@ -157,13 +177,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a679139e-fe1b-435c-8090-ec9ba5339b55" name="Changes" comment="" />
-      <created>1700019789129</created>
+      <changelist id="caa057ea-3162-4346-ac07-4b830a8f48c8" name="Changes" comment="" />
+      <created>1700103108543</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1700019789129</updated>
-      <workItem from="1700019790187" duration="2890000" />
-      <workItem from="1700031363864" duration="627000" />
+      <updated>1700103108543</updated>
+      <workItem from="1700103109716" duration="2201000" />
     </task>
     <servers />
   </component>
