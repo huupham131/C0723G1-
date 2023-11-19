@@ -5,8 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="caa057ea-3162-4346-ac07-4b830a8f48c8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../bai_tap/mailbox/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai_tap/mailbox/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/bai_tap/product_management/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/bai_tap/product_management/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/bai_tap/product_management/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/bai_tap/product_management/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/bai_tap/product_management/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/bai_tap/product_management/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/product_management/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/product_management/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/product_management/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/product_management/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/product_management/.idea/untitled folder.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/product_management/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/product_management/.idea/webContexts.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/product_management/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/product_management/product_management/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/product_management/product_management/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/product_management/product_management/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/product_management/product_management/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/product_management/product_management/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/product_management/product_management/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/product_management/product_management/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/product_management/product_management/src/main/java/com/example/HelloServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/product_management/product_management/src/main/java/com/example/config/AppConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/product_management/product_management/src/main/java/com/example/config/AppInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/product_management/product_management/src/main/java/com/example/controller/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/product_management/product_management/src/main/java/com/example/model/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/product_management/product_management/src/main/java/com/example/repository/IProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/product_management/product_management/src/main/java/com/example/repository/ProductRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/product_management/product_management/src/main/java/com/example/service/IProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/product_management/product_management/src/main/java/com/example/service/ProductServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/product_management/product_management/src/main/webapp/WEB-INF/views/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/product_management/product_management/src/main/webapp/WEB-INF/views/detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/product_management/product_management/src/main/webapp/WEB-INF/views/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/product_management/product_management/src/main/webapp/WEB-INF/views/update.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/product_management/product_management/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_thymeleaf/product_management/product_management/src/main/webapp/index.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,6 +203,7 @@
       <workItem from="1700105870885" duration="244000" />
       <workItem from="1700107174817" duration="1359000" />
       <workItem from="1700190329544" duration="1460000" />
+      <workItem from="1700287938155" duration="610000" />
     </task>
     <servers />
   </component>

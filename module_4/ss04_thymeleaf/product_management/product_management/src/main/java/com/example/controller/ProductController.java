@@ -31,8 +31,7 @@ public class ProductController {
     @PostMapping("/create")
     public String createNewProduct(@ModelAttribute Product product, Model model) {
         productService.createNew(product);
-        model.addAttribute("productList", productService.getAll());
-        return "/list";
+        return "redirect:/product";
     }
 
     @GetMapping("/update")
@@ -42,17 +41,15 @@ public class ProductController {
     }
 
     @PostMapping("/update")
-    public String update(@ModelAttribute Product product, Model model) {
+    public String update(@ModelAttribute Product product) {
         productService.update(product.getId(), product);
-        model.addAttribute("productList", productService.getAll());
-        return "/list";
+        return "redirect:/product";
     }
 
     @GetMapping("/delete")
-    public String delete(int id, Model model) {
+    public String delete(int id) {
         productService.delete(id);
-        model.addAttribute("productList", productService.getAll());
-        return "/list";
+        return "redirect:/product";
     }
 
     @GetMapping("/detail")
