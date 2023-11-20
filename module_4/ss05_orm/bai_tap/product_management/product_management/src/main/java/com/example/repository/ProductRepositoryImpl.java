@@ -3,71 +3,66 @@ package com.example.repository;
 import com.example.model.Product;
 import org.springframework.stereotype.Repository;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import javax.persistence.TypedQuery;
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 
 @Repository
 public class ProductRepositoryImpl implements IProductRepository {
-    private static List<Product> productList = new ArrayList<>();
-
-    static {
-        productList.add(new Product(1, "Iphone 15", "Pink", "Apple"));
-        productList.add(new Product(2, "Iphone 14 Pro max", "Purple", "Apple"));
-        productList.add(new Product(3, "SamSung S22 Ultra", "Red", "SamSung"));
-        productList.add(new Product(4, "SamSung S23", "White", "SamSung"));
-    }
+    public static final String SELECT_BY_NAME = "select * from product p where p.name like :name";
+    @PersistenceContext
+    private EntityManager entityManager;
 
     @Override
     public List<Product> getAll() {
-        return productList;
+        List<Product> products;
+        TypedQuery<Product> query = entityManager.createQuery("select p from Product p", Product.class);
+        products = query.getResultList();
+        return products;
     }
 
+    @Transactional
     @Override
     public void createNew(Product product) {
-        product.setId(productList.size()+1);
-        productList.add(product);
+        entityManager.persist(product);
     }
 
+    @Transactional
     @Override
     public void update(int id, Product product) {
-        for (Product product1 : productList) {
-            if (product1.getId() == id) {
-                product1.setName(product.getName());
-                product1.setDescription(product.getDescription());
-                product1.setManufacturer(product.getManufacturer());
-                break;
-            }
+        Product product1 = getProduct(id);
+        if(product1 != null){
+            product1.setName(product.getName());
+//            product1.setPrice(product.getPrice());
+            product1.setDescription(product.getDescription());
+            product1.setManufacturer(product.getManufacturer());
+            entityManager.merge(product1);
         }
     }
 
     @Override
     public void delete(int id) {
-        for (Product product1 : productList) {
-            if (product1.getId() == id) {
-                productList.remove(product1);
-                break;
-            }
+        Product product = getProduct(id);
+        if(product != null){
+            entityManager.remove(product);
         }
     }
 
     @Override
     public Product getProduct(int id) {
-        for (Product product1 : productList) {
-            if (product1.getId() == id) {
-                return product1;
-            }
-        }
-        return null;
+        return entityManager.find(Product.class, id);
     }
 
     @Override
     public List<Product> searchByName(String name) {
-        List<Product> products =new ArrayList<>();
-        for (Product product1 : productList) {
-            if (product1.getName().contains(name)) {
-                products.add(product1);
-            }
-        }
+        List<Product> products = new ArrayList<>();
+        Query query = entityManager.createNativeQuery(SELECT_BY_NAME, Product.class);
+        query.setParameter("name","%" + name +"%");
+        products = query.getResultList();
         return products;
     }
 }
