@@ -24,6 +24,7 @@ public class ProductRepositoryImpl implements IProductRepository {
 
     @Override
     public void createNew(Product product) {
+        product.setId(productList.size()+1);
         productList.add(product);
     }
 

@@ -29,7 +29,7 @@ public class ProductController {
     }
 
     @PostMapping("/create")
-    public String createNewProduct(@ModelAttribute Product product, Model model) {
+    public String createNewProduct(@ModelAttribute Product product) {
         productService.createNew(product);
         return "redirect:/product";
     }

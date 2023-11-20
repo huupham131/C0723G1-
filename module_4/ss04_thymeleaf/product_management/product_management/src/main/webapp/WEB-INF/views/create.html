@@ -70,8 +70,6 @@
 </head>
 <body>
 <form th:object="${product}" action="/product/create" method="post">
-    <label for="id">ID:</label><br>
-    <input th:field="*{id}" id="id"><br>
     <label for="name">Name:</label><br>
     <input th:field="*{name}" id="name"><br>
     <label for="des">Description:</label><br>
