@@ -15,6 +15,7 @@ import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.thymeleaf.TemplateEngine;
@@ -31,6 +32,7 @@ import java.util.Properties;
 @Configuration
 @EnableWebMvc
 @ComponentScan("com.example")
+@EnableTransactionManagement
 public class AppConfiguration extends WebMvcConfigurerAdapter implements ApplicationContextAware {
 
     private ApplicationContext applicationContext;
@@ -85,7 +87,7 @@ public class AppConfiguration extends WebMvcConfigurerAdapter implements Applica
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(dataSource());
-        em.setPackagesToScan(new String[]{"com.example.quan_ly_san_pham.model"});
+        em.setPackagesToScan("com.example");
         JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         em.setJpaVendorAdapter(vendorAdapter);
         em.setJpaProperties(additionalProperties());
@@ -96,9 +98,9 @@ public class AppConfiguration extends WebMvcConfigurerAdapter implements Applica
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/orm_jpa?createDatabaseIfNotExist=true&useSSL=false");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/quan_ly_san_pham123?createDatabaseIfNotExist=true&useSSL=false");
         dataSource.setUsername("root");
-        dataSource.setPassword("123456");
+        dataSource.setPassword("12345678");
         return dataSource;
     }
     Properties additionalProperties() {
