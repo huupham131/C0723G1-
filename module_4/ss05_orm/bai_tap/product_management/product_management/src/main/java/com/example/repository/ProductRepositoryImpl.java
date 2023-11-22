@@ -13,7 +13,7 @@ import java.util.List;
 
 @Repository
 public class ProductRepositoryImpl implements IProductRepository {
-    public static final String SELECT_BY_NAME = "select * from product p where p.name like :name";
+    public static final String SELECT_BY_NAME = "select p from Product p where p.name like :name";
     @PersistenceContext
     private EntityManager entityManager;
 
@@ -44,6 +44,7 @@ public class ProductRepositoryImpl implements IProductRepository {
         }
     }
 
+    @Transactional
     @Override
     public void delete(int id) {
         Product product = getProduct(id);
@@ -60,7 +61,7 @@ public class ProductRepositoryImpl implements IProductRepository {
     @Override
     public List<Product> searchByName(String name) {
         List<Product> products = new ArrayList<>();
-        Query query = entityManager.createNativeQuery(SELECT_BY_NAME, Product.class);
+        Query query = entityManager.createQuery(SELECT_BY_NAME, Product.class);
         query.setParameter("name","%" + name +"%");
         products = query.getResultList();
         return products;

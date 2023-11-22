@@ -112,8 +112,8 @@
             <a th:href="@{/product/update(id=${product.id})}"><button>Update</button></a>
         </td>
         <td>
-            <button type="button" style="border: none"
-                    class="list-group-item list-group-item-action btn btn-outline-light text-danger"
+            <button 
+                    class="list-group-item list-group-item-action btn  text-danger"
                     data-bs-toggle="modal" data-bs-target="#exampleModal"
                     th:onclick="'modalDelete(' + ${product.id} + ',\'' + ${product.name} + '\')'">
                 Delete
