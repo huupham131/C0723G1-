@@ -19,6 +19,7 @@ public class Blog {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
+    @Column(columnDefinition = "Datetime")
     private LocalDateTime date;
     @Column(columnDefinition = "text")
     private String content;

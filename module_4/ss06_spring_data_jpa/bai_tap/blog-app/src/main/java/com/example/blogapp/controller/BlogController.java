@@ -30,7 +30,7 @@ public class BlogController {
                            @RequestParam(defaultValue = "0") int idCate,
                            @RequestParam(defaultValue = "0") int page,
                            @RequestParam(defaultValue = "") String searchName) {
-        Pageable pageable = PageRequest.of(page, 3, Sort.by("date").ascending());
+        Pageable pageable = PageRequest.of(page, 3, Sort.by("date").descending());
         Page<Blog> blogPage;
         Category category = null;
         if (idCate == 0) {
