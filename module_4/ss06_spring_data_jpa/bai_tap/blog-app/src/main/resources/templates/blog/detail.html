@@ -6,14 +6,17 @@
 </head>
 <body>
 <table>
-  <tr>
-    <th>Name:</th>
-    <td th:text="${blog.name}"></td>
-  </tr>
-  <tr>
-    <th>Content :</th>
-    <td th:text="${blog.content}"></td>
-  </tr>
+    <tr>
+        <th th:text="${category.name}"></th>
+    </tr>
+    <tr>
+        <th>Blog name:</th>
+        <td th:text="${blog.name}"></td>
+    </tr>
+    <tr>
+        <th>Content :</th>
+        <td th:text="${blog.content}"></td>
+    </tr>
 </table>
 </body>
 </html>

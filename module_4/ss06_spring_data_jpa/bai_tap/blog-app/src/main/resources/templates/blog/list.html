@@ -3,62 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
     <style>
-        /*button {*/
-        /*    font-family: Arial, Helvetica, sans-serif;*/
-        /*    font-weight: bold;*/
-        /*    color: white;*/
-        /*    background-color: #171717;*/
-        /*    padding: 1em 2em;*/
-        /*    border: none;*/
-        /*    border-radius: .6rem;*/
-        /*    position: relative;*/
-        /*    cursor: pointer;*/
-        /*    overflow: hidden;*/
-        /*}*/
 
-        /*button span:not(:nth-child(6)) {*/
-        /*    position: absolute;*/
-        /*    left: 50%;*/
-        /*    top: 50%;*/
-        /*    transform: translate(-50%, -50%);*/
-        /*    height: 30px;*/
-        /*    width: 30px;*/
-        /*    background-color: #0c66ed;*/
-        /*    border-radius: 50%;*/
-        /*    transition: .6s ease;*/
-        /*}*/
-
-        /*button span:nth-child(6) {*/
-        /*    position: relative;*/
-        /*}*/
-
-        /*button span:nth-child(1) {*/
-        /*    transform: translate(-3.3em, -4em);*/
-        /*}*/
-
-        /*button span:nth-child(2) {*/
-        /*    transform: translate(-6em, 1.3em);*/
-        /*}*/
-
-        /*button span:nth-child(3) {*/
-        /*    transform: translate(-.2em, 1.8em);*/
-        /*}*/
-
-        /*button span:nth-child(4) {*/
-        /*    transform: translate(3.5em, 1.4em);*/
-        /*}*/
-
-        /*button span:nth-child(5) {*/
-        /*    transform: translate(3.5em, -3.8em);*/
-        /*}*/
-
-        /*button:hover span:not(:nth-child(6)) {*/
-        /*    transform: translate(-50%, -50%) scale(4);*/
-        /*    transition: 1.5s ease;*/
-        /*}*/
         table {
             font-family: arial, sans-serif;
             border-collapse: collapse;
@@ -74,6 +25,7 @@
         tr:nth-child(even) {
             background-color: #dddddd;
         }
+
         input[type=text], select {
             width: 10%;
             padding: 12px 20px;
@@ -84,32 +36,73 @@
             box-sizing: border-box;
         }
     </style>
+    <script>
+        function displayToast(message) {
+            document.getElementById("toastContent").innerHTML = message;
+            let myAlert = document.getElementById('liveToast');//select id of toast
+            let bsAlert = new bootstrap.Toast(myAlert);//inizialize it
+            bsAlert.show();//show it
+        }
+    </script>
 </head>
 <body>
-<div th:block th:if="${mess}">
+<!--Filter-->
+<div class="dropdown">
+    <form id="filterForm" action="/blog">
+        <select class="form-select" aria-label="Default select example" name="idCate" onchange="submitForm()">
+            <option value="" th:selected="${category == null}">All Category</option>
+            <option th:if="${category!=null}" th:each="cate:${categoryList}" th:text="${cate.name}"
+                    th:value="${cate.id}" th:selected="${category.name.equals(cate.name)}"></option>
+            <option th:if="${category==null}" th:each="cate:${categoryList}" th:text="${cate.name}"
+                    th:value="${cate.id}"></option>
+        </select>
+    </form>
+</div>
+<!--Filter-->
+<!--toast-->
+<div id="liveToast">
     <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="d-flex">
-            <div class="toast-body" th:text="${mess}">
-
+            <div class="toast-body" id="toastContent">
             </div>
             <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
     </div>
 </div>
+<!--toast-->
 <h1>Blog List</h1>
-<a href="/blog/create" style="text-decoration: none"><button>Add new blog</button></a>
+<a href="/blog/create" style="text-decoration: none">
+    <button>Add new blog</button>
+</a>
+<div>
+    <form action="/blog">
+        <select name="idCate">
+            <option value="" th:selected="${category == null}">All Category</option>
+            <option th:if="${category!=null}" th:each="cate:${categoryList}" th:text="${cate.name}"
+                    th:value="${cate.id}" th:selected="${category.name.equals(cate.name)}"></option>
+            <option th:if="${category==null}" th:each="cate:${categoryList}" th:text="${cate.name}"
+                    th:value="${cate.id}"></option>
+        </select>
+        <input placeholder="Enter name" name="searchName" th:value="${searchName}">
+        <button>Search</button>
+    </form>
+</div>
 <table>
     <tr>
         <th>STT</th>
         <th>Name Blog</th>
+        <th>Date post</th>
         <th colspan="2" style="text-align: center">Action</th>
         <th>Detail</th>
     </tr>
     <tr th:each="blog,status:${blogList}">
         <td th:text="${status.count}"></td>
         <td th:text="${blog.name}"></td>
+        <td th:text="${blog.date}"></td>
         <td>
-                <a th:href="@{/blog/update(id=${blog.id})}"><button>Update</button></a>
+            <a th:href="@{/blog/update(id=${blog.id})}">
+                <button>Update</button>
+            </a>
 
         </td>
         <td>
@@ -117,7 +110,7 @@
                     class="list-group-item list-group-item-action btn  text-danger"
                     data-bs-toggle="modal" data-bs-target="#exampleModal"
                     th:attr="data-bs-id=${blog.id}, data-bs-name=${blog.name}, data-bs-toggle='modal', data-bs-target='#exampleModal'"
-            onclick="modalDelete(this)">
+                    onclick="modalDelete(this)">
                 Delete
             </button>
         </td>
@@ -129,6 +122,25 @@
         <td th:if="${blogList.isEmpty()}" colspan="7" style="text-align: center">List is empty</td>
     </tr>
 </table>
+<!--pagenumber-->
+<div th:if="${category!=null}">
+    <a th:if="${blogList.hasPrevious()}"
+       th:href="@{/blog(page=${blogList.getNumber()-1},searchName=${searchName},idCate=${category.id})}">Previous</a>
+    <span th:text="${blogList.number+1}"></span>/
+    <span th:text="${blogList.totalPages}"></span>
+    <a th:if="${blogList.hasNext()}"
+       th:href="@{/blog(page=${blogList.number+1},searchName=${searchName},idCate=${category.id})}">next</a>
+</div>
+<div th:if="${category==null}">
+    <a th:if="${blogList.hasPrevious()}"
+       th:href="@{/blog(page=${blogList.getNumber()-1},searchName=${searchName})}">Previous</a>
+    <span th:text="${blogList.number+1}"></span>/
+    <span th:text="${blogList.totalPages}"></span>
+    <a th:if="${blogList.hasNext()}"
+       th:href="@{/blog(page=${blogList.number+1},searchName=${searchName})}">next</a>
+</div>
+<!--pagenumber-->
+<!--modal-->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
      aria-hidden="true">
     <div class="modal-dialog">
@@ -151,13 +163,21 @@
         </div>
     </div>
 </div>
+<!--modal-->
 </body>
 <script>
     function modalDelete(element) {
-        var id = element.getAttribute("data-bs-id");
-        var name = element.getAttribute("data-bs-name");
+        let id = element.getAttribute("data-bs-id");
+        let name = element.getAttribute("data-bs-name");
         document.getElementById("deleteName").innerHTML = name;
         document.getElementById("deleteId").value = id;
     }
+
+    function submitForm() {
+        document.getElementById("filterForm").submit();
+    }
+</script>
+<script th:if="${mess}">
+    displayToast(document.getElementById("mess").value)
 </script>
 </html>

@@ -6,23 +6,18 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.sql.Date;
-import java.time.LocalDateTime;
+import java.util.Set;
 
 @Entity
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Blog {
+public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-    private LocalDateTime date;
-    @Column(columnDefinition = "text")
-    private String content;
-    @ManyToOne
-    @JoinColumn(name = "id_category")
-    private Category category;
+    @OneToMany(mappedBy = "category")
+    private Set<Blog> blogs;
 }

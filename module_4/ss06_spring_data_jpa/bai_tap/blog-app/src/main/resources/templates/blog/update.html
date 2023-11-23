@@ -13,6 +13,7 @@
             border-radius: 4px;
             box-sizing: border-box;
         }
+
         button {
             font-family: Arial, Helvetica, sans-serif;
             font-weight: bold;
@@ -74,7 +75,10 @@
     <label for="name">Name:</label><br>
     <input th:field="*{name}" id="name" th:value="${blog.name}"><br>
     <label for="des">Content:</label><br>
-    <input th:field="*{content}" id="des" th:value="${blog.content}"><br>
+    <textarea style="width: 50%" th:field="*{content}" id="des" th:value="${blog.content}"></textarea><br>
+    <select th:field="*{category}">
+        <option th:each="cate:${categoryList}" th:value="${cate.getId()}" th:text="${cate.name}"></option>
+    </select>
     <button>Edit</button>
 </form>
 </body>
