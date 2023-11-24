@@ -47,17 +47,17 @@
 </head>
 <body>
 <!--Filter-->
-<div class="dropdown">
-    <form id="filterForm" action="/blog">
-        <select class="form-select" aria-label="Default select example" name="idCate" onchange="submitForm()">
-            <option value="" th:selected="${category == null}">All Category</option>
-            <option th:if="${category!=null}" th:each="cate:${categoryList}" th:text="${cate.name}"
-                    th:value="${cate.id}" th:selected="${category.name.equals(cate.name)}"></option>
-            <option th:if="${category==null}" th:each="cate:${categoryList}" th:text="${cate.name}"
-                    th:value="${cate.id}"></option>
-        </select>
-    </form>
-</div>
+<!--<div class="dropdown">-->
+<!--    <form id="filterForm" action="/blog">-->
+<!--        <select class="form-select" aria-label="Default select example" name="idCate" onchange="submitForm()">-->
+<!--            <option value="" th:selected="${category == null}">All Category</option>-->
+<!--            <option th:if="${category!=null}" th:each="cate:${categoryList}" th:text="${cate.name}"-->
+<!--                    th:value="${cate.id}" th:selected="${category.name.equals(cate.name)}"></option>-->
+<!--            <option th:if="${category==null}" th:each="cate:${categoryList}" th:text="${cate.name}"-->
+<!--                    th:value="${cate.id}"></option>-->
+<!--        </select>-->
+<!--    </form>-->
+<!--</div>-->
 <!--Filter-->
 <!--toast-->
 <div id="liveToast">

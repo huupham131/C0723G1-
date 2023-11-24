@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head xmlns:th="http://www.thymeleaf.org" lang="en">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Sign in</h1>
+<form method="post" action="/user/signIn" th:object="${userDto}">
+    <table>
+        <tr>
+            <th>
+                <label for="firstName">First Name</label>
+            </th>
+            <td>
+                <input id="firstName" placeholder="Enter First Name" th:field="*{firstName}" required><br>
+                <small style="color: red" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></small>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <label for="lastName">Last Name</label>
+            </th>
+            <td>
+                <input id="lastName" placeholder="Enter Last Name" th:field="*{lastName}" required><br>
+                <small style="color: red" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></small>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <label for="phoneNumber">Phone Number</label>
+            </th>
+            <td>
+                <input id="phoneNumber" placeholder="Enter Phone Number" th:field="*{phoneNumber}" required><br>
+                <small style="color: red" th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}"></small>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <label for="age">Age</label>
+            </th>
+            <td>
+                <input id="age" placeholder="Enter age" th:field="*{age}" type="number" required><br>
+                <small style="color: red" th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></small>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <label for="email">Email</label>
+            </th>
+            <td>
+                <input id="email" placeholder="Enter email" th:field="*{email}" type="text" ><br>
+                <small style="color: red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></small>
+            </td>
+        </tr>
+    </table>
+    <button>Submit</button>
+</form>
+</body>
+</html>
