@@ -33,11 +33,13 @@ public class UserDto implements Validator {
             errors.rejectValue("firstName", null, "It was empty.Please enter first name");
         } else if (!(userDto.getFirstName().matches("^[A-Z][a-z]+") || userDto.firstName.length()>=3)) {
             errors.rejectValue("firstName", null, "Please enter the correct format");
-        }else if ("".equals(userDto.lastName)){
+        }
+        if ("".equals(userDto.lastName)){
             errors.rejectValue("lastName", null, "It was empty.Please enter last name");
         }else if(!userDto.getLastName().matches("^[A-Z][a-z]+")){
             errors.rejectValue("lastName", null, "Please enter the correct format");
-        }else if("".equals(userDto.phoneNumber)){
+        }
+        if("".equals(userDto.phoneNumber)){
             errors.rejectValue("phoneNumber", null, "It was empty.Please enter phoneNumber");
         }else if(!userDto.getPhoneNumber().matches("^0\\d{9}$")){
             errors.rejectValue("phoneNumber", null, "Please enter the correct format");
