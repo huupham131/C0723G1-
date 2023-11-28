@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Book name:</th>
+        <td th:text="${book.name}"></td>
+    </tr>
+    <tr>
+        <th>Author :</th>
+        <td th:text="${book.author}"></td>
+    </tr>
+    <tr>
+        <th>Description :</th>
+        <td th:text="${book.description}"></td>
+    </tr>
+    <tr>
+        <th>Quantity :</th>
+        <td th:text="${book.quantity}"></td>
+    </tr>
+</table>
+<div th:if="${book.quantity}>0">
+    <a th:href="@{/borrow(id=${book.id})}"><button>Borrow</button></a>
+</div>
+<div th:if="${book.quantity}==0">
+    Hết sách rồi
+</div>
+</body>
+</html>
