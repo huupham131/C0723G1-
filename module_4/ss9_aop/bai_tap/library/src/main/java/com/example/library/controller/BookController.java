@@ -1,5 +1,6 @@
 package com.example.library.controller;
 
+import com.example.library.aop.MyException;
 import com.example.library.model.Book;
 import com.example.library.model.BorrowCode;
 import com.example.library.service.IBookService;
@@ -7,6 +8,7 @@ import com.example.library.service.IBorrowCodeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -61,6 +63,10 @@ public class BookController {
             return "redirect:";
         }
         model.addAttribute("code",code);
-        return "/error";
+        return "errors";
+    }
+    @ExceptionHandler(MyException.class)
+    public String handleException(){
+        return "error";
     }
 }
