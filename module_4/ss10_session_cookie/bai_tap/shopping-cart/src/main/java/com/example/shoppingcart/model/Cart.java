@@ -56,7 +56,6 @@ public class Cart {
         products.replace(itemEntry.getKey(), newQuantity);
         if (newQuantity == 0) {
             products.remove(itemEntry.getKey());
-
         }
     }
 
@@ -78,5 +77,9 @@ public class Cart {
             payment += entry.getKey().getPrice() * (float) entry.getValue();
         }
         return payment;
+    }
+    public void deleteAll(Product product) {
+        Map.Entry<Product, Integer> itemEntry = selectItemInCart(product);
+        products.remove(itemEntry.getKey());
     }
 }

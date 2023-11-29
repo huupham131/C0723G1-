@@ -57,4 +57,15 @@ public class ProductController {
         cart.subProduct(productOptional.get());
         return "redirect:/shop";
     }
+    @GetMapping("/detail")
+    public String detailProduct(Long id,Model model,@ModelAttribute Cart cart){
+        model.addAttribute("product",productService.findById(id));
+        model.addAttribute("cart",cart);
+        return "/detail";
+    }
+    @GetMapping("/deleteAll")
+    public String deleteAllProduct(Long id,Model model,@ModelAttribute Cart cart,String action){
+        Optional<Product> productOptional = productService.findById(id);
+        cart.deleteAll(productOptional.get());
+        return "redirect:/shopping-cart";    }
 }
