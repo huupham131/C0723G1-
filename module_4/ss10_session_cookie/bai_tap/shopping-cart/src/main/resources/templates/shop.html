@@ -68,7 +68,7 @@
             <img th:src="${product.getPathImg()}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title" th:text="${product.getName()}"></h5>
-                <p class="card-text" th:text="${product.getPrice()+' VND'}"></p>
+                <p class="card-text" th:text=" ${#numbers.formatDecimal(product.getPrice(), 0,  'COMMA', 0, 'POINT')}+' VND'"></p>
             </div>
             <div style="align-content: center;align-items: center;justify-items: center;justify-content: center">
                 <a th:href="@{/add/__${product.id}__(action='list')}" class="btn btn-primary">Add To Cart</a>

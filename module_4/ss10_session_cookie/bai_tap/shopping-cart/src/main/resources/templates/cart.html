@@ -91,7 +91,7 @@
             <th>Quantity</th>
             <th>Price</th>
         </tr>
-        <tr th:each="product: ${cart.products}" th:if="${product.getValue()!=0}">
+        <tr th:each="product: ${cart.products}">
             <td th:text="${product.getKey().name}" ></td>
             <td><img th:src="${product.getKey().getPathImg()}" style="width: 200px; height: 100px"></td>
             <td>
@@ -112,14 +112,14 @@
                 </svg>
                 </a>
             </td>
-            <td th:text="${product.getKey().price}"></td>
+            <td th:text=" ${#numbers.formatDecimal(product.getKey().price, 0,  'COMMA', 0, 'POINT')}+' VND'"></td>
 
         </tr>
         <tr>
             <td>Total</td>
             <td></td>
             <td></td>
-            <td th:text="${cart.countTotalPayment()}"></td>
+            <td th:text=" ${#numbers.formatDecimal(cart.countTotalPayment(), 0,  'COMMA', 0, 'POINT')}+' VND'"></td>
         </tr>
     </table>
 </form>
