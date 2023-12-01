@@ -76,7 +76,7 @@ public class RestBlogController {
             blogPage = blogService.searchByCategoryAndName(searchName, pageable, idCate);
         }
         if (blogPage.isEmpty()) {
-            return new ResponseEntity<>(HttpStatus.OK);
+            return new ResponseEntity<>(blogPage,HttpStatus.OK);
         }
         return new ResponseEntity<>(blogPage, HttpStatus.OK);
     }

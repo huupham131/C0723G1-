@@ -107,10 +107,11 @@
             method: "get",
             url: `http://localhost:8080/api/blog?page=${page}&idCate=${selectedCategoryId}&searchName=${searchName}`,
             success: function (data) {
-                
+                console.log(data)
                 let data1 = data.content;
-                for (let i = 0; i < data1.length; i++) {
-                    content += `<tr>
+                if(data1.length>0) {
+                    for (let i = 0; i < data1.length; i++) {
+                        content += `<tr>
                                        <td>${i + 1}</td>
                                        <td>${data1[i].name}</td>
                                        <td>${data1[i].date}</td>
@@ -118,15 +119,23 @@
                                        <td><button class="btn-delete" value="${data1[i].id}">Delete</button></td>
                                        <td><button class="btn-detail" value="${data1[i].id}">Detail</button></td>
                                 </tr>`
+                    }
+                }else {
+                    content+=`<tr><td colspan="7">List is empty</td></tr>`
                 }
 
-                $("#content").html(content);
+                $("#content").append(content);
                 $(".btn-detail").click( function() {
                     detail($(this).val());
                 });
                 $("#search").click(function (){
                     display()
                 });
+                $("#more").click(function (){
+if(data.totalPages )
+                    page++;
+                    display()
+                })
             }
         })
         // $("#next").click(function (){
@@ -139,10 +148,7 @@
         //     }
         //     display()
         // })
-        $("#more").click(function (){
-                page++;
-            display()
-        })
+
 
     }
     function detail(id) {
