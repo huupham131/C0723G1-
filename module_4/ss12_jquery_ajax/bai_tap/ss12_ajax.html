@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+    <style>
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        input[type=text], select {
+            width: 10%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+    </style>
+    <script>
+        function displayToast(message) {
+            document.getElementById("toastContent").innerHTML = message;
+            let myAlert = document.getElementById('liveToast');//select id of toast
+            let bsAlert = new bootstrap.Toast(myAlert);//inizialize it
+            bsAlert.show();//show it
+        }
+    </script>
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+    <select id="category" style="width: 50%" onchange="display()">
+
+    </select>
+    <input placeholder="Enter name" id="searchName">
+    <button id="search">Search</button>
+<table>
+    <thead>
+    <tr>
+        <th>STT</th>
+        <th>Name Blog</th>
+        <th>Date post</th>
+        <th colspan="2" style="text-align: center">Action</th>
+        <th>Detail</th>
+    </tr>
+    </thead>
+    <tbody id="content">
+    </tbody>
+</table>
+<div>
+    <button id="previous">Previous</button>
+    <button id="next">Next</button>
+    <button id="more">more</button>
+</div>
+<script>
+    $(document).ready(function () {
+        display()
+    })
+    let page = 0;
+    function display() {
+        let content = "";
+        let category = "<option value='0'>All Category</option>";
+        let selectedCategoryId;
+        if($("#category").val()==null){
+            selectedCategoryId = 0
+        }else {
+            selectedCategoryId =$("#category").val();
+        }
+        let searchName=$("#searchName").val()
+        $.ajax({
+            contentType: "application/json",
+            dataType: "json",
+            method: "get",
+            url: `http://localhost:8080/api/category`,
+            success: function (data) {
+                for (let i = 0; i < data.length; i++) {
+                    category += `
+                            <option value="${data[i].id}" >${data[i].name}</option>`
+                }
+                $("#category").html(category)
+
+                $("#category").val(selectedCategoryId)
+            }
+        })
+
+        $.ajax({
+            contentType: "application/json",
+            data: "json",
+            method: "get",
+            url: `http://localhost:8080/api/blog?page=${page}&idCate=${selectedCategoryId}&searchName=${searchName}`,
+            success: function (data) {
+                
+                let data1 = data.content;
+                for (let i = 0; i < data1.length; i++) {
+                    content += `<tr>
+                                       <td>${i + 1}</td>
+                                       <td>${data1[i].name}</td>
+                                       <td>${data1[i].date}</td>
+                                       <td><button class="btn-update" value="${data1[i].id}">Update</button></td>
+                                       <td><button class="btn-delete" value="${data1[i].id}">Delete</button></td>
+                                       <td><button class="btn-detail" value="${data1[i].id}">Detail</button></td>
+                                </tr>`
+                }
+
+                $("#content").html(content);
+                $(".btn-detail").click( function() {
+                    detail($(this).val());
+                });
+                $("#search").click(function (){
+                    display()
+                });
+            }
+        })
+        // $("#next").click(function (){
+        //     page++;
+        //     display()
+        // })
+        // $("#previous").click(function (){
+        //     if(page>0){
+        //         page--;
+        //     }
+        //     display()
+        // })
+        $("#more").click(function (){
+                page++;
+            display()
+        })
+
+    }
+    function detail(id) {
+        let content = "";
+        $.ajax({
+            contentType: "application/json",
+            dataType: "json",
+            method: "get",
+            url: `http://localhost:8080/api/blog/detail/${id}`,
+            success: function (data) {
+                    content += `<tr>
+                                        <td></td>
+                                       <td>${data.name}</td>
+                                       <td>${data.date}</td>
+
+                                </tr>`
+
+                $("#content").html(content)
+            }
+        })
+    }
+
+
+</script>
+
+</body>
+</html>

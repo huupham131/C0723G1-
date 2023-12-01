@@ -16,7 +16,9 @@ public class Logger {
     }
 
     @After("execution(* com.example.library.controller.BookController.backBook())")
-    public void historyBackBook() {
-
+    public void historyBackBook(JoinPoint joinPoint) {
+        Object[] object = joinPoint.getArgs();
+        int id = (int) object[1];
+        System.out.println("Back book id" + id);
     }
 }
