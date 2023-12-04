@@ -47,11 +47,11 @@
     <script src="js/jquery.js"></script>
 </head>
 <body>
-    <select id="category" style="width: 50%" onchange="display()">
+<select id="category" style="width: 50%" onchange="display()">
 
-    </select>
-    <input placeholder="Enter name" id="searchName">
-    <button id="search">Search</button>
+</select>
+<input placeholder="Enter name" id="searchName">
+<button id="search">Search</button>
 <table>
     <thead>
     <tr>
@@ -64,6 +64,8 @@
     </thead>
     <tbody id="content">
     </tbody>
+    <tbody id="contentMore">
+    </tbody>
 </table>
 <div>
     <button id="previous">Previous</button>
@@ -75,16 +77,17 @@
         display()
     })
     let page = 0;
+
     function display() {
         let content = "";
         let category = "<option value='0'>All Category</option>";
         let selectedCategoryId;
-        if($("#category").val()==null){
+        if ($("#category").val() == null) {
             selectedCategoryId = 0
-        }else {
-            selectedCategoryId =$("#category").val();
+        } else {
+            selectedCategoryId = $("#category").val();
         }
-        let searchName=$("#searchName").val()
+        let searchName = $("#searchName").val()
         $.ajax({
             contentType: "application/json",
             dataType: "json",
@@ -109,7 +112,7 @@
             success: function (data) {
                 console.log(data)
                 let data1 = data.content;
-                if(data1.length>0) {
+                if (data1.length > 0) {
                     for (let i = 0; i < data1.length; i++) {
                         content += `<tr>
                                        <td>${i + 1}</td>
@@ -120,19 +123,19 @@
                                        <td><button class="btn-detail" value="${data1[i].id}">Detail</button></td>
                                 </tr>`
                     }
-                }else {
-                    content+=`<tr><td colspan="7">List is empty</td></tr>`
+                } else {
+                    content += `<tr><td colspan="7">List is empty</td></tr>`
                 }
+                    $("#content").html(content);
 
-                $("#content").append(content);
-                $(".btn-detail").click( function() {
+
+                $(".btn-detail").click(function () {
                     detail($(this).val());
                 });
-                $("#search").click(function (){
+                $("#search").click(function () {
                     display()
                 });
-                $("#more").click(function (){
-if(data.totalPages )
+                $("#more").click(function () {
                     page++;
                     display()
                 })
@@ -151,6 +154,7 @@ if(data.totalPages )
 
 
     }
+
     function detail(id) {
         let content = "";
         $.ajax({
@@ -159,7 +163,7 @@ if(data.totalPages )
             method: "get",
             url: `http://localhost:8080/api/blog/detail/${id}`,
             success: function (data) {
-                    content += `<tr>
+                content += `<tr>
                                         <td></td>
                                        <td>${data.name}</td>
                                        <td>${data.date}</td>
