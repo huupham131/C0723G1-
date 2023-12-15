@@ -9,7 +9,6 @@
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
             crossorigin="anonymous"></script>
     <style>
-
         table {
             font-family: arial, sans-serif;
             border-collapse: collapse;
@@ -109,7 +108,7 @@
             <button
                     class="list-group-item list-group-item-action btn  text-danger"
                     data-bs-toggle="modal" data-bs-target="#exampleModal"
-                    th:attr="data-bs-id=${blog.id}, data-bs-name=${blog.name}, data-bs-toggle='modal', data-bs-target='#exampleModal'"
+                    attr="data-bs-id= data-bs-name=, data-bs-toggle='modal', data-bs-target='#exampleModal'"
                     onclick="modalDelete(this)">
                 Delete
             </button>
