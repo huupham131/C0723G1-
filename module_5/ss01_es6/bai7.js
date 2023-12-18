@@ -5,7 +5,6 @@
      {name:"Tưởng",
      age: 27}
  ]
-let name = array.map(({name}) => name);
-let age = array.map(({age}) => age);
-console.log(name)
-console.log(age)
+for (const { name, age } of array) {
+    console.log(`Name: ${name}, Age: ${age}`);
+}

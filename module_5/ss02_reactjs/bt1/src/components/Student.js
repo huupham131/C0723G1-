@@ -32,7 +32,7 @@ const students = [
         country: 'Italy'
     }
 ]
-export default function Student(){
+export default function student(){
     return(
 
     <div>
