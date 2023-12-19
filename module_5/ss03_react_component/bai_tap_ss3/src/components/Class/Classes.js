@@ -5,19 +5,19 @@ const listStudent = [
         id: 1,
         name: 'Hữu',
         age: 23,
-        address: 'Dhaka'
+        address: 'Quảng Ngãi'
     },
     {
         id: 2,
         name: 'Tuong',
         age: 23,
-        address: 'Dhaka'
+        address: 'Quảng Trị'
     },
     {
         id: 3,
         name: 'Hieu',
         age: 23,
-        address: 'Dhaka'
+        address: 'Huế'
     }
 ]
 const StudentInfo = ({id, name, age, address}) => {
@@ -36,7 +36,7 @@ const StudentInfo = ({id, name, age, address}) => {
                 </thead>
                 <tbody>
                 {listStudent.map((student) => (
-                    <tr>
+                    <tr key={student.id}>
                         <td>{student.id}</td>
                         <td>{student.name}</td>
                         <td>{student.age}</td>

@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b773c541-b936-48de-baee-50ddb02bee6f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss03_react_component/bai_tap_ss3/src/components/Class/Classes.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss03_react_component/bai_tap_ss3/src/components/Class/Classes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss03_react_component/bai_tap_ss3/src/components/Todo/Todo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b773c541-b936-48de-baee-50ddb02bee6f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,6 +57,7 @@
       <workItem from="1702872178801" duration="14114000" />
       <workItem from="1702957687023" duration="1478000" />
       <workItem from="1702959294564" duration="120000" />
+      <workItem from="1702960058703" duration="2971000" />
     </task>
     <servers />
   </component>
