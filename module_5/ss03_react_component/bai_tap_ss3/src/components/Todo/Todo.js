@@ -17,10 +17,10 @@ class Todo extends Component {
 
     handleAddItem = () => {
         if (this.state.items.trim() !== "") {
-            this.setState({
-                list: [...this.state.list, this.state.items],
+            this.setState((prevState) =>({
+                list: [...prevState.list, prevState.items],
                 items: ""
-            });
+             }));
         }else {
             alert("Please enter an item");
         }
