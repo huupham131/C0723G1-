@@ -1,29 +1,27 @@
 import axios from 'axios';
 
 export async function getStaticProps() {
-    return {
-        props: {
-            data: [
-                {
-                    "Country": "Viet Nam",
-                    "CountryCode": "",
-                    "Province": "",
-                    "City": "",
-                    "CityCode": "",
-                    "Lat": "0",
-                    "Lon": "0",
-                    "Confirmed": 0,
-                    "Deaths": 0,
-                    "Recovered": 0,
-                    "Active": 0,
-                    "Date": "2020-01-22T00:00:00Z"
-                },
-            ],
-        },
-    };
+    try {
+        const response = await axios.get('https://api.covid19api.com/total/country/vietnam');
+        const covids = response.data                    ;
+
+
+        return {
+            props: {
+                covids: covids
+            },
+        };
+    } catch (error) {
+        console.error('Dữ liệu ko có', error.message);
+        return {
+            props: {
+                covids: [],
+            },
+        };
+    }
 }
 
-const Page = ({ data }) => {
+const Covid = ({ data }) => {
     return (
         <div>
             <h1>Vietnam COVID-19 Information</h1>
@@ -53,4 +51,4 @@ const Page = ({ data }) => {
     );
 };
 
-export default Page;
+export default Covid;

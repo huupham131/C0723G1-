@@ -6,7 +6,7 @@ import MedicalForm from "./components/MedicalForm/MedicalForm";
 function App() {
   return (
     <div className="App">
-      <MedicalForm/>
+      <ContractForm/>
     </div>
   );
 }

@@ -20,7 +20,7 @@ const ContractForm = ()=>{
         const newErrors = {};
 
         if (!values.name) {
-            newErrors.name = 'Required';
+            newErrors.name = 'Name Required';
         }
 
         if (!values.email) {

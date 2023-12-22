@@ -5,14 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38765b2f-54f5-431c-b6de-4ab30f1e2661" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../ss08_nextjs/bai_tap_ss8/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss08_nextjs/bai_tap_ss8/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss08_nextjs/bai_tap_ss8/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss08_nextjs/bai_tap_ss8/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss08_nextjs/bai_tap_ss8/src/pages/Index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss08_nextjs/bai_tap_ss8/src/pages/components/Home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Footer/Footer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss08_nextjs/bai_tap_ss8/src/pages/api/data.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/css/aos.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/css/aos.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss05_form_router/bai_tap_ss5/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ss05_form_router/bai_tap_ss5/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss05_form_router/bai_tap_ss5/src/components/ContractForm/ContractForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ss05_form_router/bai_tap_ss5/src/components/ContractForm/ContractForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss08_nextjs/bai_tap_ss8/src/pages/Index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ss08_nextjs/bai_tap_ss8/src/pages/components/Covid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss08_nextjs/bai_tap_ss8/src/pages/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Content.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss08_nextjs/bai_tap_ss8/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../ss08_nextjs/bai_tap_ss8/src/pages/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -78,7 +83,9 @@
       <workItem from="1703043185678" duration="5726000" />
       <workItem from="1703128706241" duration="55000" />
       <workItem from="1703143509706" duration="2000" />
-      <workItem from="1703225154729" duration="2725000" />
+      <workItem from="1703225154729" duration="9085000" />
+      <workItem from="1703253355170" duration="4000" />
+      <workItem from="1703253369213" duration="319000" />
     </task>
     <servers />
   </component>
