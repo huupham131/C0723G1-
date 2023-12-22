@@ -5,39 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38765b2f-54f5-431c-b6de-4ab30f1e2661" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/css/animate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/css/aos.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/css/bootstrap-datepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/css/customer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/css/fancybox.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/css/jquery.timepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/css/magnific-popup.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/css/owl.carousel.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/fonts/fontawesome/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/fonts/fontawesome/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/fonts/fontawesome/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/fonts/fontawesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/fonts/fontawesome/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/fonts/fontawesome/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/fonts/ionicons/cheatsheet.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/fonts/ionicons/css/ionicons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/fonts/ionicons/css/ionicons.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/fonts/ionicons/fonts/ionicons.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/fonts/ionicons/fonts/ionicons.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/fonts/ionicons/fonts/ionicons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/fonts/ionicons/fonts/ionicons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss05_form_router/bai_tap_ss5/src/components/ContractForm/ContractForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss05_form_router/bai_tap_ss5/src/components/ContractForm/MedicalForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Layout_case_study/furama/customer.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Layout_case_study/furama/customer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss08_nextjs/bai_tap_ss8/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss08_nextjs/bai_tap_ss8/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss08_nextjs/bai_tap_ss8/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss08_nextjs/bai_tap_ss8/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss08_nextjs/bai_tap_ss8/src/pages/Index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss08_nextjs/bai_tap_ss8/src/pages/components/Home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +78,7 @@
       <workItem from="1703043185678" duration="5726000" />
       <workItem from="1703128706241" duration="55000" />
       <workItem from="1703143509706" duration="2000" />
+      <workItem from="1703225154729" duration="2725000" />
     </task>
     <servers />
   </component>
