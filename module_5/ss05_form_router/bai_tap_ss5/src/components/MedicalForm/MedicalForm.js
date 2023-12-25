@@ -25,43 +25,43 @@ const MedicalForm = () => {
         const newErrors = {};
 
         if (!values.name) {
-            newErrors.name = 'Yêu cầu nhập';
+            newErrors.name = 'Yêu cầu nhập tên';
         }
         if (!values.cmnd) {
-            newErrors.cmnd = 'Yêu cầu nhập';
+            newErrors.cmnd = 'Yêu cầu nhập CMND';
         }
         if (!values.birthday) {
-            newErrors.birthday = 'Yêu cầu nhập';
+            newErrors.birthday = 'Yêu cầu nhập năm sinh';
         } else if (!values.birthday < 1900) {
             newErrors.birthday = 'Năm sinh không hợp lệ';
         }
 
         if (!values.sex) {
-            newErrors.sex = 'Yêu cầu nhập';
+            newErrors.sex = 'Yêu cầu nhập giới tính';
         }
         if (!values.nationality) {
-            newErrors.nationality = 'Yêu cầu nhập';
+            newErrors.nationality = 'Yêu cầu nhập quốc tịch';
         }
         if (!values.province) {
-            newErrors.province = 'Yêu cầu nhập';
+            newErrors.province = 'Yêu cầu nhập tỉnh thành';
         }
         if (!values.city) {
-            newErrors.city = 'Yêu cầu nhập';
+            newErrors.city = 'Yêu cầu nhập thành phố';
         }
         if (!values.district) {
-            newErrors.district = 'Yêu cầu nhập';
+            newErrors.district = 'Yêu cầu nhập quận huyện' ;
         }
         if (!values.wards) {
-            newErrors.wards = 'Yêu cầu nhập';
+            newErrors.wards = 'Yêu cầu nhập phường xã';
         }
         if (!values.address) {
-            newErrors.address = 'Yêu cầu nhập';
+            newErrors.address = 'Yêu cầu nhập địa chỉ cụ thể';
         }
         if (!values.phone) {
-            newErrors.phone = 'Yêu cầu nhập';
+            newErrors.phone = 'Yêu cầu nhập số điện thoại';
         }
         if (!values.email) {
-            newErrors.email = 'Yêu cầu nhập';
+            newErrors.email = 'Yêu cầu nhập email';
         } else if (!REGEX.email.test(values.email)) {
             newErrors.email = 'Email không hợp lệ';
         }

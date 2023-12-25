@@ -1,5 +1,10 @@
-function EditRoom(){
+import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
+
+export default function EditRoom(){
     return (
+        <>
+       <Header/>
         <section className="section contact-section" id="next">
             <div className="container">
                 <div className="row">
@@ -64,9 +69,9 @@ function EditRoom(){
                                     <textarea name="message" id="message" className="form-control " cols="30" rows="8"></textarea>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6 form-group">
-                                    <input type="submit" value="Chỉnh sửa" class="btn btn-primary text-white py-3 px-5 font-weight-bold"/>
+                            <div className="row">
+                                <div className="col-md-6 form-group">
+                                    <input type="submit" value="Chỉnh sửa" className="btn btn-primary text-white py-3 px-5 font-weight-bold"/>
                                 </div>
                             </div>
                         </form>
@@ -75,6 +80,7 @@ function EditRoom(){
                 </div>
             </div>
         </section>
+            <Footer/>
+        </>
     )
 }
-export default EditRoom()

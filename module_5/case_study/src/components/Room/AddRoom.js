@@ -1,6 +1,10 @@
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 function AddRoom(){
     return(
+        <>
+            <Header/>
         <section className="section contact-section" id="next">
             <div className="container">
                 <div className="row">
@@ -59,15 +63,15 @@ function AddRoom(){
 
 
 
-                            <div class="row mb-4">
-                                <div class="col-md-12 form-group">
-                                    <label class="text-black font-weight-bold" for="message">Mô tả</label>
-                                    <textarea name="message" id="message" class="form-control " cols="30" rows="8"></textarea>
+                            <div className="row mb-4">
+                                <div className="col-md-12 form-group">
+                                    <label className="text-black font-weight-bold" htmlFor="message">Mô tả</label>
+                                    <textarea name="message" id="message" className="form-control " cols="30" rows="8"></textarea>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6 form-group">
-                                    <input type="submit" value="Chỉnh sửa" class="btn btn-primary text-white py-3 px-5 font-weight-bold"/>
+                            <div className="row">
+                                <div className="col-md-6 form-group">
+                                    <input type="submit" value="Chỉnh sửa" className="btn btn-primary text-white py-3 px-5 font-weight-bold"/>
                                 </div>
                             </div>
                         </form>
@@ -76,6 +80,8 @@ function AddRoom(){
                 </div>
             </div>
         </section>
+            <Footer/>
+            </>
     )
 }
 export default AddRoom;

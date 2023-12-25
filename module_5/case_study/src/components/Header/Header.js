@@ -24,9 +24,9 @@ function Header() {
                                         <div className="row full-height align-items-center">
                                             <div className="col-md-6 mx-auto">
                                                 <ul className="list-unstyled menu">
-                                                    <li><NavLink to="/" activeClassName="active">Trang chủ</NavLink></li>
-                                                    <li><Link to="/">Loại phòng</Link></li>
-                                                    <li><Link to="/">Khách hàng</Link></li>
+                                                    <li><NavLink to={"/"} activeClassName="active">Trang chủ</NavLink></li>
+                                                    <li><Link to={"/room"}>Loại phòng</Link></li>
+                                                    <li><Link to={"/customer"}>Khách hàng</Link></li>
                                                     <li><Link to="/">About</Link></li>
                                                     <li><Link to="/">Sự kiện</Link></li>
                                                     <li><Link to="/">Liên hệ</Link></li>

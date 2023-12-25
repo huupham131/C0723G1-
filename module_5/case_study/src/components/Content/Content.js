@@ -176,43 +176,43 @@ function Content() {
                                     <Link to="https://cf.bstatic.com/xdata/images/hotel/max1280x900/62371531.jpg?k=fb1828d64f739b526944dcb487699e4625ad8799986e0e4ef5c2c930dcf39b6c&o=&hp=1"
                                        data-fancybox="images" data-caption="Caption for this image"><img
                                         src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/62371531.jpg?k=fb1828d64f739b526944dcb487699e4625ad8799986e0e4ef5c2c930dcf39b6c&o=&hp=1"
-                                        alt="Image placeholder" className="img-fluid"/></Link>>
+                                        alt="Image placeholder" className="img-fluid"/></Link>
                                 </div>
                                 <div className="slider-item">
                                     <Link to="https://cf.bstatic.com/xdata/images/hotel/max1280x900/64070859.jpg?k=f340e2ee68e6e898a6d9200ade7ba0ad27836a5591549e896d607243c16e6c51&o=&hp=1"
                                        data-fancybox="images" data-caption="Caption for this image"><img
                                         src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/64070859.jpg?k=f340e2ee68e6e898a6d9200ade7ba0ad27836a5591549e896d607243c16e6c51&o=&hp=1"
-                                        alt="Image placeholder" className="img-fluid"/></Link>>
+                                        alt="Image placeholder" className="img-fluid"/></Link>
                                 </div>
                                 <div className="slider-item">
                                     <Link to="https://cf.bstatic.com/xdata/images/hotel/max1280x900/154610230.jpg?k=46affac8d9773acf603bfef22aeadb8221aa792e581e285c11770876251c7c83&o=&hp=1"
                                        data-fancybox="images" data-caption="Caption for this image"><img
                                         src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/154610230.jpg?k=46affac8d9773acf603bfef22aeadb8221aa792e581e285c11770876251c7c83&o=&hp=1"
-                                        alt="Image placeholder" className="img-fluid"/></Link>>
+                                        alt="Image placeholder" className="img-fluid"/></Link>
                                 </div>
                                 <div className="slider-item">
                                     <Link to="https://cf.bstatic.com/xdata/images/hotel/max1280x900/206455597.jpg?k=6d04468d13e2dec9b6680c51e37b890788ab8204f3b475478a0a1fe61052a042&o=&hp=1"
                                        data-fancybox="images" data-caption="Caption for this image"><img
                                         src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/206455597.jpg?k=6d04468d13e2dec9b6680c51e37b890788ab8204f3b475478a0a1fe61052a042&o=&hp=1"
-                                        alt="Image placeholder" className="img-fluid"/></Link>>
+                                        alt="Image placeholder" className="img-fluid"/></Link>
                                 </div>
                                 <div className="slider-item">
                                     <Link to="https://cf.bstatic.com/xdata/images/hotel/max1280x900/64261840.jpg?k=d1e6072b27235f3a38da4cefc7e28641918a5c66b1b77872188e8f7429b1d2d5&o=&hp=1"
                                        data-fancybox="images" data-caption="Caption for this image"><img
                                         src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/64261840.jpg?k=d1e6072b27235f3a38da4cefc7e28641918a5c66b1b77872188e8f7429b1d2d5&o=&hp=1"
-                                        alt="Image placeholder" className="img-fluid"/></Link>>
+                                        alt="Image placeholder" className="img-fluid"/></Link>
                                 </div>
                                 <div className="slider-item">
                                     <Link to="https://cf.bstatic.com/xdata/images/hotel/max1280x900/160407105.jpg?k=9db3214928c5013d29fe7e34e8f741c0e52c6907960385cfa045a766ee6f8731&o=&hp=1"
                                        data-fancybox="images" data-caption="Caption for this image"><img
                                         src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/160407105.jpg?k=9db3214928c5013d29fe7e34e8f741c0e52c6907960385cfa045a766ee6f8731&o=&hp=1"
-                                        alt="Image placeholder" className="img-fluid"/></Link>>
+                                        alt="Image placeholder" className="img-fluid"/></Link>
                                 </div>
                                 <div className="slider-item">
                                     <Link to="https://cf.bstatic.com/xdata/images/hotel/max1280x900/207296917.jpg?k=825c5a63e151fe2fa92bf1073d140f9399a43026f3c07e9598313295efd53d94&o=&hp=1"
                                        data-fancybox="images" data-caption="Caption for this image"><img
                                         src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/207296917.jpg?k=825c5a63e151fe2fa92bf1073d140f9399a43026f3c07e9598313295efd53d94&o=&hp=1"
-                                        alt="Image placeholder" className="img-fluid"/></Link>>
+                                        alt="Image placeholder" className="img-fluid"/></Link>
                                 </div>
                             </div>
 
@@ -243,17 +243,17 @@ function Content() {
                             <li className="nav-item">
                                 <Link className="nav-link active letter-spacing-2" id="mains-tab" data-toggle="tab"
                                    to="#mains"
-                                   role="tab" aria-controls="mains" aria-selected="true">Mains</Link>>
+                                   role="tab" aria-controls="mains" aria-selected="true">Mains</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link letter-spacing-2" id="desserts-tab" data-toggle="tab"
                                    to="#desserts"
-                                   role="tab" aria-controls="desserts" aria-selected="false">Desserts</Link>>
+                                   role="tab" aria-controls="desserts" aria-selected="false">Desserts</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link letter-spacing-2" id="drinks-tab" data-toggle="tab"
                                    to="#drinks"
-                                   role="tab" aria-controls="drinks" aria-selected="false">Drinks</Link>>
+                                   role="tab" aria-controls="drinks" aria-selected="false">Drinks</Link>
                             </li>
                         </ul>
                         <div className="tab-content py-5" id="myTabContent">
@@ -266,7 +266,7 @@ function Content() {
                                         <div className="food-menu mb-5">
                                             <span className="d-block text-primary h4 mb-3">$20.00</span>
                                             <h3 className="text-white"><Link to="#" className="text-white">Murgh Tikka
-                                                Masala</Link>>
+                                                Masala</Link>
                                             </h3>
                                             <p className="text-white text-opacity-7">Far far away, behind the word
                                                 mountains,
@@ -276,7 +276,7 @@ function Content() {
                                         <div className="food-menu mb-5">
                                             <span className="d-block text-primary h4 mb-3">$35.00</span>
                                             <h3 className="text-white"><Link to="#" className="text-white">Fish
-                                                Moilee</Link>></h3>
+                                                Moilee</Link></h3>
                                             <p className="text-white text-opacity-7">Far far away, behind the word
                                                 mountains,
                                                 far from the countries Vokalia and Consonantia, there live the blind
@@ -285,7 +285,7 @@ function Content() {
                                         <div className="food-menu mb-5">
                                             <span className="d-block text-primary h4 mb-3">$15.00</span>
                                             <h3 className="text-white"><Link to="#" className="text-white">Safed
-                                                Gosht</Link>></h3>
+                                                Gosht</Link></h3>
                                             <p className="text-white text-opacity-7">Far far away, behind the word
                                                 mountains,
                                                 far from the countries Vokalia and Consonantia, there live the blind
@@ -296,7 +296,7 @@ function Content() {
                                         <div className="food-menu mb-5">
                                             <span className="d-block text-primary h4 mb-3">$10.00</span>
                                             <h3 className="text-white"><Link to="#" className="text-white">French Toast
-                                                Combo</Link>>
+                                                Combo</Link>
                                             </h3>
                                             <p className="text-white text-opacity-7">Far far away, behind the word
                                                 mountains,
@@ -306,7 +306,7 @@ function Content() {
                                         <div className="food-menu mb-5">
                                             <span className="d-block text-primary h4 mb-3">$8.35</span>
                                             <h3 className="text-white"><Link to="#" className="text-white">Vegie
-                                                Omelet</Link>></h3>
+                                                Omelet</Link></h3>
                                             <p className="text-white text-opacity-7">Far far away, behind the word
                                                 mountains,
                                                 far from the countries Vokalia and Consonantia, there live the blind
@@ -316,7 +316,7 @@ function Content() {
                                             <span className="d-block text-primary h4 mb-3">$22.00</span>
                                             <h3 className="text-white"><Link to="#"
                                                                           className="text-white">Chorizo &amp; Egg
-                                                Omelet</Link>></h3>
+                                                Omelet</Link></h3>
                                             <p className="text-white text-opacity-7">Far far away, behind the word
                                                 mountains,
                                                 far from the countries Vokalia and Consonantia, there live the blind
@@ -336,7 +336,7 @@ function Content() {
                                         <div className="food-menu mb-5">
                                             <span className="d-block text-primary h4 mb-3">$11.00</span>
                                             <h3 className="text-white"><Link to="#" className="text-white">Banana
-                                                Split</Link>></h3>
+                                                Split</Link></h3>
                                             <p className="text-white text-opacity-7">Far far away, behind the word
                                                 mountains,
                                                 far from the countries Vokalia and Consonantia, there live the blind
@@ -345,7 +345,7 @@ function Content() {
                                         <div className="food-menu mb-5">
                                             <span className="d-block text-primary h4 mb-3">$72.00</span>
                                             <h3 className="text-white"><Link to="#" className="text-white">Sticky Toffee
-                                                Pudding</Link>></h3>
+                                                Pudding</Link></h3>
                                             <p className="text-white text-opacity-7">Far far away, behind the word
                                                 mountains,
                                                 far from the countries Vokalia and Consonantia, there live the blind
@@ -353,7 +353,7 @@ function Content() {
                                         </div>
                                         <div className="food-menu mb-5">
                                             <span className="d-block text-primary h4 mb-3">$26.00</span>
-                                            <h3 className="text-white"><Link to="#" className="text-white">Pecan</Link>></h3>
+                                            <h3 className="text-white"><Link to="#" className="text-white">Pecan</Link></h3>
                                             <p className="text-white text-opacity-7">Far far away, behind the word
                                                 mountains,
                                                 far from the countries Vokalia and Consonantia, there live the blind
@@ -364,7 +364,7 @@ function Content() {
                                         <div className="food-menu mb-5">
                                             <span className="d-block text-primary h4 mb-3">$42.00</span>
                                             <h3 className="text-white"><Link to="#" className="text-white">Apple
-                                                Strudel</Link>></h3>
+                                                Strudel</Link></h3>
                                             <p className="text-white text-opacity-7">Far far away, behind the word
                                                 mountains,
                                                 far from the countries Vokalia and Consonantia, there live the blind
@@ -372,7 +372,7 @@ function Content() {
                                         </div>
                                         <div className="food-menu mb-5">
                                             <span className="d-block text-primary h4 mb-3">$7.35</span>
-                                            <h3 className="text-white"><Link to="#" className="text-white">Pancakes</Link>>
+                                            <h3 className="text-white"><Link to="#" className="text-white">Pancakes</Link>
                                             </h3>
                                             <p className="text-white text-opacity-7">Far far away, behind the word
                                                 mountains,
@@ -382,7 +382,7 @@ function Content() {
                                         <div className="food-menu mb-5">
                                             <span className="d-block text-primary h4 mb-3">$22.00</span>
                                             <h3 className="text-white"><Link to="#" className="text-white">Ice Cream
-                                                Sundae</Link>>
+                                                Sundae</Link>
                                             </h3>
                                             <p className="text-white text-opacity-7">Far far away, behind the word
                                                 mountains,
@@ -401,7 +401,7 @@ function Content() {
                                         <div className="food-menu mb-5">
                                             <span className="d-block text-primary h4 mb-3">$32.00</span>
                                             <h3 className="text-white"><Link to="#" className="text-white">Spring
-                                                Water</Link>></h3>
+                                                Water</Link></h3>
                                             <p className="text-white text-opacity-7">Far far away, behind the word
                                                 mountains,
                                                 far from the countries Vokalia and Consonantia, there live the blind
@@ -411,7 +411,7 @@ function Content() {
                                             <span className="d-block text-primary h4 mb-3">$14.00</span>
                                             <h3 className="text-white"><Link to="#" className="text-white">Coke, Diet
                                                 Coke, Coke
-                                                Zero</Link>></h3>
+                                                Zero</Link></h3>
                                             <p className="text-white text-opacity-7">Far far away, behind the word
                                                 mountains,
                                                 far from the countries Vokalia and Consonantia, there live the blind
@@ -420,7 +420,7 @@ function Content() {
                                         <div className="food-menu mb-5">
                                             <span className="d-block text-primary h4 mb-3">$93.00</span>
                                             <h3 className="text-white"><Link to="#" className="text-white">Orange
-                                                Fanta</Link>></h3>
+                                                Fanta</Link></h3>
                                             <p className="text-white text-opacity-7">Far far away, behind the word
                                                 mountains,
                                                 far from the countries Vokalia and Consonantia, there live the blind
@@ -431,7 +431,7 @@ function Content() {
                                         <div class="food-menu mb-5">
                                             <span class="d-block text-primary h4 mb-3">$18.00</span>
                                             <h3 class="text-white"><Link to="#" class="text-white">Lemonade, Lemon
-                                                Squash</Link>>
+                                                Squash</Link>
                                             </h3>
                                             <p class="text-white text-opacity-7">Far far away, behind the word
                                                 mountains, far
@@ -441,7 +441,7 @@ function Content() {
                                         <div class="food-menu mb-5">
                                             <span class="d-block text-primary h4 mb-3">$38.35</span>
                                             <h3 class="text-white"><Link to="#" class="text-white">Sparkling Mineral
-                                                Water</Link>>
+                                                Water</Link>
                                             </h3>
                                             <p class="text-white text-opacity-7">Far far away, behind the word
                                                 mountains, far
@@ -451,7 +451,7 @@ function Content() {
                                         <div class="food-menu mb-5">
                                             <span class="d-block text-primary h4 mb-3">$69.00</span>
                                             <h3 class="text-white"><Link to="#" class="text-white">Lemon,
-                                                Lime &amp; Bitters</Link>>
+                                                Lime &amp; Bitters</Link>
                                             </h3>
                                             <p class="text-white text-opacity-7">Far far away, behind the word
                                                 mountains, far
@@ -487,11 +487,11 @@ function Content() {
 
                             <div class="media media-custom d-block mb-4 h-100">
                                 <Link to="#" class="mb-4 d-block"><img src="images/img_1.jpg" alt="Image placeholder"
-                                                                      class="img-fluid"/></Link>>
+                                                                      class="img-fluid"/></Link>
                                 <div class="media-body">
                                     <span class="meta-post">February 26, 2018</span>
                                     <h2 class="mt-0 mb-3"><Link to="#">Travel Hacks to Make Your Flight More
-                                        Comfortable</Link>></h2>
+                                        Comfortable</Link></h2>
                                     <p>Far far away, behind the word mountains, far from the countries Vokalia and
                                         Consonantia,
                                         there live the blind texts.</p>
@@ -502,12 +502,12 @@ function Content() {
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="200">
                             <div class="media media-custom d-block mb-4 h-100">
                                 <Link to="#" class="mb-4 d-block"><img src="images/img_2.jpg" alt="Image placeholder"
-                                                                      class="img-fluid"/></Link>>
+                                                                      class="img-fluid"/></Link>
                                 <div class="media-body">
                                     <span class="meta-post">February 26, 2018</span>
                                     <h2 class="mt-0 mb-3"><Link to="#">5 Job Types That Aallow You To Earn As You Travel
                                         The
-                                        World</Link>></h2>
+                                        World</Link></h2>
                                     <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a
                                         large
                                         language ocean.</p>
@@ -517,10 +517,10 @@ function Content() {
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="300">
                             <div class="media media-custom d-block mb-4 h-100">
                                 <Link to="#" class="mb-4 d-block"><img src="images/img_3.jpg" alt="Image placeholder"
-                                                                      class="img-fluid"/></Link>>
+                                                                      class="img-fluid"/></Link>
                                 <div class="media-body">
                                     <span class="meta-post">February 26, 2018</span>
-                                    <h2 class="mt-0 mb-3"><Link to="#">30 Great Ideas On Gifts For Travelers</Link>></h2>
+                                    <h2 class="mt-0 mb-3"><Link to="#">30 Great Ideas On Gifts For Travelers</Link></h2>
                                     <p>A small river named Duden flows by their place and supplies it with the necessary
                                         regelialia. t is a paradisematic country, in which roasted parts of
                                         sentences.</p>
@@ -540,7 +540,7 @@ function Content() {
                         </div>
                         <div class="col-12 col-md-6 text-center text-md-right" data-aos="fade-up" data-aos-delay="200">
                             <Link to="reservation.html" class="btn btn-outline-white-primary py-3 text-white px-5">Đặt
-                                ngay</Link>>
+                                ngay</Link>
                         </div>
                     </div>
                 </div>
