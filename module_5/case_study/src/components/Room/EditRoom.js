@@ -1,10 +1,12 @@
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
+import HeadingEditRoom from "./HeadingEditRoom";
 
 export default function EditRoom(){
     return (
         <>
        <Header/>
+            <HeadingEditRoom/>
         <section className="section contact-section" id="next">
             <div className="container">
                 <div className="row">

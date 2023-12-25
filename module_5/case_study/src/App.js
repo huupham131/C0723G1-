@@ -21,6 +21,9 @@ import Home from "./components/Home/Home";
 import Room from "./components/Room/Room";
 import AddRoom from "./components/Room/AddRoom";
 import EditRoom from "./components/Room/EditRoom";
+import Customer from "./components/Customer/Customer";
+import AddCustomer from "./components/Customer/AddCustomer";
+import EditCustomer from "./components/Customer/EditCustomer";
 
 
 function App() {
@@ -30,6 +33,9 @@ function App() {
             <Route path={"/room"} element={<Room/>}></Route>
             <Route path={"/editRoom"} element={<EditRoom/>}></Route>
             <Route path={"/addRoom"} element={<AddRoom/>}></Route>
+            <Route path={"/customer"} element={<Customer/>}></Route>
+            <Route path={"/addCustomer"} element={<AddCustomer/>}></Route>
+            <Route path={"/editCustomer"} element={<EditCustomer/>}></Route>
 
         </Routes>
     );

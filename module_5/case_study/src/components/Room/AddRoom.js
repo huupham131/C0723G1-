@@ -1,10 +1,12 @@
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import HeadingAddRoom from "./HeadingAddRoom";
 
 function AddRoom(){
     return(
         <>
             <Header/>
+            <HeadingAddRoom/>
         <section className="section contact-section" id="next">
             <div className="container">
                 <div className="row">
