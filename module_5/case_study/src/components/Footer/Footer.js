@@ -42,7 +42,7 @@ function Footer(){
                         <Link to="#"><span className="fa fa-facebook"></span></Link>
                         <Link to="#"><span className="fa fa-twitter"></span></Link>
                         <Link to="#"><span className="fa fa-linkedin"></span></Link>
-                        <Link to="#"><span class="fa fa-vimeo"></span></Link>
+                        <Link to="#"><span className="fa fa-vimeo"></span></Link>
                     </p>
                 </div>
             </div>

@@ -427,33 +427,33 @@ function Content() {
                                                 texts.</p>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="food-menu mb-5">
-                                            <span class="d-block text-primary h4 mb-3">$18.00</span>
-                                            <h3 class="text-white"><Link to="#" class="text-white">Lemonade, Lemon
+                                    <div className="col-md-6">
+                                        <div className="food-menu mb-5">
+                                            <span className="d-block text-primary h4 mb-3">$18.00</span>
+                                            <h3 className="text-white"><Link to="#" class="text-white">Lemonade, Lemon
                                                 Squash</Link>
                                             </h3>
-                                            <p class="text-white text-opacity-7">Far far away, behind the word
+                                            <p className="text-white text-opacity-7">Far far away, behind the word
                                                 mountains, far
                                                 from the countries Vokalia and Consonantia, there live the blind
                                                 texts.</p>
                                         </div>
-                                        <div class="food-menu mb-5">
-                                            <span class="d-block text-primary h4 mb-3">$38.35</span>
-                                            <h3 class="text-white"><Link to="#" class="text-white">Sparkling Mineral
+                                        <div className="food-menu mb-5">
+                                            <span className="d-block text-primary h4 mb-3">$38.35</span>
+                                            <h3 className="text-white"><Link to="#" class="text-white">Sparkling Mineral
                                                 Water</Link>
                                             </h3>
-                                            <p class="text-white text-opacity-7">Far far away, behind the word
+                                            <p className="text-white text-opacity-7">Far far away, behind the word
                                                 mountains, far
                                                 from the countries Vokalia and Consonantia, there live the blind
                                                 texts.</p>
                                         </div>
-                                        <div class="food-menu mb-5">
-                                            <span class="d-block text-primary h4 mb-3">$69.00</span>
-                                            <h3 class="text-white"><Link to="#" class="text-white">Lemon,
+                                        <div className="food-menu mb-5">
+                                            <span className="d-block text-primary h4 mb-3">$69.00</span>
+                                            <h3 className="text-white"><Link to="#" class="text-white">Lemon,
                                                 Lime &amp; Bitters</Link>
                                             </h3>
-                                            <p class="text-white text-opacity-7">Far far away, behind the word
+                                            <p className="text-white text-opacity-7">Far far away, behind the word
                                                 mountains, far
                                                 from the countries Vokalia and Consonantia, there live the blind
                                                 texts.</p>
@@ -470,11 +470,11 @@ function Content() {
 
 
 
-            <section class="section blog-post-entry bg-light">
-                <div class="container">
-                    <div class="row justify-content-center text-center mb-5">
-                        <div class="col-md-7">
-                            <h2 class="heading" data-aos="fade-up">Sự kiện</h2>
+            <section className="section blog-post-entry bg-light">
+                <div className="container">
+                    <div className="row justify-content-center text-center mb-5">
+                        <div className="col-md-7">
+                            <h2 className="heading" data-aos="fade-up">Sự kiện</h2>
                             <p data-aos="fade-up">Far far away, behind the word mountains, far from the countries
                                 Vokalia and
                                 Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at
@@ -482,15 +482,15 @@ function Content() {
                                 coast of the Semantics, a large language ocean.</p>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="100">
+                    <div className="row">
+                        <div className="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="100">
 
-                            <div class="media media-custom d-block mb-4 h-100">
+                            <div className="media media-custom d-block mb-4 h-100">
                                 <Link to="#" class="mb-4 d-block"><img src="images/img_1.jpg" alt="Image placeholder"
-                                                                      class="img-fluid"/></Link>
-                                <div class="media-body">
-                                    <span class="meta-post">February 26, 2018</span>
-                                    <h2 class="mt-0 mb-3"><Link to="#">Travel Hacks to Make Your Flight More
+                                                                      className="img-fluid"/></Link>
+                                <div className="media-body">
+                                    <span className="meta-post">February 26, 2018</span>
+                                    <h2 className="mt-0 mb-3"><Link to="#">Travel Hacks to Make Your Flight More
                                         Comfortable</Link></h2>
                                     <p>Far far away, behind the word mountains, far from the countries Vokalia and
                                         Consonantia,
@@ -499,13 +499,13 @@ function Content() {
                             </div>
 
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="200">
-                            <div class="media media-custom d-block mb-4 h-100">
+                        <div className="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="200">
+                            <div className="media media-custom d-block mb-4 h-100">
                                 <Link to="#" class="mb-4 d-block"><img src="images/img_2.jpg" alt="Image placeholder"
-                                                                      class="img-fluid"/></Link>
-                                <div class="media-body">
-                                    <span class="meta-post">February 26, 2018</span>
-                                    <h2 class="mt-0 mb-3"><Link to="#">5 Job Types That Aallow You To Earn As You Travel
+                                                                      className="img-fluid"/></Link>
+                                <div className="media-body">
+                                    <span className="meta-post">February 26, 2018</span>
+                                    <h2 className="mt-0 mb-3"><Link to="#">5 Job Types That Aallow You To Earn As You Travel
                                         The
                                         World</Link></h2>
                                     <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a
@@ -514,13 +514,13 @@ function Content() {
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="300">
-                            <div class="media media-custom d-block mb-4 h-100">
+                        <div className="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="300">
+                            <div className="media media-custom d-block mb-4 h-100">
                                 <Link to="#" class="mb-4 d-block"><img src="images/img_3.jpg" alt="Image placeholder"
-                                                                      class="img-fluid"/></Link>
-                                <div class="media-body">
-                                    <span class="meta-post">February 26, 2018</span>
-                                    <h2 class="mt-0 mb-3"><Link to="#">30 Great Ideas On Gifts For Travelers</Link></h2>
+                                                                      className="img-fluid"/></Link>
+                                <div className="media-body">
+                                    <span className="meta-post">February 26, 2018</span>
+                                    <h2 className="mt-0 mb-3"><Link to="#">30 Great Ideas On Gifts For Travelers</Link></h2>
                                     <p>A small river named Duden flows by their place and supplies it with the necessary
                                         regelialia. t is a paradisematic country, in which roasted parts of
                                         sentences.</p>
@@ -531,14 +531,14 @@ function Content() {
                 </div>
             </section>
 
-            <section class="section bg-image overlay"
+            <section className="section bg-image overlay"
                      style={{backgroundImage: "url('https://cf.bstatic.com/xdata/images/hotel/max1280x900/37836676.jpg?k=6e5197f999e346e00edd20fe9de55d145f8f8ba7acf290921f4b1def1bbf6f93&o=&hp=1');"}}>
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-12 col-md-6 text-center mb-4 mb-md-0 text-md-left" data-aos="fade-up">
-                            <h2 class="text-white font-weight-bold">Lựa chọn tốt nhất để trải nghiệm!</h2>
+                <div className="container">
+                    <div className="row align-items-center">
+                        <div className="col-12 col-md-6 text-center mb-4 mb-md-0 text-md-left" data-aos="fade-up">
+                            <h2 className="text-white font-weight-bold">Lựa chọn tốt nhất để trải nghiệm!</h2>
                         </div>
-                        <div class="col-12 col-md-6 text-center text-md-right" data-aos="fade-up" data-aos-delay="200">
+                        <div className="col-12 col-md-6 text-center text-md-right" data-aos="fade-up" data-aos-delay="200">
                             <Link to="reservation.html" class="btn btn-outline-white-primary py-3 text-white px-5">Đặt
                                 ngay</Link>
                         </div>

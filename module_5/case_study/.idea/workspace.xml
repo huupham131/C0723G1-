@@ -5,20 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38765b2f-54f5-431c-b6de-4ab30f1e2661" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Customer/Customer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Customer/addCustomer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Customer/editCustomer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Home/Home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Contract/AddContract.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Contract/Contract.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Contract/HeadingAddContract.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Contract/HeadingContract.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Layout_case_study/furama/js/aos.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Layout_case_study/furama/js/aos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/case_study.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/case_study.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Content/Content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Content.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Room/AddRoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Room/AddRoom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Room/EditRoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Room/EditRoom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Room/Room.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Room/Room.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss05_form_router/bai_tap_ss5/src/components/ContractForm/ContractForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ss05_form_router/bai_tap_ss5/src/components/ContractForm/ContractForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss05_form_router/bai_tap_ss5/src/components/MedicalForm/MedicalForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ss05_form_router/bai_tap_ss5/src/components/MedicalForm/MedicalForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +54,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/macbook/Documents/GitHub/C0723G1-PhamThanhHuu/module_5/case_study/src/components/Header&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/macbook/Documents/GitHub/C0723G1-PhamThanhHuu/module_5/case_study&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -87,7 +87,9 @@
       <workItem from="1703225154729" duration="9085000" />
       <workItem from="1703253355170" duration="4000" />
       <workItem from="1703253369213" duration="1170000" />
-      <workItem from="1703467300745" duration="2463000" />
+      <workItem from="1703467300745" duration="8617000" />
+      <workItem from="1703477030534" duration="4175000" />
+      <workItem from="1703552630396" duration="886000" />
     </task>
     <servers />
   </component>

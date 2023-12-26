@@ -1,5 +1,4 @@
-import React from 'react';
-import {BrowserRouter as Router} from 'react-router-dom';  // Sử dụng BrowserRouter
+import React, {useEffect} from 'react';
 import './App.css';
 import './components/Header/css/aos.css';
 import './components/Header/css/animate.css';
@@ -16,6 +15,7 @@ import './components/Header/css/style.css';
 import './components/Header/fonts/fontawesome/css/font-awesome.min.css'
 import './components/Header/fonts/ionicons/css/ionicons.css'
 
+import Aos from 'aos'
 import {Route, Routes} from "react-router-dom";
 import Home from "./components/Home/Home";
 import Room from "./components/Room/Room";
@@ -24,9 +24,14 @@ import EditRoom from "./components/Room/EditRoom";
 import Customer from "./components/Customer/Customer";
 import AddCustomer from "./components/Customer/AddCustomer";
 import EditCustomer from "./components/Customer/EditCustomer";
+import Contract from "./components/Contract/Contract";
+import AddContract from "./components/Contract/AddContract";
 
 
 function App() {
+    useEffect(() => {
+        Aos.init();
+    }, []);
     return (
         <Routes>
             <Route path={"/"} element={<Home/>}></Route>
@@ -36,6 +41,8 @@ function App() {
             <Route path={"/customer"} element={<Customer/>}></Route>
             <Route path={"/addCustomer"} element={<AddCustomer/>}></Route>
             <Route path={"/editCustomer"} element={<EditCustomer/>}></Route>
+            <Route path={"/contract"} element={<Contract/>}></Route>
+            <Route path={"/addContract"} element={<AddContract/>}></Route>
 
         </Routes>
     );
