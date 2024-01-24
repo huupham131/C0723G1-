@@ -1,0 +1,44 @@
+{
+  "song": [
+    {
+      "id": 1,
+      "name": "Nơi này có anh",
+      "singer": "Sơn Tùng",
+      "timeRelease": "05:00",
+      "like": 34,
+      "status": true
+    },
+    {
+      "id": 2,
+      "name": "Khó vẽ nụ cười",
+      "singer": "Đạt G",
+      "timeRelease": "04:30",
+      "like": 20,
+      "status": false
+    },
+    {
+      "id": 3,
+      "name": "See you again",
+      "singer": "Wiz Khalifa",
+      "timeRelease": "03:55",
+      "like": 5,
+      "status": false
+    },
+    {
+      "id": 4,
+      "name": "Shape of you",
+      "singer": "Ed Sheeran",
+      "timeRelease": "06:05",
+      "like": 43,
+      "status": true
+    },
+    {
+      "id": 5,
+      "name": "Symphony",
+      "singer": "ss",
+      "timeRelease": "04:50",
+      "like": 111,
+      "status": true
+    }
+  ]
+}

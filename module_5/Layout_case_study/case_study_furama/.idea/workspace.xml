@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b773c541-b936-48de-baee-50ddb02bee6f" name="Changes" comment="" />
+    <list default="true" id="b773c541-b936-48de-baee-50ddb02bee6f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../thi_module5/src/component/AddSong.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module5/src/component/Spotify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module5/src/data/db.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module5/src/service/getAllSong.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss01_es6/bai1.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss01_es6/bai1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss01_es6/bai6.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss01_es6/bai6.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,6 +66,7 @@
       <workItem from="1702957687023" duration="1478000" />
       <workItem from="1702959294564" duration="120000" />
       <workItem from="1702960058703" duration="2971000" />
+      <workItem from="1705994076905" duration="8000" />
     </task>
     <servers />
   </component>

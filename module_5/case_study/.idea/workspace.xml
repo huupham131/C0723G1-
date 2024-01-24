@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38765b2f-54f5-431c-b6de-4ab30f1e2661" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../ss06_api/bai_tap_6/src/components/Todo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss06_api/bai_tap_6/src/data/db.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss06_api/bai_tap_6/src/service/TodoService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module5/src/component/AddSong.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module5/src/component/Spotify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module5/src/data/db.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_module5/src/service/getAllSong.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Layout_case_study/case_study_furama/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Layout_case_study/case_study_furama/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss01_es6/bai1.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ss01_es6/bai1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss01_es6/bai6.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ss01_es6/bai6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss02_reactjs/bt2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ss02_reactjs/bt2/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +85,21 @@
       <workItem from="1703467300745" duration="8617000" />
       <workItem from="1703477030534" duration="4175000" />
       <workItem from="1703552630396" duration="1875000" />
-      <workItem from="1703599196901" duration="375000" />
+      <workItem from="1703599196901" duration="432000" />
+      <workItem from="1703687587538" duration="232000" />
+      <workItem from="1703725686363" duration="598000" />
+      <workItem from="1703728114601" duration="610000" />
+      <workItem from="1703959351020" duration="64000" />
+      <workItem from="1704039357245" duration="14000" />
+      <workItem from="1705891957655" duration="28000" />
+      <workItem from="1705894308079" duration="615000" />
+      <workItem from="1705975720471" duration="13000" />
+      <workItem from="1705994085754" duration="1881000" />
+      <workItem from="1706004961335" duration="50000" />
+      <workItem from="1706059810583" duration="599000" />
+      <workItem from="1706066811798" duration="589000" />
+      <workItem from="1706068177982" duration="149000" />
+      <workItem from="1706069234314" duration="15000" />
     </task>
     <servers />
   </component>

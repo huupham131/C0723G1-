@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf5ac25b-f076-4aa6-af03-edea033a92c6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../ss01_es6/bai8.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss01_es6/bai8.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ss01_es6/bai9.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss01_es6/bai9.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module5/src/component/AddSong.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module5/src/component/Spotify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module5/src/data/db.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module5/src/service/getAllSong.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Layout_case_study/case_study_furama/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Layout_case_study/case_study_furama/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss01_es6/bai1.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss01_es6/bai1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss01_es6/bai6.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss01_es6/bai6.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +66,7 @@
       <workItem from="1702867359846" duration="1477000" />
       <workItem from="1702868852724" duration="2000" />
       <workItem from="1702868880084" duration="18000" />
+      <workItem from="1706003237148" duration="27000" />
     </task>
     <servers />
   </component>
