@@ -1,20 +1,20 @@
 import React, {useState} from "react";
-import {Formik} from "formik";
+import {Field, Form, Formik} from "formik";
 
 const REGEX = {
     email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     phone: /^[0-9]{10}$/,
 };
-const ContractForm = ()=>{
-    const [form, setForm]= useState({})
+const ContractForm = () => {
+    // const [form, setForm] = useState({})
     const [error, setErrors] = useState({})
-    const handleChange = (event) => {
-        const { name, value } = event.target;
-        setForm((prevForm)=>({
-            form : prevForm,
-            [name]: value,
-        }))
-    };
+    // const handleChange = (event) => {
+    //     const {name, value} = event.target;
+    //     setForm((prevForm) => ({
+    //         ...prevForm,
+    //         [name]: value,
+    //     }))
+    // };
 
     const handleValidate = (values) => {
         const newErrors = {};
@@ -31,24 +31,30 @@ const ContractForm = ()=>{
 
         if (!values.phone) {
             newErrors.phone = 'Phone Required';
-        }else if (!REGEX.phone.test(values.phone)) {
+        } else if (!REGEX.phone.test(values.phone)) {
             newErrors.phone = 'Invalid phone number';
         }
-        if (!values.message){
+        if (!values.message) {
             newErrors.message = 'Message Required';
         }
         setErrors(newErrors);
         return newErrors;
     };
 
-    const handleSubmit = () => {
+    const handleSubmit = (value) => {
+        console.log(value)
         alert('Contact added successfully!');
     };
 
     return (
         <div>
             <Formik
-                initialValues={form}
+                initialValues={{
+                    name: '',
+                    email: '',
+                    phone: '',
+                    message: ''
+                }}
                 validate={handleValidate}
                 onSubmit={handleSubmit}
             >
@@ -58,28 +64,23 @@ const ContractForm = ()=>{
                       handleChange: formikHandleChange,
                       handleSubmit: formikHandleSubmit,
                   }) => (
-                    <form onSubmit={formikHandleSubmit}>
+                    <Form onSubmit={formikHandleSubmit}>
                         <div>
                             <label>Name:</label>
-                            <input
+                            <Field
                                 type="text"
                                 name="name"
-                                value={values.name || ''}
-                                onChange={(e) => {
-                                    handleChange(e);
-                                    formikHandleChange(e);
-                                }}
                             />
                             {formikErrors.name && <div>{formikErrors.name}</div>}
                         </div>
                         <div>
                             <label>Email:</label>
-                            <input
+                            <Field
                                 type="text"
                                 name="email"
-                                value={values.email || ''}
+
                                 onChange={(e) => {
-                                    handleChange(e);
+                                    // handleChange(e);
                                     formikHandleChange(e);
                                 }}
                             />
@@ -87,12 +88,12 @@ const ContractForm = ()=>{
                         </div>
                         <div>
                             <label>Phone:</label>
-                            <input
+                            <Field
                                 type="text"
                                 name="phone"
-                                value={values.phone || ''}
+
                                 onChange={(e) => {
-                                    handleChange(e);
+                                    // handleChange(e);
                                     formikHandleChange(e);
                                 }}
                             />
@@ -100,17 +101,17 @@ const ContractForm = ()=>{
                         </div>
                         <div>
                             <label>Message:</label>
-                            <textarea
+                            <Field
+                                as ="textarea"
                                 name="message"
-                                value={values.message || ''}
                                 onChange={(e) => {
-                                    handleChange(e);
+                                    // handleChange(e);
                                     formikHandleChange(e);
                                 }}/>
                             {formikErrors.message && <div>{formikErrors.message}</div>}
                         </div>
                         <button type="submit">Submit</button>
-                    </form>
+                    </Form>
                 )}
             </Formik>
         </div>

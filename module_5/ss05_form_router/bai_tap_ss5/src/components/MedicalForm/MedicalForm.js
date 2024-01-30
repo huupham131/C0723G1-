@@ -69,8 +69,8 @@ const MedicalForm = () => {
         return newErrors;
     };
 
-    const handleSubmit = () => {
-        console.log('submit')
+    const handleSubmit = (from) => {
+        console.log(from)
         alert('Nhập thành công!');
     };
 

@@ -52,7 +52,7 @@ export default function Spotify() {
                             <td>{item.singer}</td>
                             <td>{item.timeRelease}</td>
                             <td>{item.like}</td>
-                            <td>{item.status}</td>
+                            <td>{item.status && <p>true</p>}</td>
                             <td>
                                 <button>Công khai</button>
                             </td>
