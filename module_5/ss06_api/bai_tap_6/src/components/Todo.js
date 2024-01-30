@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import {getAll} from "../service/TodoService";
-import {Field, Formik} from "formik"
+import {Field, Form, Formik} from "formik"
 import * as toDoAppService from "../service/TodoService";
 
 export default function Todo({data}) {
@@ -10,11 +10,9 @@ const [tasks, setTasks] = useState([])
             setTasks(res);
         });
     }, []);
-    console.log(tasks)
     async function createTask(values) {
         let result = await toDoAppService.addTodo(values);
         if (result) {
-            await getAll();
             alert("Task added");
             setTasks(await getAll());
         } else {
@@ -27,15 +25,16 @@ const [tasks, setTasks] = useState([])
         <div>
             <Formik
                 initialValues={{
-                    decription: ""
+                    title: "",
+                    description: ""
                 }}
                 onSubmit={createTask}
             >
-                <form>
+                <Form>
                 <h1>Todo List</h1>
-                <Field type="text" name="decription"/>
+                <Field type="text" name="title"/>
                 <button>Submit</button>
-                </form>
+                </Form>
             </Formik>
                 <ul>{
                     tasks.map((item,index) => (

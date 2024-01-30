@@ -11,7 +11,8 @@ export const getAll = async ()=> {
 
 export const addTodo = async (title) => {
     try {
-        const response = await axios.post("http://localhost:8080/tasks", {title});
+        const response = await axios.post("http://localhost:8080/tasks", title);
+        console.log(title);
         return true;
     } catch (error) {
         console.log(error);
